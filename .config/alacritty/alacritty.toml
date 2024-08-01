@@ -1,0 +1,206 @@
+# background_opacity = 1
+live_config_reload = true
+
+[colors.bright]
+black = "0x3c3836"
+blue = "0x7daea3"
+cyan = "0x89b482"
+green = "0xa9b665"
+magenta = "0xd3869b"
+red = "0xea6962"
+white = "0xd4be98"
+yellow = "0xd8a657"
+
+[colors.normal]
+black = "0x3c3836"
+blue = "0x7daea3"
+cyan = "0x89b482"
+green = "0xa9b665"
+magenta = "0xd3869b"
+red = "0xea6962"
+white = "0xd4be98"
+yellow = "0xd8a657"
+
+[colors.primary]
+background = "0x282828"
+foreground = "0xd4be98"
+
+[font.bold]
+family = "JetBrains Mono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrains Mono Nerd Font"
+style = "BoldItalic"
+
+[font.italic]
+family = "JetBrains Mono Nerd Font"
+style = "MediumItalic"
+
+[font.normal]
+family = "JetBrains Mono Nerd Font"
+style = "Medium"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Super|Shift"
+
+# [schemes.gruvbox_material_hard_dark.bright]
+# black = "0x32302f"
+# blue = "0x7daea3"
+# cyan = "0x89b482"
+# green = "0xa9b665"
+# magenta = "0xd3869b"
+# red = "0xea6962"
+# white = "0xd4be98"
+# yellow = "0xd8a657"
+#
+# [schemes.gruvbox_material_hard_dark.normal]
+# black = "0x32302f"
+# blue = "0x7daea3"
+# cyan = "0x89b482"
+# green = "0xa9b665"
+# magenta = "0xd3869b"
+# red = "0xea6962"
+# white = "0xd4be98"
+# yellow = "0xd8a657"
+#
+# [schemes.gruvbox_material_hard_dark.primary]
+# background = "0x1d2021"
+# foreground = "0xd4be98"
+#
+# [schemes.gruvbox_material_hard_light.bright]
+# black = "0x654735"
+# blue = "0x45707a"
+# cyan = "0x4c7a5d"
+# green = "0x6c782e"
+# magenta = "0x945e80"
+# red = "0xc14a4a"
+# white = "0xf2e5bc"
+# yellow = "0xb47109"
+#
+# [schemes.gruvbox_material_hard_light.normal]
+# black = "0x654735"
+# blue = "0x45707a"
+# cyan = "0x4c7a5d"
+# green = "0x6c782e"
+# magenta = "0x945e80"
+# red = "0xc14a4a"
+# white = "0xf2e5bc"
+# yellow = "0xb47109"
+#
+# [schemes.gruvbox_material_hard_light.primary]
+# background = "0xf9f5d7"
+# foreground = "0x654735"
+#
+# [schemes.gruvbox_material_medium_dark.bright]
+# black = "0x3c3836"
+# blue = "0x7daea3"
+# cyan = "0x89b482"
+# green = "0xa9b665"
+# magenta = "0xd3869b"
+# red = "0xea6962"
+# white = "0xd4be98"
+# yellow = "0xd8a657"
+#
+# [schemes.gruvbox_material_medium_dark.normal]
+# black = "0x3c3836"
+# blue = "0x7daea3"
+# cyan = "0x89b482"
+# green = "0xa9b665"
+# magenta = "0xd3869b"
+# red = "0xea6962"
+# white = "0xd4be98"
+# yellow = "0xd8a657"
+#
+# [schemes.gruvbox_material_medium_dark.primary]
+# background = "0x282828"
+# foreground = "0xd4be98"
+#
+# [schemes.gruvbox_material_medium_light.bright]
+# black = "0x654735"
+# blue = "0x45707a"
+# cyan = "0x4c7a5d"
+# green = "0x6c782e"
+# magenta = "0x945e80"
+# red = "0xc14a4a"
+# white = "0xeee0b7"
+# yellow = "0xb47109"
+#
+# [schemes.gruvbox_material_medium_light.normal]
+# black = "0x654735"
+# blue = "0x45707a"
+# cyan = "0x4c7a5d"
+# green = "0x6c782e"
+# magenta = "0x945e80"
+# red = "0xc14a4a"
+# white = "0xeee0b7"
+# yellow = "0xb47109"
+#
+# [schemes.gruvbox_material_medium_light.primary]
+# background = "0xfbf1c7"
+# foreground = "0x654735"
+#
+# [schemes.gruvbox_material_soft_dark.bright]
+# black = "0x45403d"
+# blue = "0x7daea3"
+# cyan = "0x89b482"
+# green = "0xa9b665"
+# magenta = "0xd3869b"
+# red = "0xea6962"
+# white = "0xd4be98"
+# yellow = "0xd8a657"
+#
+# [schemes.gruvbox_material_soft_dark.normal]
+# black = "0x45403d"
+# blue = "0x7daea3"
+# cyan = "0x89b482"
+# green = "0xa9b665"
+# magenta = "0xd3869b"
+# red = "0xea6962"
+# white = "0xd4be98"
+# yellow = "0xd8a657"
+#
+# [schemes.gruvbox_material_soft_dark.primary]
+# background = "0x32302f"
+# foreground = "0xd4be98"
+#
+# [schemes.gruvbox_material_soft_light.bright]
+# black = "0x654735"
+# blue = "0x45707a"
+# cyan = "0x4c7a5d"
+# green = "0x6c782e"
+# magenta = "0x945e80"
+# red = "0xc14a4a"
+# white = "0xe6d5ae"
+# yellow = "0xb47109"
+#
+# [schemes.gruvbox_material_soft_light.normal]
+# black = "0x654735"
+# blue = "0x45707a"
+# cyan = "0x4c7a5d"
+# green = "0x6c782e"
+# magenta = "0x945e80"
+# red = "0xc14a4a"
+# white = "0xe6d5ae"
+# yellow = "0xb47109"
+#
+# [schemes.gruvbox_material_soft_light.primary]
+# background = "0xf2e5bc"
+# foreground = "0x654735"
+
+# [scroolling]
+# history = 10000
+# multiplier = 3
+
+[shell]
+program = "/usr/bin/zsh"
+
+[window.padding]
+x = 5
+y = 5
+
+# [window.padding.class]
+# general = "Alacritty"
+# instance = "Alacritty"

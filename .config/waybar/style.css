@@ -1,0 +1,138 @@
+window#waybar {
+  background: transparent;
+}
+
+* {
+    font-family: "JetBrains Mono Nerd Font";
+    font-size: 17px;
+    min-height: 15px;
+}
+
+#window {
+  background-color: #d5c4a1;
+  color: #282828;
+  margin-left: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+#custom-arch {
+  background-color: #83c092;
+  padding-top: 1px;
+  padding-left: 0px;
+  padding-right: 10px;
+  color: #282828;
+  padding-right: 10px;
+  padding-left: 5px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+#workspaces {
+  border-radius: 8px;
+  background-color: #928374;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 10px;
+}
+
+#workspaces button {
+  background: #928374;
+  color: #d5c4a1;
+  border-radius: 8px;
+}
+
+#workspaces button.active{
+  background: #3c3836;
+  color: #d79921;
+}
+
+#pulseaudio {
+  background-color: #cc241d;
+  color: #282828;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+#network {
+  background-color: #458588;
+  color: #282828;
+  padding-left: 10px;
+  padding-right: 8px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+
+#clock {
+  background-color: #b8bb26;
+  color:#282828;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.custom-spotify {
+    font-size: 17px;
+    padding-left: 10px;
+    padding-right: 15px;
+    background-color: #427b58;
+    color: #fbf1c7;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+#taskbar {
+    background: #111111;
+    margin: 3px 15px 3px 0px;
+    padding:0px;
+    border-radius: 15px;
+    font-weight: normal;
+    font-style: normal;
+    opacity:0.8;
+    border: 3px solid #689d6a;
+}
+
+#taskbar button {
+    margin:0;
+    border-radius: 15px;
+    padding: 0px 5px 0px 5px;
+}
+
+#taskbar.empty {
+    background:transparent;
+    border:0;
+    padding:0;
+    margin:0;
+}
+
+#memory {
+    background-color: #fe8019;
+    color: #282828;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+
+#custom-power {
+    color: #282828;
+    background-color: #689d6a;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 14px;
+}
