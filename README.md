@@ -6,7 +6,7 @@
 - alacritty
 - kitty
 - clion
-- code (vscode)
+- visual-studio-code-bin (yay) 
 - nvim
 - spotify
 - oh-my-posh
