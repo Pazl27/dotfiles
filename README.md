@@ -12,6 +12,7 @@
 - oh-my-posh
 - bluemanager (bluetooth)
 - brave-bin
+- network-manager-applet
 
 ## Hyprland
 - hyprland
@@ -37,3 +38,4 @@
 ## Theme
 - gruvbox-plus-icon-theme
 - ttf-jetbrains-mono-nerd
+- ttf-iosevka-nerd
