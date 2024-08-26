@@ -1,0 +1,78 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+nnoremap <Space> <Nop>
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set textobj-entire
+Plug 'machakann/vim-highlightedyank'
+Plug 'preservim/nerdtree'
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+set scrolloff=5
+set relativenumber
+set number
+
+""" Disable bell sound ----------------------
+set visualbell
+set noerrorbellsa
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+""" Basic Movement --------------------------------
+
+sethandler <c-h> a:vim
+sethandler <c-l> a:vim
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+map U <C-r>
+
+xnoremap K :m '<-2<CR>gv=gv
+xnoremap J :m '>+1<CR>gv=gv
+
+""" Leader mappings -------------------------
+map <leader>xf <Action>(ReformatCode)
+map <leader>rn <Action>(RenameElement)
+map <leader>z <Action>(ToggleDistractionFreeMode)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>o <Action>(FileStructurePopup)
+map <leader>bd <Action>(CloseContent)
+map <leader>ca :action ShowIntentionActions<CR>
+"map <leader>d :action
+
+""" Telescope ------------------------------
+map <leader>ff :action GotoFile<CR>
+map <leader>fg :action TextSearchAction<CR>
+
+""" Terminal settings -----------------------
+map <leader>tn :action Terminal.OpenInTerminal<CR>
+map <leader>tk :action Terminal.CloseSession<CR>
+map <leader>tt :action ActivateTerminalToolWindow<CR>
+
+""" NERDTree -------------------------------
+map <Leader><Tab> :NERDTreeToggle<CR>
+map <Leader>e :NERDTreeFocus<CR>
+
+""" Splitting windows ------------------------
+map <leader>sv :action SplitVertically<CR>
+map <leader>sh :action SplitHorizontally<CR>
+
+""" Tab navigation ---------------------------
+map <S-tab> :action PreviousTab<CR>
+map <tab> :action NextTab <CR>
