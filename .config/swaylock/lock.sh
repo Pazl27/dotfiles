@@ -1,5 +1,5 @@
 
-swaylock \
+twaylock \
   --indicator-radius 160 \
   --indicator-thickness 20 \
   --inside-color 00000000 \
@@ -14,7 +14,7 @@ swaylock \
   --ring-ver-color "$color3" \
   --line-uses-ring \
   --line-color 00000000 \
-  --font 'NotoSans Nerd Font Mono:style=Thin,Regular 40' \
+  --font 'JetBrains Mono Nerd Font:style=Thin,Regular 40' \
   --text-color 00000000 \
   --text-clear-color 00000000 \ #"$color2" \
   --text-wrong-color 00000000 \ #"$color5" \
