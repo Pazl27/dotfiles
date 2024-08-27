@@ -1,8 +1,8 @@
 {
 	"layer": "top",
-	"modules-left": ["custom/launcher", "backlight", "pulseaudio", "wlr/taskbar"],
+	"modules-left": ["custom/launcher", "backlight", "pulseaudio", "tray", "wlr/taskbar"],
 	"modules-center": ["hyprland/workspaces"],
-	"modules-right": ["network", "bluetooth", "battery", "clock", "tray", "custom/notification", "custom/power"],
+	"modules-right": ["network", "bluetooth", "battery", "clock", "custom/notification", "custom/power"],
 	
   "pulseaudio": {
       "format": "{icon} {volume}% {format_source}",

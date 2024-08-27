@@ -170,8 +170,9 @@ window#waybar.hidden {
 
 #custom-notification {
   margin-top: 6px;
-  margin-left: 8px;
-  margin-right: 1px;
+  /* strange values normal is 8px 8px*/
+  /* margin-left: 0px; */ 
+  /* margin-right: 0px; */
   padding-left: 6px;
   padding-right: 6px;
   margin-bottom: 0px;
@@ -200,7 +201,7 @@ window#waybar.hidden {
 
 #tray {
   margin-top: 6px;
-  margin-left: 0px;
+  margin-left: 8px;
   margin-right: 0px;
   margin-bottom: 0px;
   border-radius: 10px;
@@ -225,7 +226,7 @@ window#waybar.hidden {
 
 #taskbar {
   margin-top: 6px;
-  margin-left: 8px;
+  margin-left: 0px;
   margin-right: 8px;
   margin-bottom: 0px;
   border-radius: 10px;
