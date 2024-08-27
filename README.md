@@ -5,14 +5,16 @@
 - neofetch
 - alacritty
 - kitty
-- clion
+- clion (yay)
 - visual-studio-code-bin (yay) 
 - nvim
 - spotify
 - oh-my-posh
 - bluemanager (bluetooth)
-- brave-bin
+- brave-bin (yay)
 - network-manager-applet
+- intellij-idea-ultimate-edition (yay)
+- keepass (yay)
 
 ## Hyprland
 - hyprland
@@ -57,3 +59,9 @@ sudo npm install -g neovim
 pip install --user neovim
 ```
 - packages needed for nvim
+
+## System update
+```bash
+sudo pacman -Syu
+yay -Syu
+```
