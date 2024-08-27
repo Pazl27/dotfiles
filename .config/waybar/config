@@ -18,7 +18,11 @@
               ""
           ]
       },
-      "on-click": "blueman-manager"
+      "on-click": "pavucontrol"
+  },
+
+  "bluetooth": {
+    "on-click": "blueman-manager",
   },
 
   "network": {
