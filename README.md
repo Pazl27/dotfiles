@@ -56,7 +56,6 @@ sudo pacman -S clipx
 ```bash
 sudo pacman -S luarocks
 sudo npm install -g neovim
-pip install --user neovim
 ```
 - packages needed for nvim
 
