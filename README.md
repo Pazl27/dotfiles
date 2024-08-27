@@ -29,6 +29,7 @@
 - jre21-openjdk 21.0.4.u7-1
 - jdk-openjdk 22.0.2.u9-1
 - python
+- python-pip (problems installing)
 - nodejs
 - npm
 - gcc
@@ -39,3 +40,20 @@
 - gruvbox-plus-icon-theme
 - ttf-jetbrains-mono-nerd
 - ttf-iosevka-nerd
+
+## Nvim settings
+```lua
+vim.opt.clipboard = "unnamedplus"
+```
+- need for clipboard support
+```bash
+sudo pacman -S clipx
+```
+- program for system clipboard
+
+```bash
+sudo pacman -S luarocks
+sudo npm install -g neovim
+pip install --user neovim
+```
+- packages needed for nvim
