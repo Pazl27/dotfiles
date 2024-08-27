@@ -11,6 +11,7 @@
 - spotify
 - oh-my-posh
 - bluemanager (bluetooth)
+- bluez (if not installed allready)
 - brave-bin (yay)
 - network-manager-applet
 - intellij-idea-ultimate-edition (yay)
