@@ -1,155 +1,235 @@
+/*
+* 
+* Different solution so when applied on new screen 
+* values need to change a bit 
+*
+* padding = space within
+* margin = space from element to element
+*/
+
+
 @import "gruvbox.css";
 
 * {
-    font-family: "Iosevka Nerd Font";
-    font-size: 16px;
-    min-height: 0;
-    font-weight: bold;
+  border: none;
+  border-radius: 8;
+  font-family: "JetbrainsMono Nerd Font";
+  font-size: 12px;
+  min-height: 15px;
 }
 
 window#waybar {
-    background: transparent;
-    background-color: @background;
-    color: @foreground;
-    transition-property: background-color;
-    transition-duration: 0.1s;
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
 }
 
 #window {
-    margin: 2;
-    padding-left: 8;
-    padding-right: 8;
+  margin-top: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: transparent;
+  background: transparent;
 }
 
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
+#workspaces {
+  margin-top: 6px;
+  margin-left: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background: #282828;
+  /* default: background: #161320; */
+  transition: none;
 }
-
-button:hover {
-    background: inherit;
-    border-top: 2px solid @hover;
-}
-
 
 #workspaces button {
-  border-radius: 15px;
-  margin-right: 10px;
-  padding-top: 4px;
-  padding-bottom: 2px;
-  padding-right: 10px;
-  font-weight: bolder;
-  margin-top: 7px;
-  margin-bottom: 7px;
-  background-color: @lightred;
-  color: @lightbg;
+  transition: none;
+  color: #fbf1c7;
+  /* default: color: #b5e8e0; */
+  background: transparent;
+  border-radius: 2px;
 }
 
 #workspaces button.active {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 3px;
-  background-color: #689d6a;
-  color: @lightbg;
+  color: #fe8019;
 }
 
-
-#pulseaudio,
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#wireplumber,
-#network,
-#tray,
-#mode,
-#bluetooth,
-#scratchpad {
-    margin: 2px;
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-#clock {
-    color: @maroon;
-    border-bottom: 2px solid @maroon;
-}
-
-#clock.date {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
-}
-
-#pulseaudio {
-    color: @blue;
-    border-bottom: 2px solid @blue;
+#workspaces button:hover {
+  transition: none;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #d65d0e;
+  border-color: #d65d0e;
+  /* border-color: #e8a2af; */
+  /* color: #e8a2af; */
 }
 
 #network {
-    color: @yellow;
-    border-bottom: 2px solid @yellow;
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  font-size: 12px;
+  transition: none;
+  color: #161320;
+  background: #fb4934;
+  /*default: background: #bd93f9;*/
 }
 
-#bluetooth {
-  color: @yellow;
-  border-bottom: 2px solid @yellow;
+#pulseaudio {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  font-size: 12px;
+  transition: none;
+  color: #1a1826;
+  background: #fae3b0;
 }
 
-#idle_inhibitor {
-    margin-right: 12px;
-    color: #7cb342;
+#battery {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  font-size: 12px;
+  transition: none;
+  color: #161320;
+  background: #b5e8e0;
 }
 
-#idle_inhibitor.activated {
-    color: @red;
+#battery.critical:not(.charging) {
+  background-color: #b5e8e0;
+  color: #161320;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-#battery.charging,
-#battery.plugged {
-    color: @green;
-    border-bottom: 2px solid @green;
+@keyframes blink {
+  to {
+    background-color: #bf616a;
+    color: #b5e8e0;
+  }
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-    margin-left: 0;
+#backlight {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  font-size: 12px;
+  transition: none;
+  color: #161320;
+  background: #f8bd96;
 }
 
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-    margin-right: 0;
+#clock {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  font-size: 12px;
+  transition: none;
+  color: #161320;
+  background: #8ec07c;
+  /*default: background: #abe9b3; */
 }
 
-#custom-vpn {
-    color: @lavender;
-    border-radius: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
-}
-
-#custom-power {
-    color: #282828;
-    background-color: #689d6a;
-    border-radius: 5px;
-    margin-right: 10px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-    padding-left: 10px;
-    padding-right: 14px;
+#custom-launcher {
+  font-size: 24px;
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  padding-right: 5px;
+  border-radius: 10px;
+  transition: none;
+  color: #fe8019;
+  /*default: color: #89dceb; */
+  background: #161320;
 }
 
 #custom-notification {
-  background: @lightbg;
-  margin: 2px;
-  padding: 2px;
-  padding-left: 7px;
-  padding-right: 10px;
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 1px;
+  padding-left: 6px;
+  padding-right: 6px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: none;
+  color: #161320;
+  background: #b8bb26;
+  /*default: background: #bd93f9;*/
+}
 
-  margin-top: 7px;
-  margin-bottom: 7px;
-  border-radius: 5px;
+#custom-power {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 1px;
+  padding-left: 6px;
+  padding-right: 10px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: none;
+  color: #161320;
+  background: #fb4934;
+  /*default: background: #bd93f9;*/
+}
+
+#tray {
+  margin-top: 6px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background: #282828;
+  /* default: background: #161320; */
+  transition: none;
+}
+
+#bluetooth {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-bottom: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  transition: none;
+  color: #161320;
+  background: #fabd2f;
+  /*default: background: #bd93f9;*/
+}
+
+#taskbar {
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 0px;
+  border-radius: 10px;
+  background: #282828;
+  /* default: background: #161320; */
+  transition: none;
 }

@@ -1,0 +1,163 @@
+{
+    "height": 32,
+    "spacing": 10,
+    "modules-left": [
+        "hyprland/workspaces",
+        "wlr/taskbar"
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "bluetooth",
+        "pulseaudio",
+        "network",
+        "clock",
+        "clock#date",
+        "battery",
+        "tray",
+        "custom/notification",
+        "custom/power"
+    ],
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-active": "{icon}",
+        "on-click": "activate",
+        "all-outputs": true,
+        "active-only": false,
+        "persistent-workspaces": {
+          "*": 5
+        }
+    },
+    "hyprland/window": {
+        "tooltip": false,
+        "format": "<span font='9' rise='-4444'>{}</span>"
+    },
+    "tray": {
+        "spacing": 10,
+        "items": ["all"]
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "clock#date": {
+        "format": "{:%d.%m.%Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "backlight": {
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "on-click": "ags -t quicksettings"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}% {format_source}",
+        "format-bluetooth": " {icon} {volume}% {format_source}",
+        "format-bluetooth-muted": "  {icon} {format_source}",
+        "format-muted": "  {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": " <span foreground='red'><sup></sup></span>",
+        "none": " ",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": " ",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": " ",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": " "
+      },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+      "escape": true
+    },
+    "bluetooth": {
+      "format": " {status}",
+      "format-disabled": "",
+      "format-off": "",
+      "interval": 30,
+      "on-click": "blueman-manager",
+      "format-no-controller": ""
+    },
+    "network": {
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}",
+        "interval": 3,
+        "format-linked": "{ifname} (No IP) ",
+        "format": "",
+        "format-disconnected": "",
+        "tooltip-format": " {bandwidthUpBits}  {bandwidthDownBits}\n{ifname}\n{ipaddr}/{cidr}\n",
+        "tooltip-format-wifi": " {essid} {frequency}MHz\nStrength: {signaldBm}dBm ({signalStrength}%)\nIP: {ipaddr}/{cidr}\n {bandwidthUpBits}  {bandwidthDownBits}",
+        "min-length": 17,
+        "max-length": 17,
+    },
+    "custom/power": {
+       "format": "⏻",
+       "on-click": "wlogout",
+       "tooltip": false
+    },
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-size": 14,
+      "icon-theme": "Gruvbox Plus Dark",
+      "tooltip-format": "{title}",
+      "on-click": "activate",
+      "on-click-middle": "close",
+      "ignore-list": [
+          "Alacritty",
+          "kitty"
+      ],
+      "app_ids-mapping": {
+        "firefoxdeveloperedition": "firefox-developer-edition"
+      },
+      "rewrite": {
+        "Firefox Web Browser": "Firefox",
+        "Foot Server": "Terminal"
+      }
+    }
+}
+}

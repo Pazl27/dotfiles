@@ -1,0 +1,155 @@
+@import "gruvbox.css";
+
+* {
+    font-family: "Iosevka Nerd Font";
+    font-size: 16px;
+    min-height: 0;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+    background-color: @background;
+    color: @foreground;
+    transition-property: background-color;
+    transition-duration: 0.1s;
+}
+
+#window {
+    margin: 2;
+    padding-left: 8;
+    padding-right: 8;
+}
+
+button {
+    box-shadow: inset 0 -3px transparent;
+    border: none;
+    border-radius: 0;
+}
+
+button:hover {
+    background: inherit;
+    border-top: 2px solid @hover;
+}
+
+
+#workspaces button {
+  border-radius: 15px;
+  margin-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 2px;
+  padding-right: 10px;
+  font-weight: bolder;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  background-color: @lightred;
+  color: @lightbg;
+}
+
+#workspaces button.active {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 3px;
+  background-color: #689d6a;
+  color: @lightbg;
+}
+
+
+#pulseaudio,
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#wireplumber,
+#network,
+#tray,
+#mode,
+#bluetooth,
+#scratchpad {
+    margin: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#clock {
+    color: @maroon;
+    border-bottom: 2px solid @maroon;
+}
+
+#clock.date {
+    color: @mauve;
+    border-bottom: 2px solid @mauve;
+}
+
+#pulseaudio {
+    color: @blue;
+    border-bottom: 2px solid @blue;
+}
+
+#network {
+    color: @yellow;
+    border-bottom: 2px solid @yellow;
+}
+
+#bluetooth {
+  color: @yellow;
+  border-bottom: 2px solid @yellow;
+}
+
+#idle_inhibitor {
+    margin-right: 12px;
+    color: #7cb342;
+}
+
+#idle_inhibitor.activated {
+    color: @red;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @green;
+    border-bottom: 2px solid @green;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left>widget:first-child>#workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right>widget:last-child>#workspaces {
+    margin-right: 0;
+}
+
+#custom-vpn {
+    color: @lavender;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+#custom-power {
+    color: #282828;
+    background-color: #689d6a;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 14px;
+}
+
+#custom-notification {
+  background: @lightbg;
+  margin: 2px;
+  padding: 2px;
+  padding-left: 7px;
+  padding-right: 10px;
+
+  margin-top: 7px;
+  margin-bottom: 7px;
+  border-radius: 5px;
+}
