@@ -16,6 +16,14 @@
 - network-manager-applet
 - intellij-idea-ultimate-edition (yay)
     - need to set env variables for wm (hyrland or in /etc/environment)
+    - in /etc/environment: 
+    ```bash
+    BROWSER=firefox
+    EDITOR=nvim
+
+    JAVA_HOME=/usr/lib/jvm/java-22-openjdk
+    PATH="/usr/lib/jvm/java-22-openjdk/bin:/opt/intellij-idea-ultimate-edition/bin:$PATH"
+    ```
 - keepass (yay)
 - whatsapp-for-linux (yay)
 
