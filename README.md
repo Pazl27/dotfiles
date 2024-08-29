@@ -15,7 +15,9 @@
 - brave-bin (yay)
 - network-manager-applet
 - intellij-idea-ultimate-edition (yay)
+    - need to set env variables for wm (hyrland or in /etc/environment)
 - keepass (yay)
+- whatsapp-for-linux (yay)
 
 ## Hyprland
 - hyprland

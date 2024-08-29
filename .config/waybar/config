@@ -67,8 +67,8 @@
 
   "custom/launcher":{
       "format": " ",
-      "on-click": "alacritty",
-      "on-click-right": "killall alacritty"
+      "on-click": "kitty",
+      "on-click-right": "killall kitty"
   },
 
   "hyprland/workspaces": {

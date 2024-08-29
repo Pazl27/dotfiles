@@ -3,6 +3,12 @@
 # Add custom binaries to PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
+export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$PATH:/opt/intellij-idea-ultimate-edition/bin
+
+
+
 # Aliases
 alias ls='ls --color'
 alias grep='grep --color=auto'
