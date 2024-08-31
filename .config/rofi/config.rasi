@@ -72,7 +72,7 @@ entry {
 }
 
 inputbar {
-	background-image: url("~/.config/rofi/rofi.png", width);
+	background-image: url("~/.config/rofi/rofi3.png", width);
 	padding: 180 0 0;
 	margin: 0 0 0 0;
 } 
