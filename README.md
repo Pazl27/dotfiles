@@ -1,77 +1,18 @@
-# Packages
+<div align="center">
+    <h1>【 Hyprland dotfiles 】</h1>
+    <h3></h3>
+</div>
 
-## Programs
-- zsh
-- neofetch
-- alacritty
-- kitty
-- clion (yay)
-- visual-studio-code-bin (yay) 
-- nvim
-- spotify
-- oh-my-posh
-- bluemanager (bluetooth)
-- bluez (if not installed allready)
-- brave-bin (yay)
-- network-manager-applet
-- intellij-idea-ultimate-edition (yay)
-    - need to set env variables for wm (hyrland or in /etc/environment)
-    - in /etc/environment: 
-    ```bash
-    BROWSER=firefox
-    EDITOR=nvim
+<div align="center">
+    <h2>• overview •</h2>
+    <h3></h3>
+</div>
+- [Description](#description)
+- [Preview](#preview)
+- [Applications](#applications)
+- [Installation](#installation)
 
-    JAVA_HOME=/usr/lib/jvm/java-22-openjdk
-    PATH="/usr/lib/jvm/java-22-openjdk/bin:/opt/intellij-idea-ultimate-edition/bin:$PATH"
-    ```
-- keepass (yay)
-- whatsapp-for-linux (yay)
-
-## Hyprland
-- hyprland
-- swww
-- rofi
-- waybar
-- wlogout
-- swaylock (probllems executing)
-- hyprlock
-
-## Compiler
-- cargo (rust)
-- go 
-- jre21-openjdk 21.0.4.u7-1
-- jdk-openjdk 22.0.2.u9-1
-- python
-- python-pip (problems installing)
-- nodejs
-- npm
-- gcc
-- make 
-- cmake
-
-## Theme
-- gruvbox-plus-icon-theme
-- ttf-jetbrains-mono-nerd
-- ttf-iosevka-nerd
-
-## Nvim settings
-```lua
-vim.opt.clipboard = "unnamedplus"
-```
-- need for clipboard support
-```bash
-sudo pacman -S clipx
-```
-- program for system clipboard
-
-```bash
-sudo pacman -S luarocks
-sudo npm install -g neovim
-```
-- packages needed for nvim
-
-## System update
-```bash
-sudo pacman -Syu
-yay -Syu
-```
+<div align="center">
+    <h2>• description •</h2>
+    <h3></h3>
+</div>
