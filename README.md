@@ -1,31 +1,52 @@
-<div align="center">
-    <h1>【 Hyprland dotfiles 】</h1>
-</div>
+# 【 Hyprland dotfiles 】
 
-<div align="center">
-    <h2>• overview •</h2>
-</div>
+## Overview
+- [Description](#description)
+- [Preview](#preview)
+- [Applications](#applications)
+- [Installation](#installation)
 
-<ul>
-    <li><a href="#description">Description</a></li>
-    <li><a href="#preview">Preview</a></li>
-    <li><a href="#applications">Applications</a></li>
-    <li><a href="#installation">Installation</a></li>
-</ul>
+## Description
+This repository contains my personal dotfiles. The hole configuration is based around the colortheme **gruvbox**.
+This is my first attempt on a linux rice. I'm using Hyprland as my window manager.
 
-<div align="center" id="description">
-    <h2>• description •</h2>
-</div>
+## Preview
+![Preview](./screenshots/snapshot_2024-08-31_19-57-38.png)
+![Preview](./screenshots/snapshot_2024-08-31_19-57-04.png)
+![Preview](./screenshots/snapshot_2024-08-31_19-58-38.png)
 
-<div align="center" id="preview">
-    <h2>• preview •</h2>
-</div>
+## Applications
+- **Window Manager**: [Hyprland](https://hyprland.org/)
+- **Wallpaper**: Hyprpaper
+- **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/)
+- **Shell**: Zsh
+- **Editor**: [Neovim](https://neovim.io/)
+- **File Manager**: Nautilus
+- **Browser**: Brave
+- **Launcher**: [Rofi](https://github.com/lbonn/rofi)
+- **Bar**: [Hyprpanel](https://hyprpanel.com/)
+- **Notification**: [Hyprpanel](https://hyprpanel.com/)
+- **Terminal Prompt**: [Oh-My-Posh](https://ohmyposh.dev/)
+- **Neofetch**: [Neofetch](https://github.com/dylanaraps/neofetch)
 
-<div align="center" id="applications">
-    <h2>• applications •</h2>
-</div>
+This repository also contains some configurations for applications that I don't use anymore.
+These are:
+- **Bar**: Waybar
+- **Terminal**: Alacritty
+- swaylock
+- wlogout
 
-<div align="center" id="installation">
-    <h2>• installation •</h2>
-</div>
 
+## Installation
+1. Clone the repository
+```bash
+cd ~
+git clone https://github.com/Pazl27/dotfiles.git
+```
+2. Make shure you have the application installed that you want to use.
+3. Copy the configuration files to the `.config` directory
+```bash
+cd dotfiles
+cp -r -f .config/[dir_you_want_to_copy] ~/.config/
+```
+If you have existing configuration files you want to keep, make a backup of them before copying the new ones.
