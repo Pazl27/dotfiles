@@ -1,7 +1,6 @@
 -- set leader key to space
 vim.g.mapleader = " "
 
-
 local keymap = vim.keymap -- for conciseness
 
 local wk = require("paul.plugins.which-key")
@@ -19,9 +18,10 @@ vim.api.nvim_set_keymap('x', 'K', ":move '<-2<CR>gv=gv", { noremap = true, silen
 vim.api.nvim_set_keymap('x', 'J', ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
 
 -- Copy/past to/from system clipboard (with ctrl-c/ctrl-v)
-vim.opt.clipboard = "unnamedplus"
-vim.api.nvim_set_keymap('n', '<C-v>', '"+p', { noremap = true, silent = true })
+-- vim.opt.clipboard = "unnamedplus"
+vim.api.nvim_set_keymap('n', '<C-c>', '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<C-v>', '"+p', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', '<C-v>', '"+p', { noremap = true, silent = true })
 
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
@@ -41,6 +41,11 @@ keymap.set("n", "<C-h>", "<C-w>h", { desc = "Move cursor to window on the left" 
 keymap.set("n", "<C-j>", "<C-w>j", { desc = "Move cursor to window below" }) -- Move cursor to window below
 keymap.set("n", "<C-k>", "<C-w>k", { desc = "Move cursor to window above" }) -- Move cursor to window above
 keymap.set("n", "<C-l>", "<C-w>l", { desc = "Move cursor to window on the right" }) -- Move cursor to window on the right
+-- Nvim Tmux navigation
+keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Move cursor to window on the left" }) -- Move cursor to window on the left
+keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "Move cursor to window below" }) -- Move cursor to window below
+keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Move cursor to window above" }) -- Move cursor to window above
+keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Move cursor to window on the right" }) -- Move cursor to window on the right
 
 -- Buffer management
 keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Close buffer" }) -- close buffer
@@ -61,6 +66,13 @@ keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=horizontal<CR>", { desc
 keymap.set("t", "<esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 keymap.set("n", "<leader>tk", "<cmd>q<CR>", { desc = "Kill terminal" })
 keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Toggle floating terminal" })
+
+-- Vim-test
+keymap.set("n","<leader>ht", ":TestNearest<CR>", { desc = "Test nearest" })
+keymap.set("n","<leader>hT", ":TestFile<CR>" , { desc = "Test file" })
+keymap.set("n","<leader>ha", ":TestSuite<CR>" , { desc = "Test suite" })
+keymap.set("n","<leader>hl", ":TestLast<CR>" , { desc = "Test last" })
+keymap.set("n","<leader>hg", ":TestVisit<CR>" , { desc = "Test visit" })
 
 -- Copilot 
 keymap.set("n", "<leader>cc", "<cmd>CopilotChatToggle<CR>", { desc = "CopilotChat" })
