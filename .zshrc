@@ -6,13 +6,19 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/opt/intellij-idea-ultimate-edition/bin
+export BAT_THEME="gruvbox-dark"
 
-
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
 # Aliases
 alias ls='ls --color'
 alias grep='grep --color=auto'
 alias ..='cd ..'
+alias ll='ls -la'
+alias vim='nvim'
+alias cat='bat'
+alias fz='nvim $(fzf -m --preview="bat --color=always {}")'
 
 # Oh my posh setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"
@@ -56,3 +62,7 @@ setopt hist_find_no_dups
 # Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-color "${(s.:.)LS_COLORS}"
+
+# Language
+export LANG=en_US.UTF-8
+
