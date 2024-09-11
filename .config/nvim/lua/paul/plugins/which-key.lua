@@ -23,7 +23,7 @@ return {
     wk.add({ "<leader>b", group = "Buffers" })
     wk.add({ "<leader>f", group = "Telescope" })
     wk.add({ "<leader>s", group = "Window" })
-    wk.add({ "<leader>x", group = "LSP" })
+    wk.add({ "<leader>x", group = "Trouble" })
     wk.add({ "<leader>r", group = "Rename|Restart" })
     wk.add({ "<leader>q", group = "Quit" })
     wk.add({ "<leader>c", group = "CodeActions|Copilot" })
