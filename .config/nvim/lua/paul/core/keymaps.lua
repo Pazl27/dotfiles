@@ -74,6 +74,9 @@ keymap.set("n","<leader>ha", ":TestSuite<CR>" , { desc = "Test suite" })
 keymap.set("n","<leader>hl", ":TestLast<CR>" , { desc = "Test last" })
 keymap.set("n","<leader>hg", ":TestVisit<CR>" , { desc = "Test visit" })
 
+-- Lazygit
+keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
+
 -- Copilot 
 keymap.set("n", "<leader>cc", "<cmd>CopilotChatToggle<CR>", { desc = "CopilotChat" })
 

@@ -28,5 +28,6 @@ return {
     wk.add({ "<leader>q", group = "Quit" })
     wk.add({ "<leader>c", group = "CodeActions|Copilot" })
     wk.add({ "<leader>h", group = "Testing"})
+    wk.add({ "<leader>l", group = "Git"})
   end,
 }

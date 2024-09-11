@@ -17,8 +17,10 @@ alias grep='grep --color=auto'
 alias ..='cd ..'
 alias ll='ls -la'
 alias vim='nvim'
-alias cat='bat'
-alias fz='nvim $(fzf -m --preview="bat --color=always {}")'
+# alias cat='bat'
+alias f='nvim $(fzf -m --preview="bat --color=always {}")'
+alias fd='cd $(find ~ -type d -print | fzf)'
+alias fdv='cd $(find ~ -type d -print | fzf) && nvim'
 
 # Oh my posh setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"
