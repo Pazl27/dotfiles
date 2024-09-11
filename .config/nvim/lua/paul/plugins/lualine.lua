@@ -12,7 +12,8 @@ return {
       yellow = "#fabd2f", -- gruvbox yellow
       red = "#cc241d", -- gruvbox red
       fg = "#fbf1c7", -- gruvbox fg0
-      bg = "#3c3836", -- gruvbox bg1
+      -- bg = "#3c3836", -- gruvbox medium
+      bg = "#1D2021", -- gruvbox dark
       inactive_bg = "#d65d0e", -- gruvbox orange
     }
 
