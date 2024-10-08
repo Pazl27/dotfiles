@@ -1,5 +1,3 @@
-# Created by newuser for 5.9
-
 # Add custom binaries to PATH
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
@@ -17,10 +15,11 @@ alias grep='grep --color=auto'
 alias ..='cd ..'
 alias ll='ls -la'
 alias vim='nvim'
-# alias cat='bat'
+alias v='nvim'
 alias f='nvim $(fzf -m --preview="bat --color=always {}")'
-alias fd='cd $(find ~ -type d -print | fzf)'
+alias fd='~/.config/scripts/fzf-tmux.sh'
 alias fdv='cd $(find ~ -type d -print | fzf) && nvim'
+alias t='~/.config/scripts/start-tmux.sh'
 
 # Oh my posh setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"
