@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SESSION_NAME="notes"
-TARGET_DIR="$HOME/notes_vault/personal/"
+TARGET_DIR="$HOME/notes/personal/"
 
 if tmux has-session -t $SESSION_NAME 2>/dev/null; then
   # If already in tmux, switch to the session instead of nesting
