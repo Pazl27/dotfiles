@@ -1,10 +1,10 @@
 # Add custom binaries to PATH
-export PATH="$HOME/.emacs.d/bin:$PATH"
-
-export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-23-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
-export PATH=$PATH:/opt/intellij-idea-ultimate-edition/bin
+# export PATH=$PATH:/opt/intellij-idea-ultimate-edition/bin
 export BAT_THEME="gruvbox-dark"
+
+export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -17,9 +17,11 @@ alias ll='ls -la'
 alias vim='nvim'
 alias v='nvim'
 alias f='nvim $(fzf -m --preview="bat --color=always {}")'
-alias fd='~/.config/scripts/fzf-tmux.sh'
+alias ft='~/.config/scripts/fzf-tmux.sh'
+alias fd='cd $(find ~ -type d -print | fzf)'
 alias fdv='cd $(find ~ -type d -print | fzf) && nvim'
 alias t='~/.config/scripts/start-tmux.sh'
+alias c='clear'
 
 # Oh my posh setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"

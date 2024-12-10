@@ -61,12 +61,6 @@ keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", { desc = "Live gre
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Buffers" })
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Help tags" })
 
--- Terminal
-keymap.set("n", "<leader>tt", "<cmd>ToggleTerm direction=horizontal<CR>", { desc = "Toggle terminal" })
-keymap.set("t", "<esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
-keymap.set("n", "<leader>tk", "<cmd>q<CR>", { desc = "Kill terminal" })
-keymap.set("n", "<leader>tf", "<cmd>ToggleTerm direction=float<CR>", { desc = "Toggle floating terminal" })
-
 -- Vim-test
 keymap.set("n","<leader>ht", ":TestNearest<CR>", { desc = "Test nearest" })
 keymap.set("n","<leader>hT", ":TestFile<CR>" , { desc = "Test file" })
@@ -74,8 +68,9 @@ keymap.set("n","<leader>ha", ":TestSuite<CR>" , { desc = "Test suite" })
 keymap.set("n","<leader>hl", ":TestLast<CR>" , { desc = "Test last" })
 keymap.set("n","<leader>hg", ":TestVisit<CR>" , { desc = "Test visit" })
 
--- Lazygit
-keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "LazyGit" })
+-- Git
+vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
+vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle current line blame" })
 
 -- Copilot 
 keymap.set("n", "<leader>cc", "<cmd>CopilotChatToggle<CR>", { desc = "CopilotChat" })

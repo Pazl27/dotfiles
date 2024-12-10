@@ -10,15 +10,6 @@ return {
 
     local wk = require("which-key")
 
-    -- wk.register({ t = { name = "Tabs|Terminal" } }, { prefix = "<leader>"}) -- register a prefix
-    -- wk.register({ b = { name = "Buffers" } }, { prefix = "<leader>"}) -- register a prefix
-    -- wk.register({ f = { name = "Telescope" } }, { prefix = "<leader>"}) -- register a prefix
-    -- wk.register({ s = { name = "Window" } }, { prefix = "<leader>"}) -- register a prefix
-    -- wk.register({ x = { name = "LSP" } }, { prefix = "<leader>"}) -- register a prefix
-    -- wk.register({ r = { name = "Rename|Restart" } }, { prefix = "<leader>"}) -- register a prefix
-    -- wk.register({ q = { name = "Quit" } }, { prefix = "<leader>"}) -- register a prefix
-    -- wk.register({ c = { name = "CodeActions|Copilot" } }, { prefix = "<leader>"}) -- register a prefix
-
     wk.add({ "<leader>t", group = "Tabs|Terminal" })
     wk.add({ "<leader>b", group = "Buffers" })
     wk.add({ "<leader>f", group = "Telescope" })
@@ -28,6 +19,6 @@ return {
     wk.add({ "<leader>q", group = "Quit" })
     wk.add({ "<leader>c", group = "CodeActions|Copilot" })
     wk.add({ "<leader>h", group = "Testing"})
-    wk.add({ "<leader>l", group = "Git"})
+    wk.add({ "<leader>g", group = "Git"})
   end,
 }
