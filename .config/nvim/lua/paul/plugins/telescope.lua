@@ -72,6 +72,8 @@ return {
         },
         pickers = {
           find_files = {
+            hidden = true,
+            follow = true,
             previewer = true,
             path_display = formattedName,
             layout_config = {
