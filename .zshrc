@@ -1,7 +1,6 @@
 # Add custom binaries to PATH
 export JAVA_HOME=/usr/lib/jvm/java-23-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
-# export PATH=$PATH:/opt/intellij-idea-ultimate-edition/bin
 export BAT_THEME="gruvbox-dark"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
