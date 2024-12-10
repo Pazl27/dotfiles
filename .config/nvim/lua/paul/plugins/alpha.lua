@@ -190,7 +190,7 @@ return {
         dashboard.button("f", "󰈞 " .. "Find file", "<cmd>Telescope find_files<CR>"),
         dashboard.button("g", "󰊄 " .. "Live grep", "<cmd>Telescope live_grep<CR>"),
         dashboard.button("r", " " .. "Recent files", "<cmd> Telescope oldfiles <cr>"),
-        dashboard.button("o", "󰇈 " .. "Obsidian", "<cmd>cd ~/notes_vault/personal<CR>"),
+        dashboard.button("o", "󰇈 " .. "Obsidian", "<cmd>cd ~/notes/personal<CR>"),
         dashboard.button("c", " " .. "Configuration", "<cmd>cd ~/.config/nvim/<CR><cmd>edit $MYVIMRC<CR>"),
         dashboard.button("u", " " .. "Update plugins", "<cmd>Lazy sync<CR>"),
         dashboard.button("l", "󰒲 " .. "Lazy", "<cmd> Lazy <cr>"),
