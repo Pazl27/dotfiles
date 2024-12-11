@@ -1,0 +1,9 @@
+screenshots
+
+\.git
+\.gitignore
+\.gitmodules
+
+^/README.*
+^/LICENSE.*
+^/COPYING
