@@ -68,3 +68,4 @@ zstyle ':completion:*' list-color "${(s.:.)LS_COLORS}"
 
 # Language
 export LANG=en_US.UTF-8
+export PATH="$HOME/.cargo/bin:$PATH"
