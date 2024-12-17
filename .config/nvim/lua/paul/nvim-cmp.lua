@@ -1,1 +1,0 @@
-plugins/nvim-cmp.lua

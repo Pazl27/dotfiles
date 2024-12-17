@@ -68,6 +68,20 @@ keymap.set("n","<leader>ha", ":TestSuite<CR>" , { desc = "Test suite" })
 keymap.set("n","<leader>hl", ":TestLast<CR>" , { desc = "Test last" })
 keymap.set("n","<leader>hg", ":TestVisit<CR>" , { desc = "Test visit" })
 
+-- Dap
+local map = vim.keymap.set
+map("n", "<Leader>di", "<cmd>lua require'dap'.step_into()<CR>", { desc = "Debugger step into" })
+map("n", "<Leader>do", "<cmd>lua require'dap'.step_over()<CR>", { desc = "Debugger step over" })
+map("n", "<Leader>dk", "<cmd>lua require'dap'.step_out()<CR>", { desc = "Debugger step out" })
+map("n", "<Leader>dc", "<cmd>lua require'dap'.continue()<CR>", { desc = "Debugger continue" })
+map("n", "<Leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<CR>", { desc = "Debugger toggle breakpoint" })
+map("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugger reset" })
+map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
+map("n", "<leader>dx", ":DapTerminate<CR>", { desc = "Debugger terminate" })
+
+-- rustaceanvim
+map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
+
 -- Git
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
 vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle current line blame" })

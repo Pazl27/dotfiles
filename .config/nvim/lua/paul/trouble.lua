@@ -1,1 +1,0 @@
-plugins/trouble.lua
