@@ -14,7 +14,8 @@ return {
       fg = "#fbf1c7", -- gruvbox fg0
       -- bg = "#3c3836", -- gruvbox medium
       bg = "#1D2021", -- gruvbox dark
-      inactive_bg = "#d65d0e", -- gruvbox orange
+      -- inactive_bg = "#d65d0e", -- gruvbox orange
+      inactive_bg = "#202323", -- gruvbox gray
     }
 
     local my_lualine_theme = {

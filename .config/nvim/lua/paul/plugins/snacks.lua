@@ -9,7 +9,7 @@ return {
     indent = { enabled = true },
     notifier = {
       enabled = true,
-      timeout = 3000,
+      timeout = 2000,
     },
     quickfile = { enabled = true },
     statuscolumn = { enabled = true },
