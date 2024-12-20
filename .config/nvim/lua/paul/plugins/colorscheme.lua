@@ -20,13 +20,6 @@ return {
     end,
   },
   {
-    "rebelot/kanagawa.nvim",
-    priority = 1000,
-    config = function()
-      -- vim.cmd("colorscheme kanagawa")
-    end,
-  },
-  {
     "ellisonleao/gruvbox.nvim",
     name = "gruvbox",
     priority = 1000,
@@ -41,14 +34,11 @@ return {
     end,
   },
   {
-    "luisiacc/gruvbox-baby",
+    "ajmwagar/vim-deus",
     priority = 1000,
     config = function()
-      vim.g.gruvbox_baby_highlights = {Normal = {fg = "#123123", bg = "NONE", style="underline"}}
-      vim.g.gruvbox_baby_telescope_theme = 1
-      vim.g.gruvbox_baby_transparent_mode = 1
-      -- vim.cmd("colorscheme gruvbox-baby")
+      -- vim.cmd("colorscheme deus")
     end,
-  },
+  }
 
 }

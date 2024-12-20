@@ -3,6 +3,11 @@ return {
   version = '^5', -- Recommended
   lazy = false,   -- This plugin is already lazy
   ft = "rust",
+  [ "rust-analyser" ] = {
+    cargo = {
+      allFeatures = true,
+    }
+  },
   config = function()
     local mason_registry = require('mason-registry')
     local codelldb = mason_registry.get_package("codelldb")
@@ -13,24 +18,24 @@ return {
     local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
     local cfg = require('rustaceanvim.config')
 
+
+    -- KEYMAPS
+    vim.keymap.set("n", "<leader>ca", "<cmd>:RustLsp codeAction<CR>", { desc = "Rust Code action" })
+    vim.keymap.set("n", "<leader>dd", "<cmd>:RustLsp renderDiagnostic current<CR>", { desc = "Line diagnostic"})
+    vim.keymap.set("n", "<leader>D", "<cmd>:RustLsp explainError current<CR>", { desc = "Explain error"})
+    vim.keymap.set("n", "<leader>K", "<cmd>:RustLsp openDocs<CR>", { desc = "Open documentation in browser"})
+    vim.keymap.set("n", "K",  -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
+      function()
+        vim.cmd.RustLsp({'hover', 'actions'})
+      end,
+      { silent = true, buffer = bufnr }
+    )
+
+
     vim.g.rustaceanvim = {
       dap = {
         adapter = cfg.get_codelldb_adapter(codelldb_path, liblldb_path),
       },
-      server = {
-        cmd = function()
-          if mason_registry.is_installed('rust-analyzer') then
-            -- This may need to be tweaked depending on the operating system.
-            local ra = mason_registry.get_package('rust-analyzer')
-            local ra_filename = ra:get_receipt():get().links.bin['rust-analyzer']
-            return { ('%s/%s'):format(ra:get_install_path(), ra_filename or 'rust-analyzer') }
-          else
-            -- global installation
-            return { 'rust-analyzer' }
-          end
-        end,
-      },
-
     }
   end
 }
