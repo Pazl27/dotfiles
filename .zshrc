@@ -3,6 +3,8 @@ export JAVA_HOME=/usr/lib/jvm/java-23-openjdk
 export PATH=$JAVA_HOME/bin:$PATH
 export BAT_THEME="gruvbox-dark"
 export PATH=$HOME/.local/bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$HOME/.cache/pokemon-icat:$PATH
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
@@ -68,4 +70,3 @@ zstyle ':completion:*' list-color "${(s.:.)LS_COLORS}"
 
 # Language
 export LANG=en_US.UTF-8
-export PATH="$HOME/.cargo/bin:$PATH"
