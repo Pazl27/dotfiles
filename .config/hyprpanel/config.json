@@ -374,5 +374,6 @@
   "theme.font.name": "JetBrainsMonoNL Nerd Font Propo Italic",
   "menus.dashboard.powermenu.avatar.name": "Paul",
   "theme.bar.transparent": false,
-  "bar.workspaces.workspaces": 7
+  "bar.workspaces.workspaces": 7,
+  "menus.dashboard.shortcuts.left.shortcut1.icon": ""
 }
