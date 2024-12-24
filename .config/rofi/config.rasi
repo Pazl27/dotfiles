@@ -1,14 +1,14 @@
 @theme "/dev/null"
 
 * {
-        bg: #3c3836;
+  bg: #3c3836;
 	background-color: @bg;
 }
 
 
 configuration {
 	show-icons: true;
-		icon-theme: "Papirus";
+	icon-theme: "Papirus";
 	location: 0;
 	font: "CaskaydiaCove Nerd Font 12";	
 	display-drun: "";
@@ -24,8 +24,8 @@ window {
 	width: 35%;
 	transparency: "real";
 	orientation: vertical;
-	border-color: #a89984;
-        border-radius: 15px;
+  border-color: #a89984;
+  border-radius: 15px;
 }
 
 mainbox {
@@ -38,7 +38,7 @@ mainbox {
 element {
 	padding: 4 12;
 	text-color: #EFE7DD;
-        border-radius: 10px;
+  border-radius: 10px;
 }
 
 element selected {
@@ -70,11 +70,6 @@ listview {
 // INPUT BAR 
 //------------------------------------------------
 
-input {
-  children: [inputbar, mode-switcher];
-}
-
-
 entry {
 	text-color: #EFE7DD;
 	padding: 10 10 0 0;
@@ -82,7 +77,7 @@ entry {
 }
 
 inputbar {
-	background-image: url("~/.config/rofi/rofi3.png", width);
+	background-image: url("~/.config/rofi/girl-3.png", width);
 	padding: 180 0 0;
 	margin: 0 0 0 0;
 } 

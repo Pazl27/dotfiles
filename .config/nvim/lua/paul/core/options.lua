@@ -39,3 +39,6 @@ opt.swapfile = false
 
 -- for obsidian
 opt.conceallevel = 2
+
+-- colors
+vim.o.termguicolors = true
