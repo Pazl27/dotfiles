@@ -12,6 +12,12 @@ configuration {
 	location: 0;
 	font: "CaskaydiaCove Nerd Font 12";	
 	display-drun: "";
+  
+  /* for custom ones do Test:~/path/to/file */
+  modi: "drun,window,ssh";
+  display-drun: " ";
+  display-window: "  ";
+  display-ssh: "󱘖 ";
 }
 
 window { 
@@ -25,7 +31,6 @@ window {
 mainbox {
 	children: [inputbar, listview];
 }
-
 
 // ELEMENT
 // -----------------------------------
@@ -53,7 +58,7 @@ element-icon {
 }
 
 listview {
-	columns: 2;
+	columns: 1;
 	lines: 9;
 	padding: 8 0;
 	fixed-height: true;
@@ -64,6 +69,11 @@ listview {
 
 // INPUT BAR 
 //------------------------------------------------
+
+input {
+  children: [inputbar, mode-switcher];
+}
+
 
 entry {
 	text-color: #EFE7DD;
@@ -87,24 +97,15 @@ prompt {
 //------------------------------------------------
 
 configuration {
-  kb-row-up: "Up,Control+k,Shift+Tab,Shift+ISO_Left_Tab";
+  kb-mode-complete: "";
+  kb-element-next: "";
+  kb-element-prev: "";
+  kb-row-up: "Up,Control+k,";
   kb-row-down: "Down,Control+j";
   kb-accept-entry: "Control+m,Return,KP_Enter";
   terminal: "mate-terminal";
   kb-remove-to-eol: "Control+Shift+e";
-  /*kb-mode-next: "Shift+Right,Control+Tab,Control+l";*/
-  kb-mode-previous: "Shift+Left,Control+Shift+Tab,Control+h";
+  kb-mode-next: "Tab,Shift+Right,Control+l";
+  kb-mode-previous: "ISO_Left_Tab,Shift+Left,Control+h";
   kb-remove-char-back: "BackSpace";
 }
-
-
-
-
-
-
-
-
-
-
-
-
