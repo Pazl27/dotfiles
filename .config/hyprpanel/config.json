@@ -1,7 +1,7 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
   "menus.clock.weather.location": "Los Angeles",
-  "menus.dashboard.powermenu.avatar.image": "/home/paul/Pictures/wallpaper/gruvbox/minimalistic/smile.png",
+  "menus.dashboard.powermenu.avatar.image": "/home/paul/Pictures/wallpaper/gruvbox/minimalistic/moon.png",
   "menus.dashboard.shortcuts.left.shortcut1.command": "microsoft-edge-stable",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Microsoft Edge",
   "menus.dashboard.directories.left.directory1.label": "󰉍  Downloads",
