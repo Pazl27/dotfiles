@@ -20,17 +20,19 @@ return {
 
 
     -- KEYMAPS
-    vim.keymap.set("n", "<leader>ca", "<cmd>:RustLsp codeAction<CR>", { desc = "Rust Code action" })
-    vim.keymap.set("n", "<leader>dd", "<cmd>:RustLsp renderDiagnostic current<CR>", { desc = "Line diagnostic"})
-    vim.keymap.set("n", "<leader>D", "<cmd>:RustLsp explainError current<CR>", { desc = "Explain error"})
-    vim.keymap.set("n", "<leader>K", "<cmd>:RustLsp openDocs<CR>", { desc = "Open documentation in browser"})
+    vim.keymap.set("n", "<leader>ra", "<cmd>:RustLsp codeAction<CR>", { desc = "Rust Code action" })
+    vim.keymap.set("n", "<leader>rd", "<cmd>:RustLsp renderDiagnostic current<CR>", { desc = "Line diagnostic"})
+    vim.keymap.set("n", "<leader>rD", "<cmd>:RustLsp explainError current<CR>", { desc = "Explain error"})
+    vim.keymap.set("n", "<leader>rO", "<cmd>:RustLsp openDocs<CR>", { desc = "Open documentation in browser"})
     vim.keymap.set("n", "K",  -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
       function()
         vim.cmd.RustLsp({'hover', 'actions'})
       end,
       { silent = true, buffer = bufnr }
     )
-
+    -- rustaceanvim
+    vim.keymap.set("n", "<Leader>rt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
+    vim.keymap.set("n", "<leader>rf", "<cmd>:RustFmt<CR>", { desc = "Format Rust buffer" })
 
     vim.g.rustaceanvim = {
       dap = {

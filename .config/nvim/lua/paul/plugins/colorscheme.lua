@@ -5,19 +5,24 @@ return {
     priority = 1000,
     config = function()
       vim.g.gruvbox_material_transparent_background = 0
-      vim.g.gruvbox_material_foreground = "medium"  -- mix, material, original
-      vim.g.gruvbox_material_background = "medium"  -- soft, medium, hard
+      vim.g.gruvbox_material_foreground = "original" -- mix, material, original
+      vim.g.gruvbox_material_background = "hard"     -- soft, medium, hard
       vim.g.gruvbox_material_ui_contrast = "high"   -- The contrast of line numbers, indent lines, etc.
-      vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
-      vim.g.gruvbox_material_statusline_style = "original"
-      vim.g.gruvbox_material_cursor = "auto"
+      vim.g.gruvbox_material_float_style = "bright"  -- Background of floating windows (dim, bright)
+      -- vim.g.gruvbox_material_dim_inactive_windows = 1
 
-      -- vim.g.gruvbox_material_colors_override = { bg0 = '#000000' } -- #0e1010
-      -- vim.g.gruvbox_material_colors_override = { bg0 = "#121212" }
       vim.g.gruvbox_material_better_performance = 0
 
-      -- vim.cmd.colorscheme("gruvbox-material")
+      vim.cmd.colorscheme("gruvbox-material")
     end,
+  },
+  {
+    {
+      "the-argus/banner.nvim",
+      config = function()
+        -- vim.cmd('colorscheme base16-gruvbox-dark-hard')
+      end,
+    },
   },
   {
     "ellisonleao/gruvbox.nvim",

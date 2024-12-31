@@ -79,8 +79,6 @@ map("n", "<Leader>de", "<cmd>lua require'dap'.terminate()<CR>", { desc = "Debugg
 map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugger run last" })
 map("n", "<leader>dx", ":DapTerminate<CR>", { desc = "Debugger terminate" })
 
--- rustaceanvim
-map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
 
 -- Git
 vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
