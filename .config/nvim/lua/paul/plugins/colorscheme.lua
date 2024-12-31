@@ -9,6 +9,8 @@ return {
       vim.g.gruvbox_material_background = "hard"     -- soft, medium, hard
       vim.g.gruvbox_material_ui_contrast = "high"   -- The contrast of line numbers, indent lines, etc.
       vim.g.gruvbox_material_float_style = "bright"  -- Background of floating windows (dim, bright)
+      vim.g.gruvbox_material_diagnostic_line_highlight = 1
+      vim.g.gruvbox_material_diagnostic_virtual_text = "highlighted"
       -- vim.g.gruvbox_material_dim_inactive_windows = 1
 
       vim.g.gruvbox_material_better_performance = 0
