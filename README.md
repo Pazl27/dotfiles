@@ -15,9 +15,9 @@ This configuration is used on my school laptop. I'm mostly using it for programm
 It also conations my neovim configuration which is set up to work with go, python, rust and c++.
 
 ## Preview
-![Preview](./screenshots/snapshot_2024-08-31_19-57-38.png)
-![Preview](./screenshots/snapshot_2024-08-31_19-57-04.png)
-![Preview](./screenshots/snapshot_2024-08-31_19-58-38.png)
+![Preview](./screenshots/snapshot_2025-01-04_00-46-37.png)
+![Preview](./screenshots/snapshot_2025-01-04_00-56-24.png)
+![Preview](./screenshots/snapshot_2025-01-04_00-47-33.png)
 
 ## Applications
 - **Window Manager**: [Hyprland](https://hyprland.org/)
@@ -26,20 +26,21 @@ It also conations my neovim configuration which is set up to work with go, pytho
 - **Shell**: Zsh
 - **Editor**: [Neovim](https://neovim.io/)
 - **File Manager**: Nautilus
-- **Browser**: Brave
+- **Browser**: Vivaldi
 - **Launcher**: [Rofi](https://github.com/lbonn/rofi)
 - **Bar**: [Hyprpanel](https://hyprpanel.com/)
 - **Notification**: [Hyprpanel](https://hyprpanel.com/)
 - **Terminal Prompt**: [Oh-My-Posh](https://ohmyposh.dev/)
 - **Neofetch**: [Neofetch](https://github.com/dylanaraps/neofetch)
+- **Fastfetch**: [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
 
 This repository also contains some configurations for applications that I don't use anymore.
 These are:
 - **Bar**: Waybar
 - **Terminal**: Alacritty
-- swaylock
-- wlogout
-
+- **File Explorer**: Yazi
+- **Git**: Lazygit
+- **Terminal Multiplexer**: Tmux
 
 ## Installation
 1. Clone the repository
