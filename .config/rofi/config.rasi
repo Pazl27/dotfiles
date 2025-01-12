@@ -64,7 +64,6 @@ listview {
 	fixed-height: true;
 	fixed-columns: true;
 	fixed-lines: true;
-	border: 0 10 6 10;
 }
 
 // INPUT BAR 
@@ -84,7 +83,7 @@ inputbar {
 
 prompt {
 	text-color: #aaffaa;
-	padding: 10 6 0 10;
+	padding: 11 10 0 10;
 	margin: 0 -2 0 0;
 }
 

@@ -7,6 +7,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$HOME/.cache/pokemon-icat:$PATH
 
 export _JAVA_AWT_WM_NONREPARENTING=1
+export BROWSER=vivaldi
+
+# Language
+export LANG=en_US.UTF-8
 
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
@@ -68,5 +72,5 @@ setopt hist_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 zstyle ':completion:*' list-color "${(s.:.)LS_COLORS}"
 
-# Language
-export LANG=en_US.UTF-8
+# Pokemon
+pokemon-icat
