@@ -28,6 +28,7 @@ alias fd='cd $(find ~ -type d -print | fzf)'
 alias fdv='cd $(find ~ -type d -print | fzf) && nvim'
 alias t='~/.config/scripts/start-tmux.sh'
 alias c='clear'
+alias zed='zeditor'
 
 # Oh my posh setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"

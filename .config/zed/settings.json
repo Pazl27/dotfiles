@@ -1,0 +1,53 @@
+{
+  "vim_mode": true,
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "ui_font_size": 16,
+  "buffer_font_size": 16,
+  "base_keymap": null,
+  "relative_line_numbers": true,
+  "cursor_blink": false,
+  "autosave": "on_focus_change",
+  "tab_bar": {
+    "show": true
+  },
+  "indent_guides": {
+    "enabled": true
+  },
+  "inlay_hints": {
+    "enabled": false
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "buffer_line_height": {
+    "custom": 1.5
+  },
+  "terminal": {
+    "font_family": "JetBrainsMono Nerd Font",
+    "font_size": 15,
+    "line_height": {
+      "custom": 1.5
+    }
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Dark Hard",
+    "dark": "One Dark"
+  },
+  "experimental.theme_overrides": {
+    "players": [
+      {
+        "cursor": "#FB4934",
+        "background": "#8d3250ff",
+        "selection": "#8d32503d"
+      }
+    ]
+  },
+  "assistant": {
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  }
+}
