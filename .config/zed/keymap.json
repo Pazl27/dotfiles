@@ -1,5 +1,12 @@
 [
   {
+    // global key bindings
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrev"
+    }
+  },
+  {
     "context": "VimControl && !menu",
     "bindings": {
       // Put key bindings here if you want them to work in normal & visual mode.
@@ -11,8 +18,12 @@
       "space f b": "tab_switcher::Toggle",
       "space b d": "pane::CloseActiveItem",
       ":": "command_palette::Toggle",
-      "space s v": "pane::SplitLeft",
+      "space s v": "pane::SplitVertical",
+      "space s h": "pane::SplitHorizontal",
+
       "space c c": "assistant::NewContext",
+      "space c i": "assistant::InlineAssist",
+
       "shift-u": "editor::Redo",
 
       "space f f": "file_finder::Toggle",
@@ -23,11 +34,14 @@
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
       "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
 
-      // "ctrl-c": "editor::Copy",
-      // "ctrl-v": "editor::Paste",
-      // "ctrl-x": "editor::Cut",
+      "ctrl-c": "editor::Copy",
+      "ctrl-v": "editor::Paste",
+      "ctrl-x": "editor::Cut",
 
-      "space g p": "editor::ToggleHunkDiff"
+      "space g p": "editor::ToggleHunkDiff",
+      "space g b": "editor::ToggleGitBlame",
+
+      "space t t": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -58,7 +72,9 @@
       // Put key bindings here (in addition to the context above) if you want them to
       // work when no editor exists.
       "space f f": "file_finder::Toggle",
-      "space e": "workspace::ToggleLeftDock"
+      "space e": "workspace::ToggleLeftDock",
+      "space b d": "pane::CloseActiveItem",
+      "space t t": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -84,10 +100,10 @@
   {
     "context": "Dock",
     "bindings": {
-      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
     }
   },
   {
@@ -95,14 +111,6 @@
     "bindings": {
       "ctrl-k": "editor::ContextMenuPrev",
       "ctrl-j": "editor::ContextMenuNext"
-    }
-  },
-  {
-    "context": "FileFinder || menu",
-    "bindings": {
-      // ctrl-k does not work
-      "ctrl-k": "menu::SelectPrev",
-      "ctrl-j": "menu::SelectNext"
     }
   }
 ]
