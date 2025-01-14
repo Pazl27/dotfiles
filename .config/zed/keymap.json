@@ -43,7 +43,9 @@
 
       "space t t": "workspace::ToggleBottomDock",
 
-      "space w r": "projects::OpenRecent"
+      "space w r": "projects::OpenRecent",
+
+      "space q a": "zed::Quit"
     }
   },
   {
@@ -77,7 +79,8 @@
       "space e": "workspace::ToggleLeftDock",
       "space b d": "pane::CloseActiveItem",
       "space t t": "workspace::ToggleBottomDock",
-      "space w r": "projects::OpenRecent"
+      "space w r": "projects::OpenRecent",
+      "space q a": "zed::Quit"
     }
   },
   {
