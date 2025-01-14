@@ -4,6 +4,7 @@
     "toggle_relative_line_numbers": true,
     "use_system_clipboard": "never"
   },
+  "vertical_scroll_margin": 8,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 16,
   "buffer_font_size": 16,

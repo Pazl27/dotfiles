@@ -41,7 +41,9 @@
       "space g p": "editor::ToggleHunkDiff",
       "space g b": "editor::ToggleGitBlame",
 
-      "space t t": "workspace::ToggleBottomDock"
+      "space t t": "workspace::ToggleBottomDock",
+
+      "space w r": "projects::OpenRecent"
     }
   },
   {
@@ -74,7 +76,8 @@
       "space f f": "file_finder::Toggle",
       "space e": "workspace::ToggleLeftDock",
       "space b d": "pane::CloseActiveItem",
-      "space t t": "workspace::ToggleBottomDock"
+      "space t t": "workspace::ToggleBottomDock",
+      "space w r": "projects::OpenRecent"
     }
   },
   {
