@@ -12,7 +12,6 @@
       // Put key bindings here if you want them to work in normal & visual mode.
       "shift-k": "editor::Hover",
       "space r n": "editor::Rename",
-      "space c a": "editor::ToggleCodeActions",
       "space x f": "editor::Format",
       "space d": "diagnostics::Deploy",
       "space f b": "tab_switcher::Toggle",
@@ -21,12 +20,15 @@
       "space s v": "pane::SplitVertical",
       "space s h": "pane::SplitHorizontal",
 
-      "space c c": "assistant::NewContext",
+      "space c a": "editor::ToggleCodeActions",
+
+      "space c c": "workspace::ToggleRightDock",
       "space c i": "assistant::InlineAssist",
 
       "shift-u": "editor::Redo",
 
       "space f f": "file_finder::Toggle",
+      "space f t": "task::Spawn",
       "space e": "workspace::ToggleLeftDock",
 
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
@@ -109,7 +111,8 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-x": "workspace::ToggleBottomDock"
     }
   },
   {
