@@ -4,6 +4,7 @@
     "toggle_relative_line_numbers": true,
     "use_system_clipboard": "never"
   },
+  "extend_comment_on_newline": false,
   "vertical_scroll_margin": 8,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 16,
@@ -27,6 +28,7 @@
     "custom": 1.5
   },
   "terminal": {
+    "dock": "bottom",
     "font_family": "JetBrainsMono Nerd Font",
     "font_size": 15,
     "line_height": {

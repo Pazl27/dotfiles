@@ -39,6 +39,7 @@
       "ctrl-c": "editor::Copy",
       "ctrl-v": "editor::Paste",
       "ctrl-x": "editor::Cut",
+      "ctrl-a": "editor::SelectAll",
 
       "space g p": "editor::ToggleHunkDiff",
       "space g b": "editor::ToggleGitBlame",
@@ -65,7 +66,11 @@
     "bindings": {
       "shift-y": ["workspace::SendKeystrokes", "y $"],
       "tab": "pane::ActivateNextItem",
-      "shift-tab": "pane::ActivatePrevItem"
+      "shift-tab": "pane::ActivatePrevItem",
+      "ctrl-c": "editor::Copy",
+      "ctrl-v": "editor::Paste",
+      "ctrl-x": "editor::Cut",
+      "ctrl-a": "editor::SelectAll"
     }
   },
   {
@@ -82,7 +87,11 @@
       "space b d": "pane::CloseActiveItem",
       "space t t": "workspace::ToggleBottomDock",
       "space w r": "projects::OpenRecent",
-      "space q a": "zed::Quit"
+      "space q a": "zed::Quit",
+      "ctrl-c": "editor::Copy",
+      "ctrl-v": "editor::Paste",
+      "ctrl-x": "editor::Cut",
+      "ctrl-a": "editor::SelectAll"
     }
   },
   {
