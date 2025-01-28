@@ -19,7 +19,10 @@ source <(fzf --zsh)
 alias ls='ls --color'
 alias grep='grep --color=auto'
 alias ..='cd ..'
-alias ll='ls -la'
+alias ...='cd ../..'
+alias cd='z'
+alias ls='exa'
+alias ll='exa -la --icons'
 alias vim='nvim'
 alias v='nvim'
 alias ff='nvim $(fzf -m --preview="bat --color=always {}")'
@@ -32,6 +35,7 @@ alias zed='zeditor'
 
 # Oh my posh setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"
+eval "$(zoxide init zsh)"
 
 # Pluginmanager zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"

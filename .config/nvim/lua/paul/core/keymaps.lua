@@ -14,6 +14,8 @@ vim.api.nvim_set_keymap('n', 'U', '<C-r>', { noremap = true })
 
 vim.api.nvim_set_keymap('x', 'K', ":move '<-2<CR>gv=gv", { noremap = true, silent = true })
 vim.api.nvim_set_keymap('x', 'J', ":move '>+1<CR>gv=gv", { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<Tab>', '>gv', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
 
 -- Copy/past to/from system clipboard (with ctrl-c/ctrl-v)
 -- vim.opt.clipboard = "unnamedplus"

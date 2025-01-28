@@ -42,3 +42,10 @@ opt.conceallevel = 2
 
 -- colors
 vim.o.termguicolors = true
+
+-- completion
+vim.g.copilot_filetypes = {
+  ['typr'] = false
+}
+
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
