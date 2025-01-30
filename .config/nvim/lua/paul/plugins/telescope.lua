@@ -34,7 +34,6 @@ return {
       end
 
       telescope.setup({
-        file_ignore_patterns = { ".git/", ".cache", "%.o", "%.a", "%.out", "%.class","%.pdf", "%.mkv", "%.mp4", "%.zip"},
         -- borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
         defaults = {
           mappings = {
@@ -47,7 +46,7 @@ return {
 
           },
           previewer = true,
-          file_ignore_patterns = { "node_modules", "package-lock.json" },
+          file_ignore_patterns = { "node_modules", "package-lock.json", ".cache/", "%.o", "%.a", "%.out", "%.class","%.pdf", "%.mkv", "%.mp4", "%.zip", ".git/"},
           initial_mode = "insert",
           select_strategy = "reset",
           sorting_strategy = "ascending",

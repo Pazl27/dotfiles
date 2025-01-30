@@ -38,7 +38,7 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.swapfile = false
 
 -- for obsidian
-opt.conceallevel = 2
+opt.conceallevel = 1
 
 -- colors
 vim.o.termguicolors = true
