@@ -9,7 +9,7 @@ return {
       "nvim-tree/nvim-web-devicons",
       "nvim-telescope/telescope-ui-select.nvim",
       "kkharji/sqlite.lua",
-      -- "nvim-telescope/telescope-frecency.nvim",
+      "nvim-telescope/telescope-frecency.nvim",
     },
     config = function()
       local telescope = require("telescope")
@@ -19,8 +19,7 @@ return {
         pattern = "TelescopeResults",
         callback = function(ctx)
           vim.api.nvim_buf_call(ctx.buf, function()
-            vim.fn.matchadd("TelescopeParent", "\t\t.*$")
-            vim.api.nvim_set_hl(0, "TelescopeParent", { link = "Comment" })
+            vim.fn.matchadd("TelescopeParent", "\t\t.*$") vim.api.nvim_set_hl(0, "TelescopeParent", { link = "Comment" })
           end)
         end,
       })
@@ -35,7 +34,7 @@ return {
       end
 
       telescope.setup({
-        file_ignore_patterns = { "%.git/." },
+        file_ignore_patterns = { ".git/", ".cache", "%.o", "%.a", "%.out", "%.class","%.pdf", "%.mkv", "%.mp4", "%.zip"},
         -- borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
         defaults = {
           mappings = {
@@ -106,7 +105,7 @@ return {
               },
             },
             previewer = true,
-            initial_mode = "normal",
+            initial_mode = "insert",
             -- theme = "dropdown",
             layout_config = {
               height = 0.6,

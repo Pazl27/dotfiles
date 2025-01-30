@@ -61,7 +61,7 @@ keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find buffe
 keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Help tags" })
 keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+keymap.set("n", "<leader>fs", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { desc = "Find String in Buffer" })
 
 -- Vim-test
 keymap.set("n","<leader>ht", ":TestNearest<CR>", { desc = "Test nearest" })
