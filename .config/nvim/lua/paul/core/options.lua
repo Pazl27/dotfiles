@@ -49,3 +49,7 @@ vim.g.copilot_filetypes = {
 }
 
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
+
+-- spell check
+vim.opt.spelllang = "en,de"
+vim.opt.spell = true

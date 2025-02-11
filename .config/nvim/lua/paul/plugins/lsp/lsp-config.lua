@@ -12,6 +12,8 @@ return {
     -- import cmp-nvim-lsp plugin
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+    local util = require("lspconfig/util")
+
     local keymap = vim.keymap -- for conciseness
 
     local opts = { noremap = true, silent = true }
@@ -44,7 +46,7 @@ return {
       keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts)
 
       opts.desc = "Show line diagnostics"
-      keymap.set("n", "<leader>dd", vim.diagnostic.open_float, opts)
+      keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts)
 
       opts.desc = "Go to previous diagnostic"
       keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
@@ -115,10 +117,18 @@ return {
     })
 
     -- configure rust-analyzer server
-    -- lspconfig["rust_analyzer"].setup({
-    --   capabilities = capabilities,
-    --   on_attach = on_attach,
-    -- })
+    lspconfig["rust_analyzer"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      root_dir = util.root_pattern("Cargo.toml"),
+      settings = {
+        ['rust-analyzer'] = {
+          cargo = {
+            allFeatures = true
+          }
+        }
+      }
+    })
 
     -- configure emmet language server
     lspconfig["emmet_ls"].setup({

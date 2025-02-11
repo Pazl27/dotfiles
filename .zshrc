@@ -5,6 +5,7 @@ export BAT_THEME="gruvbox-dark"
 export PATH=$HOME/.local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$HOME/.cache/pokemon-icat:$PATH
+export PATH=$HOME/.config/scripts:$PATH
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER=vivaldi
