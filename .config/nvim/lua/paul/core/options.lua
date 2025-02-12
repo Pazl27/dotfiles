@@ -6,8 +6,8 @@ opt.number = true -- shows absolute line number on cursor line (when relative nu
 opt.scrolloff = 8
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
+opt.shiftwidth = 4 -- 4 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
@@ -44,9 +44,7 @@ opt.conceallevel = 1
 vim.o.termguicolors = true
 
 -- completion
-vim.g.copilot_filetypes = {
-  ['typr'] = false
-}
+vim.g.copilot_filetypes = { ['typr'] = false }
 
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
