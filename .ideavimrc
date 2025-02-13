@@ -32,13 +32,16 @@ set ideastatusicon=gray
 set idearefactormode=keep
 
 """ Mappings --------------------------------
+map K <Action>(QuickImplementations)
 map <leader>rn <Action>(RenameElement)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 
-map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>o <Action>(FileStructurePopup)
 
 map <leader>bd <Action>(CloseContent)
+
+map gi <Action>(GotoImplementation)
+map gd <Action>(GotoDeclaration)
 
 sethandler <c-h> a:vim
 sethandler <c-l> a:vim
@@ -58,6 +61,7 @@ map <leader>xf <Action>(ReformatCode)
 """ Telescope ------------------------------
 map <leader>ff :action GotoFile<CR>
 map <leader>fg :action TextSearchAction<CR>
+map <leader>fb :action RecentFiles<CR>
 
 """ Terminal settings -----------------------
 map <leader>tn :action Terminal.OpenInTerminal<CR>
@@ -65,12 +69,15 @@ map <leader>tk :action Terminal.CloseSession<CR>
 map <leader>tt :action ActivateTerminalToolWindow<CR>
 
 """ NERDTree -------------------------------
-map <Leader><Tab> :NERDTreeToggle<CR>
-map <Leader>e :NERDTreeFocus<CR>
+map <Leader>e :NERDTreeToggle<CR>
 
 """ Splitting windows -----------------------
 map <leader>sv :action SplitVertically<CR>
 map <leader>sh :action SplitHorizontally<CR>
+
+""" Debugging -------------------------------
+map <leader>db <Action>(ToggleLineBreakpoint)
+map <leader>dc :action ChooseDebugConfiguration<CR>
 
 """ Buffer settings -----------------------
 map <S-tab> :action PreviousTab<CR>

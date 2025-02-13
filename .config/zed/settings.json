@@ -1,4 +1,5 @@
 {
+  "icon_theme": "Catppuccin Latte",
   "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,
