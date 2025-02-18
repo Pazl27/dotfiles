@@ -9,7 +9,7 @@ export PATH=$HOME/.config/scripts:$PATH
 export PATH=$HOME/.config/emacs/bin:$PATH
 
 export _JAVA_AWT_WM_NONREPARENTING=1
-export BROWSER=vivaldi
+export BROWSER=zen-browser
 
 # Language
 export LANG=en_US.UTF-8
