@@ -24,6 +24,7 @@ return {
         "isort",        -- python formatter
         "goline",       -- go formatter
         "goimports",    -- go formatter
+        "ast-grep",     -- rust formatter, linter
       },
     })
 
@@ -57,6 +58,10 @@ return {
         -- go
         formatting.goline,
         formatting.goimports_reviser,
+
+        -- rust
+        formatting.ast_grep,
+        diagnostics.ast_grep,
 
         -- js/ts linter
         diagnostics.eslint_d.with({
