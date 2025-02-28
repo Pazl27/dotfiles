@@ -31,17 +31,17 @@
       "space f t": "task::Spawn",
       "space e": "workspace::ToggleLeftDock",
 
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
 
       "ctrl-c": "editor::Copy",
       "ctrl-v": "editor::Paste",
       "ctrl-x": "editor::Cut",
       "ctrl-a": "editor::SelectAll",
 
-      "space g p": "editor::ToggleHunkDiff",
+      "space g p": "editor::ToggleStagedSelectedDiffHunks",
       "space g b": "editor::ToggleGitBlame",
 
       "space t t": "workspace::ToggleBottomDock",
@@ -58,7 +58,10 @@
       "shift-j": "editor::MoveLineDown",
       "shift-k": "editor::MoveLineUp",
       "shift-tab": "editor::TabPrev",
-      "tab": "editor::Tab"
+      "tab": "editor::Tab",
+      "ctrl-c": "editor::Copy",
+      "ctrl-v": "editor::Paste",
+      "ctrl-x": "editor::Cut"
     }
   },
   {
@@ -70,12 +73,17 @@
       "ctrl-c": "editor::Copy",
       "ctrl-v": "editor::Paste",
       "ctrl-x": "editor::Cut",
-      "ctrl-a": "editor::SelectAll"
+      "ctrl-a": "editor::SelectAll",
+      "escape": "workspace::Save"
     }
   },
   {
     "context": "vim_mode == insert",
-    "bindings": {}
+    "bindings": {
+      // on may use cmd-s, on linux ctrl-s
+      "escape": ["workspace::SendKeystrokes", "ctrl-c ctrl-s"],
+      "ctrl-v": "editor::Paste"
+    }
   },
   {
     "context": "EmptyPane || SharedScreen",
@@ -108,19 +116,19 @@
       "q": "workspace::ToggleLeftDock",
       "space e": "workspace::ToggleLeftDock",
 
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown"
     }
   },
   {
     "context": "Dock",
     "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-x": "workspace::ToggleBottomDock"
     }
   },

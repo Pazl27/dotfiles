@@ -13,6 +13,7 @@
   "base_keymap": null,
   "cursor_blink": false,
   "autosave": "on_focus_change",
+  "format_on_save": "off",
   "tab_bar": {
     "show": true
   },
