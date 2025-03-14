@@ -97,7 +97,7 @@ configuration {
   kb-row-up: "Up,Control+k,";
   kb-row-down: "Down,Control+j";
   kb-accept-entry: "Control+m,Return,KP_Enter";
-  terminal: "mate-terminal";
+  terminal: "kitty";
   kb-remove-to-eol: "Control+Shift+e";
   kb-mode-next: "Tab,Shift+Right,Control+l";
   kb-mode-previous: "ISO_Left_Tab,Shift+Left,Control+h";
