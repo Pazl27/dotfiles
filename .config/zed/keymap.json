@@ -3,7 +3,7 @@
     // global key bindings
     "bindings": {
       "ctrl-j": "menu::SelectNext",
-      "ctrl-k": "menu::SelectPrev"
+      "ctrl-k": "menu::SelectPrevious"
     }
   },
   {
@@ -41,7 +41,7 @@
       "ctrl-x": "editor::Cut",
       "ctrl-a": "editor::SelectAll",
 
-      "space g p": "editor::ToggleStagedSelectedDiffHunks",
+      "space g p": "editor::ToggleSelectedDiffHunks",
       "space g b": "editor::ToggleGitBlame",
 
       "space t t": "workspace::ToggleBottomDock",
@@ -57,7 +57,7 @@
       // Put key bindings here if you want them to work in visual mode.
       "shift-j": "editor::MoveLineDown",
       "shift-k": "editor::MoveLineUp",
-      "shift-tab": "editor::TabPrev",
+      "shift-tab": "editor::Backtab",
       "tab": "editor::Tab",
       "ctrl-c": "editor::Copy",
       "ctrl-v": "editor::Paste",
@@ -69,7 +69,7 @@
     "bindings": {
       "shift-y": ["workspace::SendKeystrokes", "y $"],
       "tab": "pane::ActivateNextItem",
-      "shift-tab": "pane::ActivatePrevItem",
+      "shift-tab": "pane::ActivatePreviousItem",
       "ctrl-c": "editor::Copy",
       "ctrl-v": "editor::Paste",
       "ctrl-x": "editor::Cut",
@@ -135,7 +135,7 @@
   {
     "context": "Editor && (showing_code_actions || showing_completions)",
     "bindings": {
-      "ctrl-k": "editor::ContextMenuPrev",
+      "ctrl-k": "editor::ContextMenuPrevious",
       "ctrl-j": "editor::ContextMenuNext"
     }
   }
