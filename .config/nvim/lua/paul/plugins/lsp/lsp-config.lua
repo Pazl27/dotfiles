@@ -160,6 +160,18 @@ return {
       on_attach = on_attach,
     })
 
+    -- configure json server
+    lspconfig["jsonls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
+    -- configure latex server
+    lspconfig["texlab"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- configure go server
     lspconfig["gopls"].setup({
       capabilities = capabilities,
