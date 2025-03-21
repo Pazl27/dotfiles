@@ -4,10 +4,6 @@
     "bindings": {
       "ctrl-j": "menu::SelectNext",
       "ctrl-k": "menu::SelectPrevious",
-      "space g g": [
-        "task::Spawn",
-        { "task_name": "Lazygit", "reveal_target": "center" }
-      ]
     }
   },
   {
@@ -52,7 +48,11 @@
 
       "space w r": "projects::OpenRecent",
 
-      "space q a": "zed::Quit"
+      "space q a": "zed::Quit",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ]
     }
   },
   {
@@ -123,7 +123,11 @@
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
-      "ctrl-j": "workspace::ActivatePaneDown"
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ]
     }
   },
   {
