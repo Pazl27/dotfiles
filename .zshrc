@@ -7,6 +7,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$HOME/.cache/pokemon-icat:$PATH
 export PATH=$HOME/.config/scripts:$PATH
 export PATH=$HOME/.config/emacs/bin:$PATH
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER=zen-browser
