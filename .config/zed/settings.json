@@ -6,6 +6,16 @@
     "use_system_clipboard": "never"
   },
   "extend_comment_on_newline": false,
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
   "vertical_scroll_margin": 8,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 16,
