@@ -3,7 +3,7 @@
     // global key bindings
     "bindings": {
       "ctrl-j": "menu::SelectNext",
-      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-k": "menu::SelectPrevious"
     }
   },
   {
@@ -28,6 +28,7 @@
       "shift-u": "editor::Redo",
 
       "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
       "space f t": "task::Spawn",
       "space e": "workspace::ToggleLeftDock",
 
@@ -42,7 +43,7 @@
       "ctrl-a": "editor::SelectAll",
 
       "space g p": "editor::ToggleSelectedDiffHunks",
-      "space g b": "editor::ToggleGitBlame",
+      "space g b": "git::Blame",
 
       "space t t": "workspace::ToggleBottomDock",
 
@@ -52,7 +53,8 @@
       "space g g": [
         "task::Spawn",
         { "task_name": "Lazygit", "reveal_target": "center" }
-      ]
+      ],
+      "space x x": "diagnostics::Deploy"
     }
   },
   {
@@ -95,6 +97,7 @@
       // Put key bindings here (in addition to the context above) if you want them to
       // work when no editor exists.
       "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
       "space e": "workspace::ToggleLeftDock",
       "space b d": "pane::CloseActiveItem",
       "space t t": "workspace::ToggleBottomDock",

@@ -67,5 +67,12 @@
       "model": "gpt-4o"
     },
     "version": "2"
+  },
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true,
+    "activate_on_close": "left_neighbour",
+    "show_close_button": "hover"
   }
 }
