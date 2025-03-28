@@ -1,21 +1,9 @@
-/*
-* 
-* Different solution so when applied on new screen 
-* values need to change a bit 
-*
-* padding = space within
-* margin = space from element to element
-*/
-
-
-@import "gruvbox.css";
-
 * {
   border: none;
   border-radius: 8;
   font-family: "JetbrainsMono Nerd Font";
-  font-size: 12px;
-  min-height: 15px;
+  font-size: 16px;
+  min-height: 20px;
 }
 
 window#waybar {
@@ -39,7 +27,7 @@ window#waybar.hidden {
 #workspaces {
   margin-top: 6px;
   margin-left: 12px;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 0px;
   border-radius: 10px;
@@ -73,25 +61,23 @@ window#waybar.hidden {
 #network {
   margin-top: 6px;
   margin-left: 8px;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding-left: 10px;
+  padding-right: 10px;
   margin-bottom: 0px;
   border-radius: 10px;
-  font-size: 12px;
   transition: none;
   color: #161320;
   background: #fb4934;
   /*default: background: #bd93f9;*/
 }
 
-#pulseaudio {
+#wireplumber {
   margin-top: 6px;
   margin-left: 8px;
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 0px;
   border-radius: 10px;
-  font-size: 12px;
   transition: none;
   color: #1a1826;
   background: #fae3b0;
@@ -104,7 +90,6 @@ window#waybar.hidden {
   padding-right: 10px;
   margin-bottom: 0px;
   border-radius: 10px;
-  font-size: 12px;
   transition: none;
   color: #161320;
   background: #b5e8e0;
@@ -134,7 +119,6 @@ window#waybar.hidden {
   padding-right: 10px;
   margin-bottom: 0px;
   border-radius: 10px;
-  font-size: 12px;
   transition: none;
   color: #161320;
   background: #f8bd96;
@@ -148,11 +132,36 @@ window#waybar.hidden {
   padding-right: 10px;
   margin-bottom: 0px;
   border-radius: 10px;
-  font-size: 12px;
   transition: none;
   color: #161320;
   background: #8ec07c;
   /*default: background: #abe9b3; */
+}
+
+#memory {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #161320;
+  background: #fabd2f;
+  /*default: background: #ddb6f2; */
+}
+
+#cpu {
+  margin-top: 6px;
+  margin-left: 8px;
+  padding-left: 10px;
+  margin-bottom: 0px;
+  padding-right: 10px;
+  border-radius: 10px;
+  transition: none;
+  color: #161320;
+  background: #b8bb26;
+  /*default: background: #96cdfb; */
 }
 
 #custom-launcher {
@@ -168,69 +177,14 @@ window#waybar.hidden {
   background: #161320;
 }
 
-#custom-notification {
-  margin-top: 6px;
-  /* strange values normal is 8px 8px*/
-  /* margin-left: 0px; */ 
-  /* margin-right: 0px; */
-  padding-left: 6px;
-  padding-right: 6px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  font-size: 15px;
-  transition: none;
-  color: #161320;
-  background: #b8bb26;
-  /*default: background: #bd93f9;*/
-}
-
-#custom-power {
+#custom-media {
   margin-top: 6px;
   margin-left: 8px;
-  margin-right: 1px;
-  padding-left: 6px;
-  padding-right: 10px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  font-size: 15px;
-  transition: none;
-  color: #161320;
-  background: #fb4934;
-  /*default: background: #bd93f9;*/
-}
-
-#tray {
-  margin-top: 6px;
-  margin-left: 8px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  background: #282828;
-  /* default: background: #161320; */
-  transition: none;
-}
-
-#bluetooth {
-  margin-top: 6px;
-  margin-left: 8px;
-  margin-bottom: 0px;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 12px;
+  margin-bottom: 0px;
   border-radius: 10px;
   transition: none;
   color: #161320;
-  background: #fabd2f;
-  /*default: background: #bd93f9;*/
-}
-
-#taskbar {
-  margin-top: 6px;
-  margin-left: 0px;
-  margin-right: 8px;
-  margin-bottom: 0px;
-  border-radius: 10px;
-  background: #282828;
-  /* default: background: #161320; */
-  transition: none;
+  background: #f2cdcd;
 }
