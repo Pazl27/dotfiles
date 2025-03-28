@@ -9,6 +9,10 @@ export PATH=$HOME/.config/scripts:$PATH
 export PATH=$HOME/.config/emacs/bin:$PATH
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 
+# Go blueprint
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER=zen-browser
 
