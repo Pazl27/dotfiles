@@ -107,6 +107,11 @@
       "ctrl-v": "editor::Paste",
       "ctrl-x": "editor::Cut",
       "ctrl-a": "editor::SelectAll",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "space c c": "workspace::ToggleRightDock"
     }
   },
   {
