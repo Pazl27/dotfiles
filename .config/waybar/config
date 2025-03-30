@@ -68,32 +68,17 @@
       "max-length": 10
   },
 
-
-  "custom/media": {
-      "interval": 30,
-      "format": "{icon} {}",
-      "return-type": "json",
-      "max-length": 20,
-      "format-icons": {
-          "spotify": " ",
-          "default": " "
-      },
-      "escape": true,
-      "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
-      "on-click": "playerctl play-pause"
-  },
-
-
   "custom/launcher":{
       "format": " ",
-      "on-click": "sh ~/.config/rofi/launchers/type-2/launcher.sh",
-      "on-click-right": "killall rofi"
+      "on-click": "kitty",
+      "on-click-right": "killall rofi",
   },
 
 
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
+    "all-outputs": true,
     "format-icons": {
       "1": "壹",
       "2": "貳",

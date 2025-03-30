@@ -388,5 +388,10 @@
   "bar.workspaces.show_numbered": false,
   "bar.workspaces.workspaceMask": false,
   "bar.workspaces.showWsIcons": false,
-  "bar.workspaces.showApplicationIcons": false
+  "bar.workspaces.showApplicationIcons": false,
+  "notifications.ignore": [],
+  "notifications.showActionsOnHover": false,
+  "theme.notification.enableShadow": false,
+  "notifications.autoDismiss": false,
+  "notifications.timeout": 6000
 }
