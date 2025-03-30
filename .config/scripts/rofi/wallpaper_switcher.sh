@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-picture_list=$(find ~/Pictures/wallpaper/gruvbox -type f)
+picture_list=$(find $HOME/Pictures/wallpaper/gruvbox -type f)
 
 chosen_picture=$(echo -e "$toggle\n$picture_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wallpaper: " )
 
