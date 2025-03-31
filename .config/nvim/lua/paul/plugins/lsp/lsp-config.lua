@@ -148,6 +148,12 @@ return {
       on_attach = on_attach,
     })
 
+    -- configure bash server
+    lspconfig["bashls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- configure go server
     lspconfig["gopls"].setup({
       capabilities = capabilities,
