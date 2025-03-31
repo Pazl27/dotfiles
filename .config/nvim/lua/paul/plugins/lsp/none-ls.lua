@@ -14,14 +14,11 @@ return {
 
     mason_null_ls.setup({
       ensure_installed = {
-        "prettier",     -- prettier formatter
         "stylua",       -- lua formatter
-        "black",        -- python formatter
-        "pylint",       -- python linter
+        "prettier",     -- prettier formatter
         "eslint_d",     -- js linter
         "clang_format", -- c/c++ formatter
         "cpplint",      -- c/c++ linter
-        "isort",        -- python formatter
         "goline",       -- go formatter
         "goimports",    -- go formatter
         "ast-grep",     -- rust formatter, linter
@@ -38,21 +35,21 @@ return {
       -- setup formatters & linters
       sources = {
 
-        -- js/ts fromatter
-        formatting.prettier.with({
-          extra_filetypes = { "svelte" },
-        }),
-
         -- lua
         formatting.stylua,
 
-        -- python
-        formatting.isort,
-        formatting.black,
-        diagnostics.pylint,
+        -- js/ts
+        formatting.prettier.with({
+          extra_filetypes = { "svelte" },
+        }),
+        diagnostics.eslint_d.with({
+          condition = function(utils)
+            return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
+          end,
+        }),
 
         -- c/c++
-        formatting.clang_format,
+        formatting.clang_format.with({ extra_args = { "--style=file" } }),
         diagnostics.cpplint,
 
         -- go
@@ -62,13 +59,6 @@ return {
         -- rust
         formatting.ast_grep,
         diagnostics.ast_grep,
-
-        -- js/ts linter
-        diagnostics.eslint_d.with({
-          condition = function(utils)
-            return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
-          end,
-        }),
 
       },
     })
