@@ -11,6 +11,13 @@ opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
+local setIndentGroup = vim.api.nvim_create_augroup("setIndent", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = setIndentGroup,
+  pattern = { "c", "cpp", "h", "hpp" },
+  command = "setlocal shiftwidth=4 tabstop=4"
+})
+
 -- line wrapping
 opt.wrap = false -- disable line wrapping
 
