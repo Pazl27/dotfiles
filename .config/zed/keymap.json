@@ -88,7 +88,9 @@
     "bindings": {
       // on may use cmd-s, on linux ctrl-s
       "escape": ["workspace::SendKeystrokes", "ctrl-c ctrl-s"],
-      "ctrl-v": "editor::Paste"
+      "ctrl-v": "editor::Paste",
+      "ctrl-j": null,
+      "ctrl-k": null
     }
   },
   {
