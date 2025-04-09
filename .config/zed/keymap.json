@@ -3,7 +3,8 @@
     // global key bindings
     "bindings": {
       "ctrl-j": "menu::SelectNext",
-      "ctrl-k": "menu::SelectPrevious"
+      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-p": null
     }
   },
   {
