@@ -40,6 +40,12 @@ alias t='~/.config/scripts/start-tmux.sh'
 alias c='clear'
 alias zed='zeditor'
 
+# XAMPP aliases
+alias xampp-start='sudo /opt/lampp/lampp start'
+alias xampp-stop='sudo /opt/lampp/lampp stop'
+alias xampp-restart='sudo /opt/lampp/lampp restart'
+alias xampp-status='sudo /opt/lampp/lampp status'
+
 # Oh my posh setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"
 eval "$(zoxide init zsh)"
