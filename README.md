@@ -21,18 +21,20 @@ It also conations my neovim configuration which is set up to work with go, pytho
 
 ## Applications
 - **Window Manager**: [Hyprland](https://hyprland.org/)
-- **Wallpaper**: Hyprpaper
+- **Wallpaper**: Hyprpaper / swww
 - **Terminal**: [Kitty](https://sw.kovidgoyal.net/kitty/)
 - **Shell**: Zsh
-- **Editor**: [Neovim](https://neovim.io/)
-- **File Manager**: Nautilus
-- **Browser**: Vivaldi
+- **Editor**: [Neovim](https://neovim.io/) / Zed
+- **File Manager**: Nautilus / Yazi
+- **Browser**: Zen-Browser 
 - **Launcher**: [Rofi](https://github.com/lbonn/rofi)
 - **Bar**: [Hyprpanel](https://hyprpanel.com/)
 - **Notification**: [Hyprpanel](https://hyprpanel.com/)
 - **Terminal Prompt**: [Oh-My-Posh](https://ohmyposh.dev/)
 - **Neofetch**: [Neofetch](https://github.com/dylanaraps/neofetch)
 - **Fastfetch**: [Fastfetch](https://github.com/fastfetch-cli/fastfetch)
+
+- **Wallpapers**: [grubox](https://github.com/AngelJumbo/gruvbox-wallpapers)
 
 This repository also contains some configurations for applications that I don't use anymore.
 These are:
