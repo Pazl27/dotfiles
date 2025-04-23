@@ -114,7 +114,11 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
-      "space c c": "workspace::ToggleRightDock"
+      "space c c": "workspace::ToggleRightDock",
+      "space g g": [
+        "task::Spawn",
+        { "task_name": "Lazygit", "reveal_target": "center" }
+      ]
     }
   },
   {
