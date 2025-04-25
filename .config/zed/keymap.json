@@ -14,7 +14,7 @@
       "shift-k": "editor::Hover",
       "space r n": "editor::Rename",
       "space x f": "editor::Format",
-      "space d": "diagnostics::Deploy",
+      "space x x": "diagnostics::Deploy",
       "space f b": "tab_switcher::Toggle",
       "space b d": "pane::CloseActiveItem",
       ":": "command_palette::Toggle",
@@ -50,12 +50,14 @@
 
       "space w r": "projects::OpenRecent",
 
-      "space q a": "zed::Quit",
       "space g g": [
         "task::Spawn",
         { "task_name": "Lazygit", "reveal_target": "center" }
       ],
-      "space x x": "diagnostics::Deploy"
+      "space l d": [
+        "task::Spawn",
+        { "task_name": "Lazydocker", "reveal_target": "center" }
+      ]
     }
   },
   {

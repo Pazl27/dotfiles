@@ -1,4 +1,18 @@
 {
+  "file_scan_exclusions": ["*.git", "*.DS_Store"],
+  "features": {
+    "edit_prediction_provider": "none"
+  },
+  "show_completions_on_input": true,
+  "outline_panel": {
+    "button": false
+  },
+  "collaboration_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
+  },
   "icon_theme": "Catppuccin Latte",
   "vim_mode": true,
   "vim": {
@@ -62,6 +76,8 @@
     ]
   },
   "assistant": {
+    "button": false,
+    "dock": "left",
     "default_model": {
       "provider": "copilot_chat",
       "model": "gpt-4o"
@@ -74,5 +90,18 @@
     "git_status": true,
     "activate_on_close": "left_neighbour",
     "show_close_button": "hover"
+  },
+  "telemetry": {
+    // Send debug info like crash reports.
+    "diagnostics": false,
+    // Send anonymized usage data like what languages you're using Zed with.
+    "metrics": false
+  },
+  "git": {
+    "git_gutter": "tracked_files",
+    "inline_blame": {
+      "enabled": true,
+      "position": "right"
+    }
   }
 }
