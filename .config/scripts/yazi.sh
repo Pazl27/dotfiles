@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 hyprctl dispatch togglespecialworkspace drop
 
 # Nur starten, wenn es nicht läuft
