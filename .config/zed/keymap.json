@@ -120,6 +120,10 @@
       "space g g": [
         "task::Spawn",
         { "task_name": "Lazygit", "reveal_target": "center" }
+      ],
+      "space l d": [
+        "task::Spawn",
+        { "task_name": "Lazydocker", "reveal_target": "center" }
       ]
     }
   },

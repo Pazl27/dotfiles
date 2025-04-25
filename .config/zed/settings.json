@@ -1,9 +1,8 @@
 {
-  "file_scan_exclusions": ["*.git", "*.DS_Store"],
+  // Aestetics
   "features": {
     "edit_prediction_provider": "none"
   },
-  "show_completions_on_input": true,
   "outline_panel": {
     "button": false
   },
@@ -14,22 +13,6 @@
     "button": false
   },
   "icon_theme": "Catppuccin Latte",
-  "vim_mode": true,
-  "vim": {
-    "toggle_relative_line_numbers": true,
-    "use_system_clipboard": "never"
-  },
-  "extend_comment_on_newline": false,
-  "diagnostics": {
-    "include_warnings": true,
-    "inline": {
-      "enabled": true,
-      "update_debounce_ms": 150,
-      "padding": 4,
-      "min_column": 0,
-      "max_severity": null
-    }
-  },
   "vertical_scroll_margin": 8,
   "buffer_font_family": "JetBrainsMono Nerd Font",
   "ui_font_size": 16,
@@ -53,6 +36,11 @@
   "buffer_line_height": {
     "custom": 1.5
   },
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Dark Hard",
+    "dark": "One Dark"
+  },
   "terminal": {
     "dock": "bottom",
     "font_family": "JetBrainsMono Nerd Font",
@@ -60,11 +48,6 @@
     "line_height": {
       "custom": 1.5
     }
-  },
-  "theme": {
-    "mode": "system",
-    "light": "Gruvbox Dark Hard",
-    "dark": "One Dark"
   },
   "experimental.theme_overrides": {
     "players": [
@@ -75,15 +58,6 @@
       }
     ]
   },
-  "assistant": {
-    "button": false,
-    "dock": "left",
-    "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
-    },
-    "version": "2"
-  },
   "tabs": {
     "close_position": "right",
     "file_icons": true,
@@ -91,17 +65,52 @@
     "activate_on_close": "left_neighbour",
     "show_close_button": "hover"
   },
-  "telemetry": {
-    // Send debug info like crash reports.
-    "diagnostics": false,
-    // Send anonymized usage data like what languages you're using Zed with.
-    "metrics": false
+  "show_completions_on_input": true,
+  "extend_comment_on_newline": false,
+
+  // Keymaps
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true,
+    "use_system_clipboard": "never"
   },
+
+  // Copilot
+  "assistant": {
+    "button": true,
+    "dock": "right",
+    "default_model": {
+      "provider":"copilot_chat",
+      "model": "gpt-4o"
+    },
+    "version": "2"
+  },
+
+  // Git
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
       "enabled": true,
       "position": "right"
     }
+  },
+
+  // Rest
+  "file_scan_exclusions": ["*.git", "*.DS_Store"],
+  "diagnostics": {
+    "include_warnings": true,
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
+  "telemetry": {
+    // Send debug info like crash reports.
+    "diagnostics": false,
+    // Send anonymized usage data like what languages you're using Zed with.
+    "metrics": false
   }
 }
