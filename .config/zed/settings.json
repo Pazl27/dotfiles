@@ -1,8 +1,5 @@
 {
   // Aestetics
-  "features": {
-    "edit_prediction_provider": "none"
-  },
   "outline_panel": {
     "button": false
   },
@@ -76,11 +73,14 @@
   },
 
   // Copilot
+  "features": {
+    "edit_prediction_provider": "copilot"
+  },
   "assistant": {
     "button": true,
     "dock": "right",
     "default_model": {
-      "provider":"copilot_chat",
+      "provider": "copilot_chat",
       "model": "gpt-4o"
     },
     "version": "2"
