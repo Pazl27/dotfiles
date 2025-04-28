@@ -1,6 +1,9 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "OXY2DEV/markview.nvim",
+    },
     build = ":TSUpdate",
     event = { "BufReadPre", "BufNewFile" },
     config = function()
@@ -27,8 +30,10 @@ return {
           "c",
           "java",
           "make",
+          "markdown",
           "markdown_inline",
           "toml",
+          "yaml"
         }
       })
     end
