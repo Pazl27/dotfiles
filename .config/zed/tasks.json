@@ -28,7 +28,7 @@
     "command": "$HOME/scripts/zed-tmux.sh",
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
-    "hide": "always",
-    "reveal_target": "center"
+    "hide": "never",
+    "reveal": "never"
   }
 ]
