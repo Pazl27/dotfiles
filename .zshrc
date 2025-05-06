@@ -30,21 +30,59 @@ alias ...='cd ../..'
 alias cd='z'
 alias ls='exa'
 alias ll='exa -la --icons'
+alias tree='eza -1A --group-directories-first --color=always --git-ignore --tree'
 alias vim='nvim'
 alias v='nvim'
 alias ff='nvim $(fzf -m --preview="bat --color=always {}")'
 alias ft='~/.config/scripts/fzf-tmux.sh'
-# alias fd='cd $(find ~ -type d -print | fzf)'
-# alias fdv='cd $(find ~ -type d -print | fzf) && nvim'
-alias t='~/.config/scripts/start-tmux.sh'
 alias c='clear'
 alias zed='zeditor'
+
+# Tmux aliases
+alias t='~/.config/scripts/start-tmux.sh'
+alias ta='tmux attach'
+alias tl='tmux list-sessions'
+alias tn='tmux new-session -s'
 
 # XAMPP aliases
 alias xampp-start='sudo /opt/lampp/lampp start'
 alias xampp-stop='sudo /opt/lampp/lampp stop'
 alias xampp-restart='sudo /opt/lampp/lampp restart'
 alias xampp-status='sudo /opt/lampp/lampp status'
+
+# Git aliases
+alias ga='git add'
+alias gap='ga --patch'
+alias gb='git branch'
+alias gba='gb --all'
+alias gc='git commit'
+alias gca='gc --amend --no-edit'
+alias gce='gc --amend'
+alias gco='git checkout'
+alias gcl='git clone --recursive'
+alias gd='git diff --output-indicator-new=" " --output-indicator-old=" "'
+alias gds='gd --staged'
+alias gi='git init'
+alias gl='git log --graph --all --pretty=format:"%C(magenta)%h %C(white) %an  %ar%C(blue)  %D%n%s%n"'
+alias gm='git merge'
+alias gn='git checkout -b'  # new branch
+alias gp='git push'
+alias gr='git reset'
+alias gs='git status --short'
+alias gu='git pull'
+
+# Man colors
+man() {
+  GROFF_NO_SGR=1 \
+  LESS_TERMCAP_mb=$'\e[31m' \
+  LESS_TERMCAP_md=$'\e[34m' \
+  LESS_TERMCAP_me=$'\e[0m' \
+  LESS_TERMCAP_se=$'\e[0m' \
+  LESS_TERMCAP_so=$'\e[1;30m' \
+  LESS_TERMCAP_ue=$'\e[0m' \
+  LESS_TERMCAP_us=$'\e[35m' \
+  command man "$@"
+}
 
 # Oh my posh setup
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"
