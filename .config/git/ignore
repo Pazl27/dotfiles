@@ -1,0 +1,24 @@
+# Python specific
+venv/
+.mypy_cache/
+.pytest_cache/
+__pycache__/
+.hypothesis/
+.ruff_cache/
+.ropeproject/
+
+# Rust specific
+target/
+
+# C/C++ specific
+*.o
+*.a
+*.so
+*.exe
+*.dll
+build/
+
+
+# Zig specific
+.zig-cache/
+zig-out/

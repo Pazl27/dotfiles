@@ -1,0 +1,43 @@
+[user]
+	name = Pazl
+	email = notmy@email.com
+
+[commit]
+  template = ~/.config/git/template
+
+[core]
+	pager = delta
+
+[init]
+    defaultBranch = master
+
+[interactive]
+	diffFilter = delta --color-only
+  
+[merge]
+	conflictStyle = zdiff3
+
+[blame]
+  coloring = highlightRecent
+  date = relative
+
+[diff]
+  context = 3  # less context in diffs
+  renames = copies  # detect copies as renames in diffs
+  interHunkContext = 10  # merge near hunks in diffs
+
+[log]
+  abbrevCommit = true  # short commits
+  graphColors = blue,yellow,cyan,magenta,green,red
+
+[status]
+  branch = true
+  short = true
+  showStash = true
+  showUntrackedFiles = all  # show individual untracked files
+
+# Third-party: diff-so-fancy
+[delta]
+	navigate = true
+  side-by-side = true
+  line-numbers = true
