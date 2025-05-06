@@ -1,6 +1,6 @@
 [user]
 	name = Pazl
-  email = 130466427+Pazl27@users.noreply.github.com
+	email = 130466427+Pazl27@users.noreply.github.com
 
 [commit]
   template = ~/.config/git/template
