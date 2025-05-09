@@ -76,7 +76,7 @@
   "features": {
     "edit_prediction_provider": "copilot"
   },
-  "assistant": {
+  "agent": {
     "button": true,
     "dock": "right",
     "default_model": {
