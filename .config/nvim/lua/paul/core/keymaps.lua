@@ -5,8 +5,8 @@ local keymap = vim.keymap -- for conciseness
 
 ---------------------
 -- General Keymaps -------------------
-keymap.set("i", "<esc>", "<esc>:wa<CR>", { desc = "Save on escape" })
-keymap.set("n", "<esc>", ":wa<CR>", { desc = "Save on escape" })
+keymap.set("i", "<esc>", "<cmd>wa<CR><esc>", { desc = "Save on escape" })
+keymap.set("n", "<esc>", "<cmd>wa<CR>", { desc = "Save on escape" })
 
 keymap.set("n", "<leader>qa", ":qa<CR>", { desc = "Quit" })
 keymap.set("n","<C-s>", ":w<CR>", {desc = "Save File"})
@@ -53,8 +53,8 @@ keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Move cursor to 
 -- keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Close buffer" }) -- close buffer
 keymap.set("n", "<leader>bn", "<cmd>bn<CR>", { desc = "Next buffer" }) -- next buffer
 keymap.set("n", "<leader>bp", "<cmd>bp<CR>", { desc = "Previous buffer" }) -- previous buffer
-keymap.set("n", "<tab>", "<cmd>bn<CR>", { desc = "Next buffer" }) -- next buffer
-keymap.set("n", "<S-tab>", "<cmd>bp<CR>", { desc = "Previous buffer" }) -- previous buffer
+keymap.set("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
+keymap.set("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })
 
 -- Telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })

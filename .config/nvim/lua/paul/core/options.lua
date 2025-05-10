@@ -18,6 +18,8 @@ vim.api.nvim_create_autocmd("FileType", {
   command = "setlocal shiftwidth=4 tabstop=4"
 })
 
+vim.diagnostic.config { virtual_text = true }
+
 -- line wrapping
 opt.wrap = false -- disable line wrapping
 
