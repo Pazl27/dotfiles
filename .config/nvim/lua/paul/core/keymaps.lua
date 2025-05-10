@@ -50,7 +50,7 @@ keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Move cursor to win
 keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Move cursor to window on the right" }) -- Move cursor to window on the right
 
 -- Buffer management
-keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Close buffer" }) -- close buffer
+-- keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Close buffer" }) -- close buffer
 keymap.set("n", "<leader>bn", "<cmd>bn<CR>", { desc = "Next buffer" }) -- next buffer
 keymap.set("n", "<leader>bp", "<cmd>bp<CR>", { desc = "Previous buffer" }) -- previous buffer
 keymap.set("n", "<tab>", "<cmd>bn<CR>", { desc = "Next buffer" }) -- next buffer
