@@ -2,7 +2,6 @@
   "layer": "top",
   "position": "top",
   "reload_style_on_change": true,
-
   "modules-left": [
     "custom/power",
     "clock",
@@ -20,7 +19,6 @@
     "battery",
     "custom/notification"
   ],
-
   // ─── Workspaces ──────────────────────────────────────────────────────────────
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -30,10 +28,17 @@
       "empty": ""
     },
     "persistent-workspaces": {
-      "*": [1, 2, 3, 4, 5, 6, 7]
+      "*": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
     }
   },
-
   // ─── System Modules ──────────────────────────────────────────────────────────
   "clock": {
     "actions": {
@@ -45,16 +50,22 @@
         "today": "<span color='#fAfBfC'><b>{}</b></span>"
       }
     },
-    "format": "{:%I:%M %p} ",
+    "format": "{:%I:%M %p}",
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>"
   },
-
   "battery": {
     "format": "{capacity}% {icon}",
     "format-alt": "{time} {icon}",
     "format-charging": "{capacity}% 󰂄",
-    "format-icons": ["󰁻", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"],
+    "format-icons": [
+      "󰁻",
+      "󰁼",
+      "󰁾",
+      "󰂀",
+      "󰂂",
+      "󰁹"
+    ],
     "format-plugged": "{capacity}% 󰂄 ",
     "interval": 30,
     "states": {
@@ -63,28 +74,27 @@
       "critical": 20
     }
   },
-
   "cpu": {
     "format": "󰻠",
     "tooltip": true
   },
-
   "disk": {
     "format": "",
     "interval": 30
   },
-
   "temperature": {
     "critical-threshold": 80,
     "format": ""
   },
-
   "backlight": {
     "format": "{percent}% {icon}",
-    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
     "tooltip": false
   },
-
   // ─── Audio and Media ─────────────────────────────────────────────────────────
   "pulseaudio": {
     "format": "{volume}% {icon} {format_source}",
@@ -94,17 +104,23 @@
     "format-source": " ",
     "format-source-muted": " <span foreground='#ea6961'></span>",
     "format-icons": {
-      "default": ["", "", ""],
+      "default": [
+        "",
+        "",
+        ""
+      ],
       "headphone": "",
       "headset": ""
     },
-    "ignored-sinks": ["Easy Effects Sink", "Monitor of Easy Effects Sink"],
+    "ignored-sinks": [
+      "Easy Effects Sink",
+      "Monitor of Easy Effects Sink"
+    ],
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
     "on-click-right": "kitty --class=floating_waybar -e pulsemixer",
     "scroll-step": 0,
     "tooltip": true
   },
-
   "custom/playerctl": {
     "exec": "playerctl -p spotify metadata -f '{\"text\": \"{{markup_escape(title)}} - {{markup_escape(artist)}} \", \"tooltip\": \"{{markup_escape(title)}} - {{markup_escape(artist)}}  {{ duration(position) }}/{{ duration(mpris:length) }}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
     "format": "{2} <span>{0}</span>",
@@ -116,7 +132,6 @@
     "return-type": "json",
     "tooltip": true
   },
-
   // ─── Network & Bluetooth ─────────────────────────────────────────────────────
   "network": {
     "format-disconnected": "󰖪 ",
@@ -130,7 +145,6 @@
     "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
     "tooltip-format-disconnected": "Disconnected"
   },
-
   "bluetooth": {
     "format-connected-battery": "{device_battery_percentage}% 󰂯",
     "format-disabled": "󰂲",
@@ -143,7 +157,6 @@
     "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%"
   },
-
   // ─── Power ───────────────────────────────────────────────────────────────────
   "custom/power": {
     "format": " {}",
@@ -152,7 +165,6 @@
     "rotate": 0,
     "tooltip": false
   },
-
   // ─── Notifications ───────────────────────────────────────────────────────────
   "custom/notification": {
     "escape": true,
@@ -174,20 +186,17 @@
     "return-type": "json",
     "tooltip": false
   },
-
   // ─── Custom Tools ────────────────────────────────────────────────────────────
   "custom/screenshot": {
     "format": "󰄀",
     "on-click": "bash -c $HOME/.config/scripts/snapshot.sh",
     "tooltip": false
   },
-
   "custom/colorpicker": {
     "format": "󰏘",
     "on-click": "sleep 0.5 && hyprpicker | wl-copy",
     "tooltip": false
   },
-
   // ─── Expandable Group ────────────────────────────────────────────────────────
   "group/expand": {
     "drawer": {
@@ -207,24 +216,48 @@
     ],
     "orientation": "horizontal"
   },
-
   "custom/expand": {
     "format": "",
     "tooltip": false
   },
-
   "custom/endpoint": {
     "format": "|",
     "tooltip": false
   },
-
   // ─── Padding Modules ─────────────────────────────────────────────────────────
-  "custom/l_end": { "format": " ", "interval": "once", "tooltip": false },
-  "custom/r_end": { "format": " ", "interval": "once", "tooltip": false },
-  "custom/sl_end": { "format": " ", "interval": "once", "tooltip": false },
-  "custom/sr_end": { "format": " ", "interval": "once", "tooltip": false },
-  "custom/rl_end": { "format": " ", "interval": "once", "tooltip": false },
-  "custom/rr_end": { "format": " ", "interval": "once", "tooltip": false },
-  "custom/padd":   { "format": "  ", "interval": "once", "tooltip": false }
+  "custom/l_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/r_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sl_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/sr_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/rl_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/rr_end": {
+    "format": " ",
+    "interval": "once",
+    "tooltip": false
+  },
+  "custom/padd": {
+    "format": "  ",
+    "interval": "once",
+    "tooltip": false
+  }
 }
-
