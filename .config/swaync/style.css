@@ -47,7 +47,8 @@
 }
 
 .notification {
-  background: alpha(@mycolor, 0.5);
+  border-color: @red;
+  background: alpha(@bg2, 0.9);
 }
 
 .control-center .notification-row .notification-background .notification {
