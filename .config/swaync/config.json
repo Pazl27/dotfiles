@@ -74,11 +74,11 @@
                 },
 
                 {
-                    "label": "",
+                    "label": "󰖩",
                     "command": "$HOME/.config/scripts/rofi/wifi.sh"
                 },
                 {
-                    "label": "",
+                    "label": "󰂯",
                     "command": "$HOME/.config/scripts/rofi/bluetooth.sh"
                 },
                 {

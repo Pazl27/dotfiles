@@ -16,7 +16,7 @@
 @define-color mpris-album-art-overlay alpha(@bg0, 0.55);
 @define-color mpris-button-hover alpha(@bg0, 0.50);
 @define-color text @fg;
-@define-color bg alpha(@bg0, 0.8); /* DARKER background for notification area */
+@define-color bg alpha(@bg0, 0.8);
 @define-color bg-hover alpha(@bg0, 0.9);
 @define-color mycolor @red;
 @define-color border-color alpha(@mycolor, 0.15);
@@ -24,9 +24,9 @@
 /* Animations */
 @keyframes fadeIn {
   0% {
-    padding-left: 20;
-    margin-left: 50;
-    margin-right: 50;
+    padding-left: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   100% {
     padding: 0;
@@ -38,7 +38,7 @@
   outline: none;
 }
 
-/* Notification Overview Background (Darker) */
+/* Notification Overview Background */
 .control-center {
   background: @bg;
   color: @text;
@@ -46,7 +46,6 @@
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.65);
 }
 
-/* Individual notification appearance */
 .notification {
   background: alpha(@mycolor, 0.5);
 }
@@ -57,19 +56,16 @@
   background: alpha(@mycolor, 0.3);
 }
 
-/* Floating notifications animation */
 .floating-notifications .notification {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Hover effects */
 .notification widget:hover {
   background: alpha(@mycolor, 0.2);
 }
 
-/* Notification content styling */
 .notification-content {
-  padding: 5;
+  padding: 5px;
   border-radius: 0.818rem;
 }
 
@@ -78,7 +74,6 @@
   padding-top: 0.818rem;
 }
 
-/* Label and image cleanup */
 .control-center .notification-row .notification-background .notification .notification-content label,
 .floating-notifications.background .notification-background .notification .notification-content label {
   padding: 10px;
@@ -90,7 +85,6 @@
   background-color: unset;
 }
 
-/* Critical notifications */
 .control-center .notification-row .notification-background .notification.critical .notification-content,
 .floating-notifications.background .notification-background .notification.critical .notification-content {
   background-color: @red;
@@ -112,9 +106,6 @@
 
 /* Title bar */
 .widget-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: @text;
   padding-left: 20px;
   padding-top: 20px;
@@ -125,7 +116,7 @@
   background: alpha(@orange, 0.3);
   border-radius: 12px;
   padding: 0px 10px;
-  margin-right: 10px;
+  margin-right: 16px;
   margin-top: 3px;
 }
 
@@ -134,22 +125,32 @@
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
 }
 
-/* DND button next to Trash */
-.widget-title > .dnd-button {
-  color: @text;
-  background: alpha(@yellow, 0.3);
+/* DND (Do Not Disturb) widget styling. */
+.widget-dnd {
+  color: rgb(212, 190, 152);
+  margin: 8px;
+  margin-left: 30px;
+  font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+  font-size: initial;
   border-radius: 12px;
-  padding: 0px 10px;
-  margin-right: 10px;
-  margin-top: 3px;
+  background: rgba(37, 36, 35, 0.9);
+  border: 1px solid rgba(124, 111, 100, 0.95);
+  box-shadow: none;
 }
 
-.widget-title > .dnd-button:hover {
-  background: @bg-hover;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
+.widget-dnd > switch:checked {
+  background: rgba(231, 138, 78, 0.9);
 }
 
-/* MPRIS widget styling */
+.widget-dnd > switch slider {
+  background: rgba(50, 48, 47, 0.95);
+  border-radius: 12px;
+}
+
+/* MPRIS widget */
 .widget-mpris .widget-mpris-player {
   padding: 16px;
   margin: 16px 20px;
@@ -175,8 +176,8 @@
 
 /* Buttons Grid */
 .widget-buttons-grid {
-  font-family: "CodeNewRoman Nerd Font Propo";
-  padding: 0 8px 8px 8px;
+  font-family: "JetBrainsMono Nerd Font";
+  padding: 0 10px 10px 10px;
   margin: 10px;
   border-radius: 12px;
   background: transparent;
@@ -197,18 +198,18 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: @blue;
+  background: @bg-hover;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
-  background: @mycolor;
+  background: @red;
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked label {
   color: @bg0;
 }
 
-/* Volume and backlight widgets */
+/* Volume and Backlight Sliders */
 .widget-volume,
 .widget-backlight {
   background-color: transparent;
@@ -216,5 +217,13 @@
   margin: 8px;
   border-radius: 12px;
 }
+
+/* Slider styling with red highlight */
+scale trough highlight,
+scale trough slider {
+  background-color: @red;
 }
 
+scale trough {
+  background-color: alpha(@red, 0.3);
+}
