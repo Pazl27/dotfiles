@@ -393,5 +393,6 @@
   "notifications.showActionsOnHover": false,
   "theme.notification.enableShadow": false,
   "notifications.autoDismiss": false,
-  "notifications.timeout": 6000
+  "notifications.timeout": 6000,
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Zen Browser"
 }
