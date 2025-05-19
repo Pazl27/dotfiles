@@ -5,7 +5,7 @@
   "modules-left": [
     "custom/power",
     "clock",
-    "wireplumber",
+    "pulseaudio",
     "network",
     "bluetooth",
     "tray"
@@ -142,6 +142,7 @@
       "cpu",
       "memory",
       "temperature",
+      "backlight",
       "custom/endpoint"
     ]
   },
@@ -174,10 +175,59 @@
       ]
     }
   },
+  "pulseaudio": {
+    "scroll-step": 0,
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": "<span foreground='#ea6961'>󰗾 {format_source}</span>",
+    "format-muted": "<span foreground='#ea6961'></span> {format_source}",
+    "format-source": " ",
+    "format-source-muted": " <span foreground='#ea6961'></span>",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "tooltip": true,
+    "on-click-right": "kitty --class=floating_waybar -e pulsemixer",
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "ignored-sinks": [
+      "Easy Effects Sink",
+      "Monitor of Easy Effects Sink"
+    ]
+  },
   "custom/notification": {
-    "format": "󰂚 ",
     "tooltip": false,
-    "on-click": ""
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "<span foreground='#ea6962'></span>",
+      "dnd-none": "<span foreground='#ea6962'></span>",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='#ea6962'></span>",
+      "dnd-inhibited-none": "<span foreground='#ea6962'></span>"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": "{percent}% {icon}",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ]
   },
   // modules for padding //
   "custom/l_end": {

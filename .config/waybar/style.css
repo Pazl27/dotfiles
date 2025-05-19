@@ -103,6 +103,12 @@ tooltip {
     color: #a89984;
 
 }
+#pulseaudio{
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color: #a89984;
+
+}
 #battery{
     padding: 0px 5px;
     transition: all .3s ease;
