@@ -30,7 +30,7 @@ tooltip {
     background: #282828;
     color: #a89984;
 }
-#clock:hover, #custom-pacman:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#memory:hover,#temperature:hover{
+#clock:hover, #custom-power:hover, #custom-notification:hover,#bluetooth:hover,#network:hover,#battery:hover, #cpu:hover,#disk:hover,#temperature:hover, #backlight:hover, #custom-screenshot:hover, #custom-colorpicker:hover{
     transition: all .3s ease;
     color: #fb4934;
 }
@@ -43,6 +43,11 @@ tooltip {
     padding: 0px 5px;
     transition: all .3s ease;
     color: #a89984;
+}
+#custom-power {
+    padding: 0px 5px;
+    transition: all .3s ease;
+    color: #ffffff;
 }
 #clock{
     padding: 0px 5px;
@@ -148,7 +153,7 @@ tooltip {
 #custom-colorpicker{
     padding: 0px 5px;
 }
-#cpu,#memory,#temperature{
+#cpu,#disk,#temperature, #backlight, #custom-screenshot, #custom-colorpicker{
     padding: 0px 5px;
     transition: all .3s ease; 
     color: #a89984;

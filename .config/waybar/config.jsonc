@@ -77,7 +77,7 @@
     "format-off": "BT-off",
     "format-disabled": "󰂲",
     "format-connected-battery": "{device_battery_percentage}% 󰂯",
-    "format-alt": "{device_alias} 󰂯",
+    // "format-alt": "{device_alias} 󰂯",
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
@@ -139,8 +139,10 @@
     },
     "modules": [
       "custom/expand",
+      "custom/screenshot",
+      "custom/colorpicker",
       "cpu",
-      "memory",
+      "disk",
       "temperature",
       "backlight",
       "custom/endpoint"
@@ -150,8 +152,9 @@
     "format": "󰻠",
     "tooltip": true
   },
-  "memory": {
-    "format": ""
+  "disk": {
+    "interval": 30,
+    "format": ""
   },
   "temperature": {
     "critical-threshold": 80,
@@ -161,31 +164,17 @@
     "icon-size": 14,
     "spacing": 10
   },
-  "wireplumber": {
-    "tooltip": false,
-    "scroll-step": 5,
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟  {volume}%",
-    "on-click": "kitty -- alsamixer -V all",
-    "format-icons": {
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    }
-  },
   "pulseaudio": {
     "scroll-step": 0,
     "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon}  {format_source}",
     "format-bluetooth-muted": "<span foreground='#ea6961'>󰗾 {format_source}</span>",
     "format-muted": "<span foreground='#ea6961'></span> {format_source}",
     "format-source": " ",
     "format-source-muted": " <span foreground='#ea6961'></span>",
     "format-icons": {
       "headphone": "",
-      "headset": "",
+      "headset": "",
       "default": [
         "",
         "",
@@ -228,6 +217,16 @@
       "󰃟",
       "󰃠"
     ]
+  },
+  "custom/screenshot": {
+    "format": "󰄀",
+    "tooltip": false,
+    "on-click": "bash -c $HOME/.config/scripts/snapshot.sh"
+  },
+  "custom/colorpicker" : {
+    "format": "󰏘",
+    "tooltip": false,
+    "on-click": "sleep 0.5 && hyprpicker | wl-copy"
   },
   // modules for padding //
   "custom/l_end": {
