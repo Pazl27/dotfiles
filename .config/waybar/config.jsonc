@@ -2,6 +2,7 @@
   "layer": "top",
   "position": "top",
   "reload_style_on_change": true,
+
   "modules-left": [
     "custom/power",
     "clock",
@@ -19,6 +20,8 @@
     "battery",
     "custom/notification"
   ],
+
+  // ─── Workspaces ──────────────────────────────────────────────────────────────
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
@@ -27,115 +30,170 @@
       "empty": ""
     },
     "persistent-workspaces": {
-      "*": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6,
-        7
-      ]
+      "*": [1, 2, 3, 4, 5, 6, 7]
     }
   },
-  "custom/power": {
-    "format": " {}",
-    "rotate": 0,
-    "on-click": "wlogout",
-    "interval": 86400,
-    "tooltip": false
-  },
+
+  // ─── System Modules ──────────────────────────────────────────────────────────
   "clock": {
-    "format": "{:%I:%M %p} ",
-    "interval": 1,
-    "tooltip-format": "<tt>{calendar}</tt>",
+    "actions": {
+      "on-click": "shift_up",
+      "on-click-right": "shift_down"
+    },
     "calendar": {
       "format": {
         "today": "<span color='#fAfBfC'><b>{}</b></span>"
       }
     },
-    "actions": {
-      "on-click-right": "shift_down",
-      "on-click": "shift_up"
-    }
+    "format": "{:%I:%M %p} ",
+    "interval": 1,
+    "tooltip-format": "<tt>{calendar}</tt>"
   },
-  "network": {
-    "tooltip": true,
-    "format-wifi": " ",
-    "rotate": 0,
-    "format-ethernet": "󰈀 ",
-    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
-    "format-linked": "󰈀 {ifname} (No IP)",
-    "format-disconnected": "󰖪 ",
-    "tooltip-format-disconnected": "Disconnected",
-    // "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
-    "interval": 2,
-    "on-click": "$HOME/.config/scripts/rofi/wifi.sh"
-  },
-  "bluetooth": {
-    "format-on": "󰂯",
-    "format-off": "BT-off",
-    "format-disabled": "󰂲",
-    "format-connected-battery": "{device_battery_percentage}% 󰂯",
-    // "format-alt": "{device_alias} 󰂯",
-    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
-    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
-    "on-click": "$HOME/.config/scripts/rofi/bluetooth.sh",
-    "on-click-right": "blueman-manager"
-  },
-  "custom/playerctl": {
-    "format": "{2} <span>{0}</span>",
-    "return-type": "json",
-    "exec": "playerctl -p spotify metadata -f '{\"text\": \"{{markup_escape(title)}} - {{markup_escape(artist)}} \", \"tooltip\": \"{{markup_escape(title)}} - {{markup_escape(artist)}}  {{ duration(position) }}/{{ duration(mpris:length) }}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-    "tooltip": true,
-    "on-click": "playerctl -p spotify play-pause",
-    // "on-click-middle": "playerctl -p spotify previous",
-    // "on-click-right": "playerctl -p spotify next",
-    // "on-click-forward": "playerctl -p spotify position 10+",
-    // "on-click-backward": "playerctl -p spotify position 10-",
-    // "on-scroll-up": "playerctl -p spotify volume 0.02+",
-    // "on-scroll-down": "playerctl -p spotify volume 0.02-",
-    "format-icons": {
-      "Paused": " ",
-      "Playing": " "
-    }
-  },
+
   "battery": {
+    "format": "{capacity}% {icon}",
+    "format-alt": "{time} {icon}",
+    "format-charging": "{capacity}% 󰂄",
+    "format-icons": ["󰁻", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"],
+    "format-plugged": "{capacity}% 󰂄 ",
     "interval": 30,
     "states": {
       "good": 95,
       "warning": 30,
       "critical": 20
+    }
+  },
+
+  "cpu": {
+    "format": "󰻠",
+    "tooltip": true
+  },
+
+  "disk": {
+    "format": "",
+    "interval": 30
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": ""
+  },
+
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "tooltip": false
+  },
+
+  // ─── Audio and Media ─────────────────────────────────────────────────────────
+  "pulseaudio": {
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon}  {format_source}",
+    "format-bluetooth-muted": "<span foreground='#ea6961'>󰗾 {format_source}</span>",
+    "format-muted": "<span foreground='#ea6961'></span> {format_source}",
+    "format-source": " ",
+    "format-source-muted": " <span foreground='#ea6961'></span>",
+    "format-icons": {
+      "default": ["", "", ""],
+      "headphone": "",
+      "headset": ""
     },
-    "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% 󰂄",
-    "format-plugged": "{capacity}% 󰂄 ",
-    "format-alt": "{time} {icon}",
-    "format-icons": [
-      "󰁻",
-      "󰁼",
-      "󰁾",
-      "󰂀",
-      "󰂂",
-      "󰁹"
-    ]
+    "ignored-sinks": ["Easy Effects Sink", "Monitor of Easy Effects Sink"],
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+    "on-click-right": "kitty --class=floating_waybar -e pulsemixer",
+    "scroll-step": 0,
+    "tooltip": true
   },
-  "custom/expand": {
-    "format": "",
+
+  "custom/playerctl": {
+    "exec": "playerctl -p spotify metadata -f '{\"text\": \"{{markup_escape(title)}} - {{markup_escape(artist)}} \", \"tooltip\": \"{{markup_escape(title)}} - {{markup_escape(artist)}}  {{ duration(position) }}/{{ duration(mpris:length) }}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "format": "{2} <span>{0}</span>",
+    "format-icons": {
+      "Paused": " ",
+      "Playing": " "
+    },
+    "on-click": "playerctl -p spotify play-pause",
+    "return-type": "json",
+    "tooltip": true
+  },
+
+  // ─── Network & Bluetooth ─────────────────────────────────────────────────────
+  "network": {
+    "format-disconnected": "󰖪 ",
+    "format-ethernet": "󰈀 ",
+    "format-linked": "󰈀 {ifname} (No IP)",
+    "format-wifi": " ",
+    "interval": 2,
+    "on-click": "$HOME/.config/scripts/rofi/wifi.sh",
+    "rotate": 0,
+    "tooltip": true,
+    "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
+    "tooltip-format-disconnected": "Disconnected"
+  },
+
+  "bluetooth": {
+    "format-connected-battery": "{device_battery_percentage}% 󰂯",
+    "format-disabled": "󰂲",
+    "format-off": "BT-off",
+    "format-on": "󰂯",
+    "on-click": "$HOME/.config/scripts/rofi/bluetooth.sh",
+    "on-click-right": "blueman-manager",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%"
+  },
+
+  // ─── Power ───────────────────────────────────────────────────────────────────
+  "custom/power": {
+    "format": " {}",
+    "interval": 86400,
+    "on-click": "wlogout",
+    "rotate": 0,
     "tooltip": false
   },
-  "custom/endpoint": {
-    "format": "|",
+
+  // ─── Notifications ───────────────────────────────────────────────────────────
+  "custom/notification": {
+    "escape": true,
+    "exec": "swaync-client -swb",
+    "exec-if": "which swaync-client",
+    "format": "{icon}",
+    "format-icons": {
+      "dnd-inhibited-none": "<span foreground='#ea6962'></span>",
+      "dnd-inhibited-notification": "<span foreground='#ea6962'></span>",
+      "dnd-none": "<span foreground='#ea6962'></span>",
+      "dnd-notification": "<span foreground='#ea6962'></span>",
+      "inhibited-none": "",
+      "inhibited-notification": "",
+      "none": "",
+      "notification": ""
+    },
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "return-type": "json",
     "tooltip": false
   },
+
+  // ─── Custom Tools ────────────────────────────────────────────────────────────
+  "custom/screenshot": {
+    "format": "󰄀",
+    "on-click": "bash -c $HOME/.config/scripts/snapshot.sh",
+    "tooltip": false
+  },
+
+  "custom/colorpicker": {
+    "format": "󰏘",
+    "on-click": "sleep 0.5 && hyprpicker | wl-copy",
+    "tooltip": false
+  },
+
+  // ─── Expandable Group ────────────────────────────────────────────────────────
   "group/expand": {
-    "orientation": "horizontal",
     "drawer": {
+      "click-to-reveal": true,
       "transition-duration": 600,
-      "transition-to-left": true,
-      "click-to-reveal": true
+      "transition-to-left": true
     },
     "modules": [
       "custom/expand",
@@ -146,122 +204,27 @@
       "temperature",
       "backlight",
       "custom/endpoint"
-    ]
+    ],
+    "orientation": "horizontal"
   },
-  "cpu": {
-    "format": "󰻠",
-    "tooltip": true
-  },
-  "disk": {
-    "interval": 30,
-    "format": ""
-  },
-  "temperature": {
-    "critical-threshold": 80,
-    "format": ""
-  },
-  "tray": {
-    "icon-size": 14,
-    "spacing": 10
-  },
-  "pulseaudio": {
-    "scroll-step": 0,
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon}  {format_source}",
-    "format-bluetooth-muted": "<span foreground='#ea6961'>󰗾 {format_source}</span>",
-    "format-muted": "<span foreground='#ea6961'></span> {format_source}",
-    "format-source": " ",
-    "format-source-muted": " <span foreground='#ea6961'></span>",
-    "format-icons": {
-      "headphone": "",
-      "headset": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    },
-    "tooltip": true,
-    "on-click-right": "kitty --class=floating_waybar -e pulsemixer",
-    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
-    "ignored-sinks": [
-      "Easy Effects Sink",
-      "Monitor of Easy Effects Sink"
-    ]
-  },
-  "custom/notification": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "",
-      "none": "",
-      "dnd-notification": "<span foreground='#ea6962'></span>",
-      "dnd-none": "<span foreground='#ea6962'></span>",
-      "inhibited-notification": "",
-      "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='#ea6962'></span>",
-      "dnd-inhibited-none": "<span foreground='#ea6962'></span>"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
-  "backlight": {
-    "tooltip": false,
-    "format": "{percent}% {icon}",
-    "format-icons": [
-      "󰃞",
-      "󰃟",
-      "󰃠"
-    ]
-  },
-  "custom/screenshot": {
-    "format": "󰄀",
-    "tooltip": false,
-    "on-click": "bash -c $HOME/.config/scripts/snapshot.sh"
-  },
-  "custom/colorpicker" : {
-    "format": "󰏘",
-    "tooltip": false,
-    "on-click": "sleep 0.5 && hyprpicker | wl-copy"
-  },
-  // modules for padding //
-  "custom/l_end": {
-    "format": " ",
-    "interval": "once",
+
+  "custom/expand": {
+    "format": "",
     "tooltip": false
   },
-  "custom/r_end": {
-    "format": " ",
-    "interval": "once",
+
+  "custom/endpoint": {
+    "format": "|",
     "tooltip": false
   },
-  "custom/sl_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/sr_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/rl_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/rr_end": {
-    "format": " ",
-    "interval": "once",
-    "tooltip": false
-  },
-  "custom/padd": {
-    "format": "  ",
-    "interval": "once",
-    "tooltip": false
-  }
+
+  // ─── Padding Modules ─────────────────────────────────────────────────────────
+  "custom/l_end": { "format": " ", "interval": "once", "tooltip": false },
+  "custom/r_end": { "format": " ", "interval": "once", "tooltip": false },
+  "custom/sl_end": { "format": " ", "interval": "once", "tooltip": false },
+  "custom/sr_end": { "format": " ", "interval": "once", "tooltip": false },
+  "custom/rl_end": { "format": " ", "interval": "once", "tooltip": false },
+  "custom/rr_end": { "format": " ", "interval": "once", "tooltip": false },
+  "custom/padd":   { "format": "  ", "interval": "once", "tooltip": false }
 }
+
