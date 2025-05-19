@@ -1,0 +1,293 @@
+/* -----------------------------
+   Global Notification Elements
+   ----------------------------- */
+
+/* The container row for all notification elements. */
+.notification-row {
+  outline: none;
+}
+
+/* The background element: acts as a box behind the notification. */
+.notification-background {
+  padding: 10px 6px;
+}
+
+/* The main notification box that contains actions and content. */
+.notification {
+  border-radius: 12px;
+  border: 1px solid rgba(37, 36, 35, 0.9);
+  padding: 0;
+  background: rgba(50, 48, 47, 0.95);
+  box-shadow:
+    0 0 0 1px rgba(37, 36, 35, 0.3),
+    0 1px 3px 1px rgba(37, 36, 35, 0.7),
+    0 2px 6px 2px rgba(37, 36, 35, 0.3);
+}
+
+/* For desktop notifications that are not part of a panel. */
+.floating-notifications {
+  background: transparent;
+}
+
+/* The main content area for notification text (like messages). */
+.notification-content {
+  background: transparent;
+  border-radius: 12px;
+  padding: 4px;
+}
+
+/* Default action elements, such as a Telegram message. */
+.notification-default-action {
+  padding: 4px;
+  margin: 0;
+  background: transparent;
+  border: none;
+  color: rgb(212, 190, 152);
+}
+
+.notification-default-action:hover {
+  -gtk-icon-effect: none;
+  background: rgba(60, 56, 54, 0.95);
+}
+
+/* Actions such as "Mark as read". */
+.notification-action {
+  padding: 4px;
+  margin: 0;
+  background: transparent;
+  color: rgb(212, 190, 152);
+  border: none;
+  border-top: 1px solid rgb(80, 73, 69);
+  border-radius: 0;
+  border-right: 1px solid rgb(80, 73, 69);
+}
+
+.notification-action:hover {
+  -gtk-icon-effect: none;
+  background: rgba(60, 56, 54, 0.95);
+}
+
+/* Adjust border radii on the first and last action buttons. */
+.notification-action:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.notification-action:last-child {
+  border-bottom-right-radius: 12px;
+  border-right: none;
+}
+
+/* ----------------------
+   Inline Reply Elements
+   ---------------------- */
+
+/* The input line for inline replies. */
+.inline-reply {
+  margin-top: 4px;
+}
+
+/* The text entry for inline replies. */
+.inline-reply-entry {
+  background: rgba(37, 36, 35, 0.95);
+  color: rgb(212, 190, 152);
+  caret-color: rgb(212, 190, 152);
+  border: transparent;
+  border-radius: 12px;
+}
+
+/* Button for sending inline replies. */
+.inline-reply-button {
+  margin-left: 4px;
+  background: transparent;
+  border: 1px solid rgba(124, 111, 100, 0.95);
+  border-radius: 12px;
+  color: rgb(212, 190, 152);
+}
+
+.inline-reply-button:disabled {
+  background: transparent;
+  color: rgba(124, 111, 100, 1);
+  border-color: transparent;
+}
+
+.inline-reply-button:hover {
+  background: rgba(80, 73, 69, 0.95);
+}
+
+/* ------------------------------
+   Notification Control Elements
+   ------------------------------ */
+
+/* The close button for notifications. */
+.close-button {
+  background: transparent;
+  color: rgb(212, 190, 152);
+  border-radius: 100%;
+  margin-top: 5px;
+  margin-right: 5px;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+.close-button:hover {
+  background: rgba(80, 73, 69, 0.95);
+}
+
+/* ---------------------------
+   Icons and Summary Elements
+   --------------------------- */
+
+/* Styling for images within notifications. */
+.image {
+  -gtk-icon-effect: none;
+  border-radius: 100px;
+  margin: 4px;
+}
+
+/* The app icon in a notification. */
+.app-icon {
+  -gtk-icon-effect: none;
+  -gtk-icon-shadow: 0 1px 4px black;
+  margin: 6px;
+}
+
+/* Notification summary text. */
+.summary {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: rgb(212, 190, 152);
+}
+
+/* Time indicators. */
+.time {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: rgb(212, 190, 152);
+}
+
+/* Main body text of a notification. */
+.body {
+  font-size: 14px;
+  font-weight: normal;
+  background: transparent;
+  color: rgb(212, 190, 152);
+  margin-top: 5px;
+}
+
+/* Body images within notifications. */
+.body-image {
+  margin-top: 4px;
+  background-color: white;
+  border-radius: 12px;
+  -gtk-icon-effect: none;
+}
+
+/* ----------------------------
+   Control Center and Grouping
+   ---------------------------- */
+
+/* The control-center panel containing notifications and widgets. */
+.control-center {
+  background: rgba(37, 36, 35, 0.85);
+  color: rgb(212, 190, 152);
+  border-radius: 12px;
+}
+
+/* Placeholder for the control center list. */
+.control-center-list-placeholder {
+  opacity: 0.5;
+}
+
+/* The control center list itself. */
+.control-center-list {
+  background: transparent;
+}
+
+/* Blank window styling (transparent background). */
+.blank-window {
+  background: transparent;
+}
+
+/* Notification groups within the control center. */
+.notification-group-buttons,
+.notification-group-headers {
+  margin: 0 16px;
+  color: rgb(212, 190, 152);
+}
+
+.notification-group-icon {
+  color: rgb(212, 190, 152);
+}
+
+.notification-group-header {
+  color: rgb(212, 190, 152);
+}
+
+/* ---------------
+   Widget Styling
+   --------------- */
+
+/* Title widget styling. */
+.widget-title {
+  color: rgb(212, 190, 152);
+  margin: 8px;
+  font-size: 20px;
+}
+
+.widget-title > button {
+  font-size: 16px;
+  color: rgb(212, 190, 152);
+  text-shadow: none;
+  background: rgba(37, 36, 35, 0.9);
+  border: 1px solid rgba(124, 111, 100, 0.95);
+  border-radius: 12px;
+}
+
+.widget-title > button:hover {
+  background: rgba(80, 73, 69, 0.9);
+}
+
+/* DND (Do Not Disturb) widget styling. */
+.widget-dnd {
+  color: rgb(212, 190, 152);
+  margin: 8px;
+  font-size: 1.1rem;
+}
+
+.widget-dnd > switch {
+  font-size: initial;
+  border-radius: 12px;
+  background: rgba(37, 36, 35, 0.9);
+  border: 1px solid rgba(124, 111, 100, 0.95);
+  box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+  background: rgba(231, 138, 78, 0.9);
+}
+
+.widget-dnd > switch slider {
+  background: rgba(50, 48, 47, 0.95);
+  border-radius: 12px;
+}
+
+/* Volume widget styling. */
+.widget-volume {
+  color: rgb(212, 190, 152);
+  background-color: rgba(60, 56, 54, 0.95);
+  padding: 8px;
+  margin: 8px;
+  border-radius: 12px;
+}
+
+/* Backlight widget styling. */
+.widget-backlight {
+  color: rgb(212, 190, 152);
+  background-color: rgba(60, 56, 54, 0.95);
+  padding: 8px;
+  margin: 8px;
+  border-radius: 12px;
+}
+

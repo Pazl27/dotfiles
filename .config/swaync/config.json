@@ -1,0 +1,42 @@
+{
+  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "positionY": "top",
+  "layer": "top",
+  "notification-2fa-action": false,
+  "notification-inline-replies": true,
+  "timeout": -1,
+  "control-center-width": 400,
+  "notification-window-width": 400,
+  "transition-time": 500,
+  "hide-on-clear": true,
+  "widgets": [
+    "inhibitors",
+    "title",
+    "dnd",
+    "notifications",
+    "volume",
+    "backlight"
+  ],
+  "widget-config": {
+    "inhibitors": {
+      "text": "Inhibitors",
+      "button-text": "Clear All",
+      "clear-all-button": true
+    },
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "volume": {
+      "label": " "
+    },
+    "backlight": {
+      "label": " "
+    }
+  }
+}
+
