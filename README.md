@@ -16,9 +16,12 @@ This configuration is used on my school laptop. I'm mostly using it for programm
 It also conations my neovim configuration which is set up to work with go, python, rust and c++.
 
 ## Preview
-![Preview](./screenshots/snapshot_2025-01-04_00-46-37.png)
-![Preview](./screenshots/snapshot_2025-01-04_00-56-24.png)
-![Preview](./screenshots/snapshot_2025-01-04_00-47-33.png)
+![Screenshot](./screenshots/snapshot_2025-05-20_02-21-30.png)
+![Screenshot](./screenshots/snapshot_2025-05-20_02-23-44.png)
+![Screenshot](./screenshots/snapshot_2025-05-20_02-26-01.png)
+![Screenshot](./screenshots/snapshot_2025-05-20_02-30-26.png)
+![Screenshot](./screenshots/snapshot_2025-05-20_02-38-14.png)
+![Screenshot](./screenshots/snapshot_2025-05-20_02-47-28.png)
 
 ## Applications
 - **Window Manager**: [Hyprland](https://hyprland.org/)
