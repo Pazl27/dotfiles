@@ -1,6 +1,6 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&letterSpacing=tiny&duration=2000&pause=3000&color=F7F7F7&center=true&vCenter=true&width=435&lines=Pazl's+Dotfiles)](https://git.io/typing-svg)
 
-## Description
+# Description
 This repository contains my personal dotfiles. The hole configuration is based around the colortheme **gruvbox**.
 This is my first attempt on a linux rice. I'm using Hyprland as my window manager.
 This repostory contains configurations for the applications I use on a daily basis.
@@ -8,14 +8,14 @@ It also contains a `.ideavimrc` file for the Vim emulation in IntelliJ IDEA.
 This configuration is used on my school laptop. I'm mostly using it for programming and browsing the web.
 It also conations my neovim configuration which is set up to work with go, python, rust and c++.
 
-## Preview
+# Preview
 ![Screenshot](./screenshots/snapshot_2025-05-20_02-30-26.png)
 ![Screenshot](./screenshots/snapshot_2025-05-20_02-38-14.png)
 ![Screenshot](./screenshots/snapshot_2025-05-20_02-47-28.png)
 
 ![Screenshot](./screenshots/snapshot_2025-05-20_02-23-44.png)
 
-## Applications
+# Applications
 
 <details>
   
@@ -92,7 +92,7 @@ It also conations my neovim configuration which is set up to work with go, pytho
 
 </details>
 
-## Installation
+# Installation
 1. Clone the repository
 ```bash
 cd ~
