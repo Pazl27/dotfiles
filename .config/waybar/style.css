@@ -76,6 +76,12 @@ tooltip {
   transition: all .3s ease;
 }
 
+#tray {
+  padding: 0px 5px;
+  transition: all .3s ease;
+  color: #a89984;
+}
+
 #workspaces {
   padding: 0px 5px;
 }
@@ -201,22 +207,6 @@ tooltip {
   color: transparent;
   text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
 
-}
-
-#tray {
-  padding: 0px 5px;
-  transition: all .3s ease;
-
-}
-
-#tray menu * {
-  padding: 0px 5px;
-  transition: all .3s ease;
-}
-
-#tray menu separator {
-  padding: 0px 5px;
-  transition: all .3s ease;
 }
 
 #tray {
