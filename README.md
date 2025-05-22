@@ -22,14 +22,24 @@ It also conations my neovim configuration which is set up to work with go, pytho
   <summary>Waybar</summary>
    <img src="./screenshots/snapshot_2025-05-20_02-21-30.png" alt="Waybar Screenshot">
 
+   ## Overview
+   This is my Waybar setup for Hyprland, designed to be clean and efficient. It includes all the essential features I wanted in Waybar. For additional needs like volume control, I use swaync, which can be     triggered from Waybar. It is possible to take screenshot, use a color picker or mute the microphone. 
+
+   ## Workspaces
+
+   ## Expanding Widgets 
+
+   ## Wifi and Bluetooth
+
 </details>
 
 <details>
   
   <summary>Rofi</summary>
+  
+   ## Overview
+   This is my roif setup. It is mainly used for launching apps and ssh connections. 
    <img src="./screenshots/snapshot_2025-05-20_02-26-01.png" alt="Rofi Screenshot">
-
-   ## Configuration
 
   ### *How To Install*
   
@@ -39,7 +49,7 @@ It also conations my neovim configuration which is set up to work with go, pytho
     sudo pacman -S rofi-wayland
    ```
    
-2. Copy the `Dotfiles/.config/wofi` folder into `~/.config`
+2. Copy the `Dotfiles/.config/rofi` folder into `~/.config`
 3. **Launching Rofi**
     - I launch rofi like this:
    
