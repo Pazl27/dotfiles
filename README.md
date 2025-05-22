@@ -9,18 +9,17 @@ This configuration is used on my school laptop. I'm mostly using it for programm
 It also conations my neovim configuration which is set up to work with go, python, rust and c++.
 
 # Preview
-![Screenshot](./screenshots/snapshot_2025-05-20_02-30-26.png)
-![Screenshot](./screenshots/snapshot_2025-05-20_02-38-14.png)
-![Screenshot](./screenshots/snapshot_2025-05-20_02-47-28.png)
-
-![Screenshot](./screenshots/snapshot_2025-05-20_02-23-44.png)
+![Screenshot](./screenshots/main.png)
+![Screenshot](./screenshots/secound.png)
+![Screenshot](./screenshots/nvim.png)
+![Screenshot](./screenshots/yazi.png)
 
 # Applications
 
 <details>
   
   <summary>Waybar</summary>
-   <img src="./screenshots/snapshot_2025-05-20_02-21-30.png" alt="Waybar Screenshot">
+   <img src="./screenshots/waybar.png" alt="Waybar Screenshot">
 
    ## Overview
    This is my Waybar setup for Hyprland, designed to be clean and efficient. It includes all the essential features I wanted in Waybar. For additional needs like volume control, I use swaync, which can be     triggered from Waybar. It is possible to take screenshot, use a color picker or mute the microphone. 
@@ -39,7 +38,7 @@ It also conations my neovim configuration which is set up to work with go, pytho
   
    ## Overview
    This is my roif setup. It is mainly used for launching apps and ssh connections. 
-   <img src="./screenshots/snapshot_2025-05-20_02-26-01.png" alt="Rofi Screenshot">
+   <img src="./screenshots/rofi.png" alt="Rofi Screenshot">
 
   ### *How To Install*
   
@@ -62,21 +61,21 @@ It also conations my neovim configuration which is set up to work with go, pytho
 <details>
   
   <summary>Swaync</summary>
-   <img src="./screenshots/snapshot_2025-05-20_02-21-30.png" alt="Waybar Screenshot">
+   <img src="./screenshots/swaync.png" alt="Swaync Screenshot">
 
 </details>
 
 <details>
   
   <summary>Neovim</summary>
-   <img src="./screenshots/snapshot_2025-05-20_02-21-30.png" alt="Waybar Screenshot">
+   <img src="./screenshots/nvim.png" alt="Nvim Screenshot">
 
 </details>
 
 <details>
   
   <summary>Wlogout</summary>
-   <img src="./screenshots/snapshot_2025-05-20_02-21-30.png" alt="Waybar Screenshot">
+   <img src="./screenshots/wlogout.png" alt="Wlogout Screenshot">
 
 </details>
 
