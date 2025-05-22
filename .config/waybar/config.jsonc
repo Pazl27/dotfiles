@@ -101,7 +101,7 @@
   },
   // ─── Audio and Media ─────────────────────────────────────────────────────────
   "pulseaudio": {
-    "format": "{volume}% {icon} {format_source}",
+    "format": "{volume}% {icon}{format_source}",
     "format-bluetooth": "{volume}% {icon}  {format_source}",
     "format-bluetooth-muted": "<span foreground='#ea6961'>󰗾 {format_source}</span>",
     "format-muted": "<span foreground='#ea6961'></span> {format_source}",
