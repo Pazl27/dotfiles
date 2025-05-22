@@ -99,6 +99,22 @@ It also conations my neovim configuration which is set up to work with go, pytho
   <summary>Swaync</summary>
    <img src="./screenshots/swaync.png" alt="Swaync Screenshot">
 
+   ### *How To Install*
+  
+1. **Install `swaync`:**
+   
+    ```bash
+    sudo pacman -S swaync
+    ```
+2. Copy the `Dotfiles/.config/swaync` folder into `~/.config`
+
+  ### Dependencies for `Swaync`
+  ```
+  swaync
+  rofi
+  libnotify
+  ```
+
 </details>
 
 <details>
