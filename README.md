@@ -21,22 +21,58 @@ It also conations my neovim configuration which is set up to work with go, pytho
   <summary>Waybar</summary>
    <img src="./screenshots/waybar.png" alt="Waybar Screenshot">
 
-   ## Overview
+   ### Overview
    This is my Waybar setup for Hyprland, designed to be clean and efficient. It includes all the essential features I wanted in Waybar. For additional needs like volume control, I use swaync, which can be     triggered from Waybar. It is possible to take screenshot, use a color picker or mute the microphone. 
 
-   ## Workspaces
+  ### Workspaces
+  I've configured the workspaces so that if a workspace contains any open content, its indicator dot appears in a lighter shade of red. This makes it easier to keep track of active workspaces. Initially, only 7         workspaces are displayed, but more are added dynamically as needed when you go beyond 7.
+  
+   <img src="./screenshots/workspaces.png" alt="Workspace Screenshot">
 
-   ## Expanding Widgets 
+  ### Expanding Widgets 
+  On the right side of the Waybar, you'll find the notification module (which opens SwayNC), the battery level, the music display, and the expanding widget.
+  Inside the expanding widget, there are several useful tools and statistics. You can monitor key system stats such as temperature, disk space, and CPU usage.
+  In addition, there are icons for taking screenshots and using a color picker. You can also adjust the screen brightness directly from this widget.
+  
+  <img src="./screenshots/expand.png" alt="Expanding Widget Screenshot">
 
-   ## Wifi and Bluetooth
+  ### Wifi and Bluetooth
+  On the left side of the Waybar, you'll find the following modules: power, clock, sound, Wi-Fi, and Bluetooth.
+  Both the Bluetooth and Wi-Fi modules launch a Rofi script when clicked. These scripts make it easy to connect to devices or select and log into Wi-Fi networks.
+  The sound module allows you to mute the microphone, and a right-click opens pulsemixer in a floating terminal window.
+  The power module opens wlogout. 
+  
+  <img src="./screenshots/wifi-bluethooth.png" alt="Left Side Screenshot">
 
+   ### *How To Install*
+1. **Install `Waybar`:**
+
+   ```
+    sudo pacman -S waybar
+   ```
+   
+2. Copy the `Dotfiles/.config/waybar` folder into `~/.config`
+
+
+  ## Dependencies
+  ```plaintext
+  swaync
+  grimblast
+  hyprpicker
+  wl-copy
+  wlogout
+  rofi
+  pulsmixer
+  kitty
+  ```
+   
 </details>
 
 <details>
   
   <summary>Rofi</summary>
   
-   ## Overview
+   ### Overview
    This is my roif setup. It is mainly used for launching apps and ssh connections. 
    <img src="./screenshots/rofi.png" alt="Rofi Screenshot">
 
@@ -76,6 +112,15 @@ It also conations my neovim configuration which is set up to work with go, pytho
   
   <summary>Wlogout</summary>
    <img src="./screenshots/wlogout.png" alt="Wlogout Screenshot">
+   
+   ### *How To Install*
+1. **Install `wlogout`:**
+   
+    ```bash
+    yay -S wlogout
+    ```
+2. Copy `Dotfiles/.config/wlogout` into `~/.config/`
+3. If not already set make sure you set a key bind in hyprland.conf to launch wlogout.
 
 </details>
 
