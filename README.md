@@ -6,7 +6,7 @@ This is my first attempt on a linux rice. I'm using Hyprland as my window manage
 This repostory contains configurations for the applications I use on a daily basis.
 It also contains a `.ideavimrc` file for the Vim emulation in IntelliJ IDEA.
 This configuration is used on my school laptop. I'm mostly using it for programming and browsing the web.
-It also conations my neovim configuration which is set up to work with go, python, rust and c++.
+It also conations my neovim configuration which is set up to work with go, rust and c++.
 
 # Preview
 ![Screenshot](./screenshots/main.png)
