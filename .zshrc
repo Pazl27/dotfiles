@@ -64,6 +64,7 @@ alias gd='git diff --output-indicator-new=" " --output-indicator-old=" "'
 alias gds='gd --staged'
 alias gi='git init'
 alias gl='git log --graph --pretty=format:"%C(magenta)%h %C(white)%an  %ar%C(blue)  %D%n%s%n"'
+alias gla='serie'
 alias gm='git merge'
 alias gn='git checkout -b'  # new branch
 alias gp='git push'
