@@ -25,10 +25,18 @@
   },
   {
     "label": "Tmux",
-    "command": "$HOME/scripts/zed-tmux.sh",
+    "command": "$HOME/.config/scripts/zed-tmux.sh",
     "use_new_terminal": true,
     "allow_concurrent_runs": false,
-    "hide": "never",
+    "hide": "always",
+    "reveal": "never"
+  },
+  {
+    "label": "Git Log",
+    "command": "kitty --class dropterm -e serie",
+    "use_new_terminal": true,
+    "allow_concurrent_runs": false,
+    "hide": "always",
     "reveal": "never"
   }
 ]

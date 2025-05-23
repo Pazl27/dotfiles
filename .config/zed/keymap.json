@@ -46,8 +46,6 @@
       "space g p": "editor::ToggleSelectedDiffHunks",
       "space g b": "git::Blame",
 
-      "space t t": "workspace::ToggleBottomDock",
-
       "space w r": "projects::OpenRecent",
 
       "space g g": [
@@ -57,6 +55,14 @@
       "space l d": [
         "task::Spawn",
         { "task_name": "Lazydocker", "reveal_target": "center" }
+      ],
+      "space g l": [
+        "task::Spawn",
+        { "task_name": "Git Log", "reveal_target": "center" }
+      ],
+      "space t t": [
+        "task::Spawn",
+        { "task_name": "Tmux", "reveal_target": "center" }
       ]
     }
   },
@@ -105,7 +111,6 @@
       "space f g": "pane::DeploySearch",
       "space e": "workspace::ToggleLeftDock",
       "space b d": "pane::CloseActiveItem",
-      "space t t": "workspace::ToggleBottomDock",
       "space w r": "projects::OpenRecent",
       "space q a": "zed::Quit",
       "ctrl-c": "editor::Copy",
@@ -124,6 +129,14 @@
       "space l d": [
         "task::Spawn",
         { "task_name": "Lazydocker", "reveal_target": "center" }
+      ],
+      "space g l": [
+        "task::Spawn",
+        { "task_name": "Git Log", "reveal_target": "center" }
+      ],
+      "space t t": [
+        "task::Spawn",
+        { "task_name": "Tmux", "reveal_target": "center" }
       ]
     }
   },
