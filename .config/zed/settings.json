@@ -1,5 +1,8 @@
 {
   // Aestetics
+  "toolbar": {
+    "quick_actions": false
+  },
   "outline_panel": {
     "button": false
   },
@@ -19,7 +22,9 @@
   "autosave": "on_focus_change",
   "format_on_save": "off",
   "tab_bar": {
-    "show": true
+    "show": true,
+    "show_tab_bar_buttons": false,
+    "show_nav_history_buttons": false
   },
   "indent_guides": {
     "enabled": true
