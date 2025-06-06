@@ -16,7 +16,7 @@
 @define-color mpris-album-art-overlay alpha(@bg0, 0.55);
 @define-color mpris-button-hover alpha(@bg0, 0.50);
 @define-color text @fg;
-@define-color bg alpha(@bg0, 0.8);
+@define-color bg alpha(@bg0, 1);
 @define-color bg-hover alpha(@bg0, 0.9);
 @define-color mycolor @red;
 @define-color border-color alpha(@mycolor, 0.15);
