@@ -6,12 +6,14 @@ window {
 }
 button {
   color: #cc241d;
-  font-family: "CaskaydiaCove Nerd Font";
+  font-family: "JetBrains Mono Nerd Font";
   background-color: #1d2021;
 
-  border-radius: 0px;
+  border-radius: 20px;
   border-style: none;
   border-width: 0px;
+
+  margin: 10px;
 
   background-repeat: no-repeat;
   background-position: center;
