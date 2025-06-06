@@ -26,7 +26,7 @@
       "space c c": "workspace::ToggleRightDock",
       "space c i": "assistant::InlineAssist",
 
-      "shift-u": "editor::Redo",
+      "shift-u": "vim::Redo",
 
       "space f f": "file_finder::Toggle",
       "space f g": "pane::DeploySearch",
@@ -45,6 +45,7 @@
 
       "space g p": "editor::ToggleSelectedDiffHunks",
       "space g b": "git::Blame",
+      "space g i": "editor::OpenGitBlameCommit",
 
       "space w r": "projects::OpenRecent",
 

@@ -40,7 +40,7 @@
   },
   "theme": {
     "mode": "system",
-    "light": "Gruvbox Dark Hard",
+    "light": "Gruvbox Dark",
     "dark": "One Dark"
   },
   "terminal": {
