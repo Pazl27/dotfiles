@@ -43,6 +43,7 @@ tooltip {
 #network:hover,
 #battery:hover,
 #cpu:hover,
+#memory:hover,
 #disk:hover,
 #temperature:hover,
 #backlight:hover,
@@ -192,6 +193,7 @@ tooltip {
 }
 
 #cpu,
+#memory,
 #disk,
 #temperature,
 #backlight,

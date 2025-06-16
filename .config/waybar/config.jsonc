@@ -78,6 +78,11 @@
     "format": "󰻠",
     "tooltip": true
   },
+  "memory": {
+    "format": "",
+    "interval": 30,
+    "tooltip": true
+  },
   "disk": {
     "format": "",
     "interval": 30
@@ -212,6 +217,7 @@
       "custom/expand",
       "custom/screenshot",
       "custom/colorpicker",
+      "memory",
       "cpu",
       "disk",
       "temperature",
