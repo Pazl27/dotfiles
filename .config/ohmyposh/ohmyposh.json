@@ -140,6 +140,25 @@
           "background": "#ffff66",
           "type": "root",
           "style": "powerline"
+        },
+        {
+          "type": "rust",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "foreground": "#111111",
+          "background": "#DEA584",
+          "template": " 🦀 {{ .Full }} "
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " \uf0ad ",
+          "foreground": "#111111",
+          "powerline_symbol": "\ue0b0",
+          "background": "#ffff66",
+          "type": "root",
+          "style": "powerline"
         }
       ]
     }
