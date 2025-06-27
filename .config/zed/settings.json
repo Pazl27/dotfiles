@@ -1,4 +1,5 @@
 {
+  "hide_mouse": "never",
   // Aestetics
   "toolbar": {
     "quick_actions": false
