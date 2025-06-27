@@ -100,6 +100,7 @@ man() {
 
 source <(fzf --zsh)
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/ohmyposh.json)"
+# eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 
