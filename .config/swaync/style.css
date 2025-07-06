@@ -1,4 +1,6 @@
-/* Gruvbox Color Definitions */
+/* =========================
+   Gruvbox Color Definitions
+   ========================= */
 @define-color bg0 #282828;
 @define-color bg1 #3c3836;
 @define-color bg2 #504945;
@@ -12,14 +14,151 @@
 @define-color orange #d65d0e;
 @define-color gray #a89984;
 
-/* Custom colors */
-@define-color mpris-album-art-overlay alpha(@bg0, 0.55);
-@define-color mpris-button-hover alpha(@bg0, 0.50);
+/* =========================
+   Custom/Derived Colors
+   ========================= */
 @define-color text @fg;
 @define-color bg alpha(@bg0, 1);
 @define-color bg-hover alpha(@bg0, 0.9);
-@define-color mycolor @red;
-@define-color border-color alpha(@mycolor, 0.15);
+@define-color border-color alpha(@red, 0.15);
+@define-color mpris-album-art-overlay alpha(@bg0, 0.55);
+@define-color mpris-button-hover alpha(@bg0, 0.50);
+
+/* Notification-specific colors */
+@define-color noti-bg alpha(@bg0, 0.85);
+@define-color noti-bg-hover alpha(@bg1, 1);
+@define-color noti-bg-focus alpha(@bg1, 0.9);
+@define-color noti-text-color @fg;
+@define-color noti-border-color alpha(@gray, 0.4);
+@define-color noti-close-bg alpha(@gray, 0.10);
+@define-color noti-close-bg-hover alpha(@gray, 0.18);
+@define-color noti-critical-bg @blue;
+@define-color noti-critical-fg @bg0;
+
+/* Control Center-specific colors */
+@define-color cc-bg alpha(@bg0, 0.95);
+@define-color cc-shadow rgba(0, 0, 0, 0.65);
+@define-color cc-title-bg alpha(@orange, 0.3);
+@define-color cc-title-hover @bg-hover;
+@define-color cc-dnd-bg rgba(37, 36, 35, 0.9);
+@define-color cc-dnd-border rgba(124, 111, 100, 0.95);
+@define-color cc-dnd-checked rgba(231, 138, 78, 0.9);
+@define-color cc-dnd-slider rgba(50, 48, 47, 0.95);
+
+/* =========================
+   NOTIFICATION STYLES
+   ========================= */
+
+* {
+    /* dunno if i like the font */
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 14px;
+  outline: none;
+}
+
+.notification-row {
+  outline: none;
+}
+.notification-row:focus,
+.notification-row:hover {
+  background: @noti-bg-focus;
+}
+
+.notification {
+  border-radius: 12px;
+  border-color: @red;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.7), 0 2px 6px 2px rgba(0, 0, 0, 0.3);
+  padding: 0;
+  margin-right: -5px;
+}
+
+.critical {
+  background: @noti-critical-bg;
+  color: @noti-critical-fg;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.notification-content {
+  background: transparent;
+  /* padding: 6px; */
+  border-radius: 12px;
+}
+
+.close-button {
+  background: @noti-close-bg;
+  color: @noti-text-color;
+  text-shadow: none;
+  padding: 0;
+  border-radius: 100%;
+  box-shadow: none;
+  border: none;
+  min-width: 24px;
+  min-height: 24px;
+}
+.close-button:hover {
+  box-shadow: none;
+  background: @noti-close-bg-hover;
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+.notification-default-action,
+.notification-action {
+  padding: 4px;
+  margin: 0;
+  box-shadow: none;
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
+  color: @noti-text-color;
+}
+.notification-default-action:hover,
+.notification-action:hover {
+  -gtk-icon-effect: none;
+  background: @noti-bg-hover;
+}
+.notification-default-action {
+  border-radius: 12px;
+}
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.notification-action {
+  border-radius: 0px;
+  border-top: none;
+  border-right: none;
+}
+.notification-action:first-child {
+  border-bottom-left-radius: 10px;
+}
+.notification-action:last-child {
+  border-bottom-right-radius: 10px;
+  border-right: 1px solid @noti-border-color;
+}
+
+.image {}
+.body-image {
+  margin-top: 6px;
+  background-color: white;
+  border-radius: 12px;
+}
+.summary {
+  color: @noti-text-color;
+  text-shadow: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+.time {
+  color: @noti-text-color;
+  text-shadow: none;
+  margin-right: 18px;
+}
+.body {
+  background: transparent;
+  color: @noti-text-color;
+  text-shadow: none;
+}
 
 /* Animations */
 @keyframes fadeIn {
@@ -34,40 +173,32 @@
   }
 }
 
-* {
-  outline: none;
+.floating-notifications .notification {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.notification widget:hover {
+  background: alpha(@red, 0.2);
+}
+.notification-content {
+  padding: 5px;
+  border-radius: 0.818rem;
 }
 
-/* Notification Overview Background */
+/* =========================
+   CONTROL CENTER STYLES
+   ========================= */
+
 .control-center {
-  background: @bg;
+  background: @cc-bg;
   color: @text;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.65);
-}
-
-.notification {
-  border-color: @red;
-  background: alpha(@bg2, 0.9);
+  box-shadow: 1px 1px 5px @cc-shadow;
 }
 
 .control-center .notification-row .notification-background .notification {
   margin-top: 0.150rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-  background: alpha(@mycolor, 0.3);
-}
-
-.floating-notifications .notification {
-  animation: fadeIn 0.5s ease-in-out;
-}
-
-.notification widget:hover {
-  background: alpha(@mycolor, 0.2);
-}
-
-.notification-content {
-  padding: 5px;
-  border-radius: 0.818rem;
+  background: alpha(@red, 0.3);
 }
 
 .control-center .notification-row .notification-background .notification .notification-content,
@@ -92,13 +223,12 @@
   color: @bg0;
 }
 
-/* Close button */
+/* Close button in control center */
 .control-center .notification-row .close-button,
 .floating-notifications.background .close-button {
   background-color: unset;
   color: @text;
 }
-
 .control-center .notification-row .close-button:hover,
 .floating-notifications.background .close-button:hover {
   background-color: @bg;
@@ -111,19 +241,17 @@
   padding-left: 20px;
   padding-top: 20px;
 }
-
 .widget-title > button {
   color: @text;
-  background: alpha(@orange, 0.3);
+  background: @cc-title-bg;
   border-radius: 12px;
   padding: 0px 10px;
   margin-right: 16px;
   margin-top: 3px;
 }
-
 .widget-title > button:hover {
-  background: @bg-hover;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.65);
+  background: @cc-title-hover;
+  box-shadow: 0px 0px 5px @cc-shadow;
 }
 
 /* DND (Do Not Disturb) widget styling. */
@@ -133,21 +261,18 @@
   margin-left: 30px;
   font-size: 1.1rem;
 }
-
 .widget-dnd > switch {
   font-size: initial;
   border-radius: 12px;
-  background: rgba(37, 36, 35, 0.9);
-  border: 1px solid rgba(124, 111, 100, 0.95);
+  background: @cc-dnd-bg;
+  border: 1px solid @cc-dnd-border;
   box-shadow: none;
 }
-
 .widget-dnd > switch:checked {
-  background: rgba(231, 138, 78, 0.9);
+  background: @cc-dnd-checked;
 }
-
 .widget-dnd > switch slider {
-  background: rgba(50, 48, 47, 0.95);
+  background: @cc-dnd-slider;
   border-radius: 12px;
 }
 
@@ -157,55 +282,45 @@
   margin: 16px 20px;
   background-color: @mpris-album-art-overlay;
   border-radius: 12px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.65);
+  box-shadow: 1px 1px 5px @cc-shadow;
 }
-
 .widget-mpris .widget-mpris-player button {
   color: @text;
   border-radius: 15px;
   padding: 5px;
   margin: 5px;
 }
-
 .widget-mpris .widget-mpris-player button:hover {
   background: @bg-hover;
 }
-
 .widget-mpris .widget-mpris-player .widget-mpris-album-art {
   border-radius: 20px;
 }
 
 /* Buttons Grid */
 .widget-buttons-grid {
-  font-family: "JetBrainsMono Nerd Font";
   padding: 0 10px 10px 10px;
   margin: 10px;
   border-radius: 12px;
   background: transparent;
 }
-
 .widget-buttons-grid > flowbox > flowboxchild > button label {
   font-size: 20px;
   color: @gray;
 }
-
 .widget-buttons-grid > flowbox > flowboxchild > button:hover label {
   color: @text;
 }
-
 .widget-buttons-grid > flowbox > flowboxchild > button {
   background: transparent;
   border-radius: 12px;
 }
-
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
   background: @bg-hover;
 }
-
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
   background: @red;
 }
-
 .widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked label {
   color: @bg0;
 }
@@ -224,7 +339,6 @@ scale trough highlight,
 scale trough slider {
   background-color: @red;
 }
-
 scale trough {
   background-color: alpha(@red, 0.3);
 }
