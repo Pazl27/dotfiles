@@ -75,8 +75,10 @@ dec_volume() {
 
 toggle_mute() {
   if [[ $(is_muted) == "true" ]]; then
+    local vol
+    vol=$(get_volume_number)
     pamixer -u
-    notify-send -e -u low -i "$(get_volume_icon)" "Volume" "Unmuted"
+    notify-send -e -u low -i "$(get_volume_icon)" "Volume" "Unmuted (${vol}%)"
   else
     pamixer -m
     local vol
