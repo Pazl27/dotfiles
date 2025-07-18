@@ -49,7 +49,6 @@
 
 .notification-default-action:hover,
 .notification-action:hover {
-  -gtk-icon-effect: none;
   background: @background;
 }
 
