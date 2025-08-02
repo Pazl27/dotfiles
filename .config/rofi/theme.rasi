@@ -1,0 +1,85 @@
+/*
+ * ROFI color theme
+ *
+ * Based on https://github.com/Murzchnvok/rofi-collection Minimal theme
+ *
+ */
+
+configuration {
+  font: "DepartureMono Nerd Font 14";
+
+  drun {
+    display-name: "";
+  }
+
+  run {
+    display-name: "";
+  }
+
+  window {
+    display-name: "";
+  }
+
+  timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+}
+
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+
+  bg:rgb(43, 40, 38);
+  bg-alt: #232323;
+  fg:rgb(136, 128, 114);
+  fg-alt:rgb(85, 80, 71);
+
+  background-color: @bg;
+  text-color: @fg;
+}
+
+window {
+  transparency: "real";
+  width: 700px;
+  border-radius: 8px;
+}
+
+mainbox {
+  children: [inputbar, listview];
+}
+
+inputbar {
+  children: [prompt, entry];
+}
+
+entry {
+  padding: 12px 0;
+}
+
+prompt {
+  padding: 12px;
+}
+
+listview {
+  lines: 8;
+}
+
+element {
+  children: [element-icon, element-text];
+}
+
+element-icon {
+  padding: 10px 10px;
+}
+
+element-text {
+  padding: 12px 0;
+  text-color: @fg-alt;
+}
+
+element-text selected {
+  text-color: @fg;
+}
