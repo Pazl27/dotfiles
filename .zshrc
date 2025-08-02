@@ -20,6 +20,9 @@ export PATH="$HOME/.cache/pokemon-icat:$PATH"            # Pokemon iCat
 export PATH="/usr/local/go/bin:$PATH"                    # Go
 export PATH="$GOPATH/bin:$PATH"                          # Go user binaries
 
+
+source $HOME/.askai-env
+
 # =========================
 # 3. Aliases
 # =========================
