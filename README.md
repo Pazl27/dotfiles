@@ -230,12 +230,12 @@ This dotfiles setup includes a minimal yet powerful **AI assistant workflow**, t
 
 ![Rofi Prompt Input](./screenshots/rofi-prompt.png)
 
-#### 📄 2. Markdown Output in Terminal
+#### 2. Markdown Output in Terminal
 > Answer rendered with `glow` in a floating kitty window
 
 ![Glow Markdown Output](./screenshots/glow-ai.png)
 
-### 🛠️ Config Notes
+### Config Notes
 
 - The Gemini API key is sourced from a `.env` file to keep it out of version control.
 - Kitty is launched with a custom script to ensure the display floats and closes on demand the floating behavior is regulated with the hyprland config and classes.
@@ -243,7 +243,7 @@ This dotfiles setup includes a minimal yet powerful **AI assistant workflow**, t
 
 
 
-### 📁 Scripts location
+### Scripts location
 
 You’ll find the related scripts inside:
 `~/.config/scripts/rofi/ai/`
