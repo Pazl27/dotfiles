@@ -163,6 +163,7 @@ My configuration has also integrated ai assistance, which can help you with quic
 
 </details>
 
+---
 
 # Keyboard Shortcuts
 
@@ -188,47 +189,6 @@ The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
 | <kbd>Super</kbd> + <kbd>A</kbd>            | Launch AI assistant (`askai.sh`)                    |
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Take screenshot (`snapshot.sh`)             |
 | <kbd>Super</kbd> + <kbd>I</kbd>            | Open logout screen (`wlogout`)                      |
-
-
-# Keyboard
-
-I use a **Corne (crkbd) v4** keyboard — a split, column-staggered 40% layout with 3 layers. Mine is the **wired version**, and I got it from [KeebArt](https://www.keebart.com/de/produkte/corne). It's compact, ergonomic, and a joy to type on once you get used to the layering system.  
-
-I use **Vial** to configure and flash my keymap. Vial makes it easy to customize layers, remap keys on the fly, and store changes directly in the keyboard’s memory.
-
-
-## My Layer Setup
-
-I use a total of **three layers**:
-
-### Layer 0 – Typing Layer (QWERTZ)
-This is my main typing layer, customized for the German QWERTZ layout. It includes standard alphanumeric keys and a few custom modifiers.
-
-**Visual:**
-![Layer 0 – Numbers & Symbols](screenshots/keyboard/layer0.png)
-
----
-
-### Layer 1 – Numbers & Symbols  
-This layer gives quick access to:
-- Numbers (0–9)
-- Common symbols like `!`, `=`, `#`, `*`, `&` etc.
-- Brackets and mathematical operators
-
-**Visual:**
-![Layer 1 – Numbers & Symbols](screenshots/keyboard/layer1.png)
-
----
-
-### Layer 2 – German Letters, Arrows & Media  
-This layer adds:
-- German-specific characters like `ä`, `ö`, `ü`, `ß`
-- Symbols like `@`, `€`, etc.
-- Arrow keys
-- Media controls (volume, play/pause, etc.)
-
-**Visual:**
-![Layer 2 – Numbers & Symbols](screenshots/keyboard/layer2.png)
 
 ---
 
@@ -278,6 +238,48 @@ You’ll find the related scripts inside:
 Main scripts:
 - `askai.sh` — handles prompt input and API call
 - `display-resp.sh` — renders the markdown response with glow
+
+---
+
+# Keyboard
+
+I use a **Corne (crkbd) v4** keyboard — a split, column-staggered 40% layout with 3 layers. Mine is the **wired version**, and I got it from [KeebArt](https://www.keebart.com/de/produkte/corne). It's compact, ergonomic, and a joy to type on once you get used to the layering system.  
+
+I use **Vial** to configure and flash my keymap. Vial makes it easy to customize layers, remap keys on the fly, and store changes directly in the keyboard’s memory.
+
+
+## My Layer Setup
+
+I use a total of **three layers**:
+
+### Layer 0 – Typing Layer (QWERTZ)
+This is my main typing layer, customized for the German QWERTZ layout. It includes standard alphanumeric keys and a few custom modifiers.
+
+**Visual:**
+![Layer 0 – Numbers & Symbols](screenshots/keyboard/layer0.png)
+
+---
+
+### Layer 1 – Numbers & Symbols  
+This layer gives quick access to:
+- Numbers (0–9)
+- Common symbols like `!`, `=`, `#`, `*`, `&` etc.
+- Brackets and mathematical operators
+
+**Visual:**
+![Layer 1 – Numbers & Symbols](screenshots/keyboard/layer1.png)
+
+---
+
+### Layer 2 – German Letters, Arrows & Media  
+This layer adds:
+- German-specific characters like `ä`, `ö`, `ü`, `ß`
+- Symbols like `@`, `€`, etc.
+- Arrow keys
+- Media controls (volume, play/pause, etc.)
+
+**Visual:**
+![Layer 2 – Numbers & Symbols](screenshots/keyboard/layer2.png)
 
 ---
 
