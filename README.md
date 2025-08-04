@@ -7,6 +7,7 @@ This repostory contains configurations for the applications I use on a daily bas
 It also contains a `.ideavimrc` file for the Vim emulation in IntelliJ IDEA.
 This configuration is used on my school laptop. I'm mostly using it for programming and browsing the web.
 It also conations my neovim configuration which is set up to work with go, rust and c++.
+My configuration has also integrated ai assistance, which can help you with quick questions or code snippet generation.
 
 # Preview
 ![Screenshot](./screenshots/main.png)
@@ -204,6 +205,54 @@ This layer adds:
 
 ---
 
+# Ai assistant
+This dotfiles setup includes a minimal yet powerful **AI assistant workflow**, tightly integrated with the Linux desktop via [Rofi](https://github.com/davatorium/rofi), [Gemini API](https://ai.google.dev), and [Glow](https://github.com/charmbracelet/glow) for terminal markdown rendering.
+
+### ✨ Features
+
+- Triggered with a keyboard shortcut (<kbd>Super</kbd> + <kbd>A</kbd>).
+- Prompt input via Rofi dmenu.
+- AI responses fetched using [Gemini 2.0 Flash](https://ai.google.dev/) (with **free API key**).
+- Response rendered beautifully in a floating `kitty` terminal using `glow`.
+
+##  How it works
+
+1. Press your configured keybinding (<kbd>Super</kbd> + <kbd>A</kbd>).
+2. Rofi pops up asking for your question.
+3. Your input is sent to the Gemini API via a small Bash script.
+4. The markdown-formatted AI response is saved to a temporary file.
+5. A floating `kitty` window opens, displaying the answer with `glow`.
+
+### Screenshots
+
+#### 1. Prompt Input via Rofi
+> Ask your question directly via a clean Rofi popup
+
+![Rofi Prompt Input](./screenshots/rofi-prompt.png)
+
+#### 📄 2. Markdown Output in Terminal
+> Answer rendered with `glow` in a floating kitty window
+
+![Glow Markdown Output](./screenshots/glow-ai.png)
+
+### 🛠️ Config Notes
+
+- The Gemini API key is sourced from a `.env` file to keep it out of version control.
+- Kitty is launched with a custom script to ensure the display floats and closes on demand the floating behavior is regulated with the hyprland config and classes.
+- `glow` is used for TUI markdown reading — clean and readable.
+
+
+
+### 📁 Scripts location
+
+You’ll find the related scripts inside:
+`~/.config/scripts/rofi/ai/`
+
+Main scripts:
+- `askai.sh` — handles prompt input and API call
+- `display-resp.sh` — renders the markdown response with glow
+
+---
 
 # Installation
 1. Clone the repository
@@ -211,10 +260,15 @@ This layer adds:
 cd ~
 git clone https://github.com/Pazl27/dotfiles.git
 ```
-2. Make shure you have the application installed that you want to use.
+2. Make sure you have the application installed that you want to use.
 3. Copy the configuration files to the `.config` directory
 ```bash
 cd dotfiles
 cp -r -f .config/[dir_you_want_to_copy] ~/.config/
 ```
 If you have existing configuration files you want to keep, make a backup of them before copying the new ones.
+It is also possible to apply the configuration with the help of stow. 
+```bash
+cd dotfiles
+stow .
+```
