@@ -169,25 +169,25 @@ My configuration has also integrated ai assistance, which can help you with quic
 These are the keybindings I use in Hyprland, configured in my `keymaps.conf`.  
 The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
 
-| Shortcut              | Action Description                                  |
-|-----------------------|-----------------------------------------------------|
-| `SUPER + Return`      | Open terminal (`kitty`)                             |
-| `SUPER + Q`           | Kill the active window                              |
-| `SUPER + M`           | Exit Hyprland session                               |
-| `SUPER + Shift + E`   | Open file manager (`nautilus`)                       |
-| `SUPER + E`           | Launch terminal file manager (`yazi.sh`)             |
-| `SUPER + B`           | Open browser (`zen-browser`)                         |
-| `SUPER + V`           | Toggle floating mode                                 |
-| `SUPER + SPACE`       | Open app launcher (`rofi -show drun`)                |
-| `SUPER + P`           | Open resolution switcher (`rofi/resolution.sh`)      |
-| `SUPER + F`           | Toggle fullscreen                                    |
-| `SUPER + D`           | Toggle split layout (dwindle only)                   |
-| `SUPER + N`           | Open terminal with notes (`open_notes.sh`)           |
-| `SUPER + W`           | Open WiFi selector (`rofi/wifi.sh`)                  |
-| `SUPER + G`           | Switch wallpaper (`rofi/wallpaper_switcher.sh`)      |
-| `SUPER + A`           | Launch AI assistant (`askai.sh`)                     |
-| `SUPER + Shift + S`   | Take screenshot (`snapshot.sh`)                      |
-| `SUPER + I`           | Open logout screen (`wlogout`)                       |
+| Shortcut                            | Action Description                                  |
+|-------------------------------------|-----------------------------------------------------|
+| <kbd>Super</kbd> + <kbd>Return</kbd>        | Open terminal (`kitty`)                             |
+| <kbd>Super</kbd> + <kbd>Q</kbd>            | Kill the active window                              |
+| <kbd>Super</kbd> + <kbd>M</kbd>            | Exit Hyprland session                               |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd> | Open file manager (`nautilus`)                |
+| <kbd>Super</kbd> + <kbd>E</kbd>            | Launch terminal file manager (`yazi.sh`)            |
+| <kbd>Super</kbd> + <kbd>B</kbd>            | Open browser (`zen-browser`)                        |
+| <kbd>Super</kbd> + <kbd>V</kbd>            | Toggle floating mode                                |
+| <kbd>Super</kbd> + <kbd>Space</kbd>        | Open app launcher (`rofi -show drun`)               |
+| <kbd>Super</kbd> + <kbd>P</kbd>            | Open resolution switcher (`rofi/resolution.sh`)     |
+| <kbd>Super</kbd> + <kbd>F</kbd>            | Toggle fullscreen                                   |
+| <kbd>Super</kbd> + <kbd>D</kbd>            | Toggle split layout (dwindle only)                  |
+| <kbd>Super</kbd> + <kbd>N</kbd>            | Open terminal with notes (`open_notes.sh`)          |
+| <kbd>Super</kbd> + <kbd>W</kbd>            | Open WiFi selector (`rofi/wifi.sh`)                 |
+| <kbd>Super</kbd> + <kbd>G</kbd>            | Switch wallpaper (`rofi/wallpaper_switcher.sh`)     |
+| <kbd>Super</kbd> + <kbd>A</kbd>            | Launch AI assistant (`askai.sh`)                    |
+| <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Take screenshot (`snapshot.sh`)             |
+| <kbd>Super</kbd> + <kbd>I</kbd>            | Open logout screen (`wlogout`)                      |
 
 
 # Keyboard
