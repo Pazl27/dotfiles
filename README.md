@@ -163,6 +163,33 @@ My configuration has also integrated ai assistance, which can help you with quic
 
 </details>
 
+
+# Keyboard Shortcuts
+
+These are the keybindings I use in Hyprland, configured in my `keymaps.conf`.  
+The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
+
+| Shortcut              | Action Description                                  |
+|-----------------------|-----------------------------------------------------|
+| `SUPER + Return`      | Open terminal (`kitty`)                             |
+| `SUPER + Q`           | Kill the active window                              |
+| `SUPER + M`           | Exit Hyprland session                               |
+| `SUPER + Shift + E`   | Open file manager (`nautilus`)                       |
+| `SUPER + E`           | Launch terminal file manager (`yazi.sh`)             |
+| `SUPER + B`           | Open browser (`zen-browser`)                         |
+| `SUPER + V`           | Toggle floating mode                                 |
+| `SUPER + SPACE`       | Open app launcher (`rofi -show drun`)                |
+| `SUPER + P`           | Open resolution switcher (`rofi/resolution.sh`)      |
+| `SUPER + F`           | Toggle fullscreen                                    |
+| `SUPER + D`           | Toggle split layout (dwindle only)                   |
+| `SUPER + N`           | Open terminal with notes (`open_notes.sh`)           |
+| `SUPER + W`           | Open WiFi selector (`rofi/wifi.sh`)                  |
+| `SUPER + G`           | Switch wallpaper (`rofi/wallpaper_switcher.sh`)      |
+| `SUPER + A`           | Launch AI assistant (`askai.sh`)                     |
+| `SUPER + Shift + S`   | Take screenshot (`snapshot.sh`)                      |
+| `SUPER + I`           | Open logout screen (`wlogout`)                       |
+
+
 # Keyboard
 
 I use a **Corne (crkbd) v4** keyboard — a split, column-staggered 40% layout with 3 layers. Mine is the **wired version**, and I got it from [KeebArt](https://www.keebart.com/de/produkte/corne). It's compact, ergonomic, and a joy to type on once you get used to the layering system.  
@@ -208,7 +235,7 @@ This layer adds:
 # Ai assistant
 This dotfiles setup includes a minimal yet powerful **AI assistant workflow**, tightly integrated with the Linux desktop via [Rofi](https://github.com/davatorium/rofi), [Gemini API](https://ai.google.dev), and [Glow](https://github.com/charmbracelet/glow) for terminal markdown rendering.
 
-### ✨ Features
+### Features
 
 - Triggered with a keyboard shortcut (<kbd>Super</kbd> + <kbd>A</kbd>).
 - Prompt input via Rofi dmenu.
