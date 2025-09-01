@@ -75,7 +75,7 @@ listview {
     dynamic:                     false;
     spacing:                     10px;
     padding:                     8px;
-    border-radius:               6px;
+    border-radius:               0px 0px 6px 6px;
     background-color:            #282828;  /* Gruvbox slightly lighter bg for grid */
 }
 
