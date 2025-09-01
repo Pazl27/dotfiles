@@ -18,6 +18,18 @@ configuration {
   display-drun: " ";
   display-window: "  ";
   display-ssh: "󱘖 ";
+
+  kb-mode-complete: "";
+  kb-element-next: "";
+  kb-element-prev: "";
+  kb-row-up: "Up,Control+k,";
+  kb-row-down: "Down,Control+j";
+  kb-accept-entry: "Control+m,Return,KP_Enter";
+  terminal: "kitty";
+  kb-remove-to-eol: "Control+Shift+e";
+  kb-mode-next: "Tab,Shift+Right,Control+l";
+  kb-mode-previous: "ISO_Left_Tab,Shift+Left,Control+h";
+  kb-remove-char-back: "BackSpace";
 }
 
 window { 
@@ -87,19 +99,3 @@ prompt {
 	margin: 0 -2 0 0;
 }
 
-// KEYMAPS
-//------------------------------------------------
-
-configuration {
-  kb-mode-complete: "";
-  kb-element-next: "";
-  kb-element-prev: "";
-  kb-row-up: "Up,Control+k,";
-  kb-row-down: "Down,Control+j";
-  kb-accept-entry: "Control+m,Return,KP_Enter";
-  terminal: "kitty";
-  kb-remove-to-eol: "Control+Shift+e";
-  kb-mode-next: "Tab,Shift+Right,Control+l";
-  kb-mode-previous: "ISO_Left_Tab,Shift+Left,Control+h";
-  kb-remove-char-back: "BackSpace";
-}
