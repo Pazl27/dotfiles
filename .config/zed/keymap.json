@@ -46,6 +46,7 @@
       "space g p": "editor::ToggleSelectedDiffHunks",
       "space g b": "git::Blame",
       "space g i": "editor::OpenGitBlameCommit",
+      "space g c": "editor::BlameHover",
 
       "space w r": "projects::OpenRecent",
 
