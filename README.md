@@ -1,5 +1,14 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&letterSpacing=tiny&duration=2000&pause=3000&color=F7F7F7&center=true&vCenter=true&width=435&lines=Pazl's+Dotfiles)](https://git.io/typing-svg)
 
+<div align="center">
+<p>
+<a href="https://github.com/Pazl27/dotfiles/stargazers"><img src="https://img.shields.io/github/stars/Pazl27/dotfiles?style=for-the-badge&logo=starship&color=d79921&logoColor=d79921&labelColor=282828"  alt="stars"></a>&nbsp;&nbsp;
+<a href="https://github.com/Pazl27/dotfiles/forks"><img src="https://img.shields.io/github/forks/Pazl27/dotfiles?style=for-the-badge&logo=appveyor&logoColor=98971a&label=Forks&labelColor=282828&color=98971a" alt="forks"></a>&nbsp;&nbsp;
+<a href="https://github.com/Pazl27/dotfiles/commits/master/"><img src="https://img.shields.io/github/last-commit/Pazl27/dotfiles?style=for-the-badge&logo=github&logoColor=fb4934&label=Last%20Commit&labelColor=282828&color=fb4934" alt="last commit"></a>&nbsp;&nbsp;
+<a href="https://github.com/Pazl27/dotfiles/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Pazl27/dotfiles?style=for-the-badge&color=b16286&logoColor=b16286&labelColor=282828" alt="license"></a>&nbsp;&nbsp;
+</p>
+</div>
+
 # Description
 This repository contains my personal dotfiles. The hole configuration is based around the colortheme **gruvbox**.
 This is my first attempt on a linux rice. I'm using Hyprland as my window manager.
