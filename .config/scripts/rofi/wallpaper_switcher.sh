@@ -1,13 +1,16 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-picture_list=$(find $HOME/Pictures/wallpaper/gruvbox -type f)
+SELECTED=$(find ~/Pictures/wallpaper/gruvbox \
+    -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \)  \
+    | shuf |
+    while read -r img; do
+        echo -en "$img\0icon\x1f$img\n"
+    done \
+| rofi -dmenu -show-icons -theme "$HOME/.config/rofi/wallselect.rasi" -p ">")
 
-chosen_picture=$(echo -e "$toggle\n$picture_list" | uniq -u | rofi -dmenu -i -selected-row 1 -p "Wallpaper: " )
 
-if [ -z "$chosen_picture" ]; then
-  exit
-else
-  notify-send "Setting wallpaper to $chosen_picture"
+notify-send "new wallpaper: $(basename "$SELECTED")"
 
-  swww img -t none --transition-duration 0 $chosen_picture
-fi
+swww img -t none --transition-duration 0 "$SELECTED"
+
+
