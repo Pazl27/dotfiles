@@ -241,6 +241,46 @@ tooltip {
     background: alpha(@select, 0.6);
 }
 
+/* Hide first and last buttons by default */
+.widget-mpris button:first-child,
+.widget-mpris button:last-child {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+.widget-mpris .widget-mpris-player button:first-child,
+.widget-mpris .widget-mpris-player button:last-child {
+    opacity: 0;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show buttons on hover */
+.widget-mpris:hover button:first-child,
+.widget-mpris:hover button:last-child {
+    opacity: 1;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 4px;
+    margin: 2px;
+}
+
+.widget-mpris .widget-mpris-player:hover button:first-child,
+.widget-mpris .widget-mpris-player:hover button:last-child {
+    opacity: 1;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 4px;
+    margin: 2px;
+}
+
 /* Volume widget */
 .widget-volume {
     padding: 6px 5px 5px 5px;
