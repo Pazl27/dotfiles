@@ -87,7 +87,7 @@
     "dock": "right",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "model": "claude-sonnet-4"
     },
     "version": "2"
   },
