@@ -66,18 +66,14 @@
     "buttons-grid": {
       "actions": [
         {
-          "label": " ",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-          "update-command": "sh -c '[[ $(nmcli r wifi) == \"enabled\" ]] && echo true || echo false'"
+          "label": "󰌘",
+          "type": "normal",
+          "command": "localsend"
         },
         {
-          "label": "󰂯",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && rfkill unblock bluetooth || rfkill block bluetooth'",
-          "update-command": "sh -c \"rfkill list bluetooth | grep -q \"Soft blocked: no\" && echo true || echo false\""
+          "label": "󰄜",
+          "type": "normal",
+          "command": "scrcpy"
         },
         {
           "label": " ",
