@@ -9,6 +9,9 @@ SELECTED=$(find ~/Pictures/wallpaper/gruvbox \
 | rofi -dmenu -show-icons -theme "$HOME/.config/rofi/wallselect.rasi" -p ">")
 
 
+if [ -z "$SELECTED" ]; then
+    exit 0
+fi
 notify-send "new wallpaper: $(basename "$SELECTED")"
 
 swww img -t none --transition-duration 0 "$SELECTED"
