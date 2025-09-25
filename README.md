@@ -189,7 +189,6 @@ The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
 | <kbd>Super</kbd> + <kbd>B</kbd>            | Open browser (`zen-browser`)                        |
 | <kbd>Super</kbd> + <kbd>V</kbd>            | Toggle floating mode                                |
 | <kbd>Super</kbd> + <kbd>Space</kbd>        | Open app launcher (`rofi -show drun`)               |
-| <kbd>Super</kbd> + <kbd>P</kbd>            | Open resolution switcher (`rofi/resolution.sh`)     |
 | <kbd>Super</kbd> + <kbd>F</kbd>            | Toggle fullscreen                                   |
 | <kbd>Super</kbd> + <kbd>D</kbd>            | Toggle split layout (dwindle only)                  |
 | <kbd>Super</kbd> + <kbd>N</kbd>            | Open terminal with notes (`open_notes.sh`)          |
@@ -198,8 +197,8 @@ The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
 | <kbd>Super</kbd> + <kbd>A</kbd>            | Launch AI assistant (`askai.sh`)                    |
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Take screenshot (`snapshot.sh`)             |
 | <kbd>Super</kbd> + <kbd>I</kbd>            | Open logout screen (`wlogout`)                      |
-| <kbd>Super</kbd> + <kbd>A</kbd>            | Open AI assistant promt                             |
-
+| <kbd>Super</kbd> + <kbd>P</kbd>            | Open Install manager (`rofi/list-installer.sh`)     |
+| <kbd>Super</kbd> + <kbd>R</kbd>            | Open Repository list (`rofi/repo-rofi.sh`)     |
 ---
 
 # Ai assistant
