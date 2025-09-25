@@ -58,5 +58,8 @@ vim.g.copilot_filetypes = { ['typr'] = false }
 vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 
 -- spell check
-vim.opt.spelllang = "en,de"
-vim.opt.spell = true
+opt.spelllang = "en,de"
+opt.spell = true
+
+-- remove statusline for telescope and tree
+opt.laststatus = 3

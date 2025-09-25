@@ -23,7 +23,11 @@ return {
         -- modes = { "n", "no", "c" },
         hybrid_modes = { "n" },
         linewise_hybrid_mode = true,
-        filetypes = { "markdown", "quarto", "rmd", "typst"}
+        filetypes = { "markdown", "quarto", "rmd", "typst" }
+      },
+      experimental = {
+        check_rtp = true,          -- or false, depending on whether you want the check at all
+        check_rtp_message = false, -- disable the warning message
       },
     })
   end
