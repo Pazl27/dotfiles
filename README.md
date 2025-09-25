@@ -217,8 +217,8 @@ My configuration has also integrated ai assistance, which can help you with quic
 
 # Keyboard Shortcuts
 
-These are the keybindings I use in Hyprland, configured in my `keymaps.conf`.
-The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
+These are the keybindings I use in Hyprland, configured in my `keymaps.conf`.  
+The `SUPER` key refers to the **Left Alt** or **Option** key on most keyboards.
 
 | Shortcut                            | Action Description                                  |
 |-------------------------------------|-----------------------------------------------------|
@@ -230,7 +230,6 @@ The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
 | <kbd>Super</kbd> + <kbd>B</kbd>            | Open browser (`zen-browser`)                        |
 | <kbd>Super</kbd> + <kbd>V</kbd>            | Toggle floating mode                                |
 | <kbd>Super</kbd> + <kbd>Space</kbd>        | Open app launcher (`rofi -show drun`)               |
-| <kbd>Super</kbd> + <kbd>P</kbd>            | Open resolution switcher (`rofi/resolution.sh`)     |
 | <kbd>Super</kbd> + <kbd>F</kbd>            | Toggle fullscreen                                   |
 | <kbd>Super</kbd> + <kbd>D</kbd>            | Toggle split layout (dwindle only)                  |
 | <kbd>Super</kbd> + <kbd>N</kbd>            | Open terminal with notes (`open_notes.sh`)          |
@@ -239,7 +238,8 @@ The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
 | <kbd>Super</kbd> + <kbd>A</kbd>            | Launch AI assistant (`askai.sh`)                    |
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Take screenshot (`snapshot.sh`)             |
 | <kbd>Super</kbd> + <kbd>I</kbd>            | Open logout screen (`wlogout`)                      |
-
+| <kbd>Super</kbd> + <kbd>P</kbd>            | Open Install manager (`rofi/list-installer.sh`)     |
+| <kbd>Super</kbd> + <kbd>R</kbd>            | Open Repository list (`rofi/repo-rofi.sh`)     |
 ---
 
 # Scripts
@@ -453,6 +453,7 @@ This script makes wallpaper management incredibly convenient - I can quickly bro
 I use a **Corne (crkbd) v4** keyboard — a split, column-staggered 40% layout with 3 layers. Mine is the **wired version**, and I got it from [KeebArt](https://www.keebart.com/de/produkte/corne). It's compact, ergonomic, and a joy to type on once you get used to the layering system.
 
 I use **Vial** to configure and flash my keymap. Vial makes it easy to customize layers, remap keys on the fly, and store changes directly in the keyboard’s memory.
+But mainly, I use a wireless Corne build. The configuration for this build can be found in this [repo](https://github.com/Pazl27/zmk-config-corne). This is the setup I use as my daily driver. The one below is a bit older.
 
 
 ## My Layer Setup
