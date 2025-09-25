@@ -217,7 +217,7 @@ My configuration has also integrated ai assistance, which can help you with quic
 
 # Keyboard Shortcuts
 
-These are the keybindings I use in Hyprland, configured in my `keymaps.conf`.  
+These are the keybindings I use in Hyprland, configured in my `keymaps.conf`.
 The `SUPER` key refers to the **Left Alt** or **Option** key on most keyboards.
 
 | Shortcut                            | Action Description                                  |
@@ -314,7 +314,7 @@ Launch the Installation Manager with `Super + P` and choose the action you want 
    - Updates locate database after completion
 
 2. **Install Official Packages** - Browse and install from official repositories
-![Pkg](./screenshot/install-pkg.png)
+![Pkg](./screenshots/install-pkg.png)
    - Multi-select packages with Tab
    - Preview package information with `pacman -Sii`
    - Scroll preview with Alt+J/K
@@ -331,13 +331,13 @@ Launch the Installation Manager with `Super + P` and choose the action you want 
    - Preview installed package information
 
 5. **Create Web App** - Convert websites to desktop applications
-![Webapp](./screenshot/create-webapp.png)
+![Webapp](./screenshots/create-webapp.png)
    - Enter app name, URL, and icon URL
    - Automatically downloads and sets up icons
    - Creates .desktop files for app launcher integration
    - Uses browser app mode to hide UI elements
    - The app can be found in the rofi menu after installation
-![Webapp in Rofi](./screenshot/webapp.png)
+![Webapp in Rofi](./screenshots/webapp.png)
 
 
 6. **Remove Web App** - Clean up created web applications
