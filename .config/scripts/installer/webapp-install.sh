@@ -1,0 +1,86 @@
+#!/bin/bash
+
+if [ "$#" -lt 3 ]; then
+  echo -e "\e[32mLet's create a new web app you can start with the app launcher.\n\e[0m"
+  # Check if gum is installed
+  if ! command -v gum &> /dev/null; then
+    echo "Error: 'gum' is not installed. Please install it first:"
+    echo "  yay -S gum"
+    read -p "Press Enter to continue..."
+    exit 1
+  fi
+
+  APP_NAME=$(gum input --prompt "Name> " --placeholder "My favorite web app")
+  APP_URL=$(gum input --prompt "URL> " --placeholder "https://example.com")
+  ICON_REF=$(gum input --prompt "Icon URL> " --placeholder "See https://dashboardicons.com (must use PNG!)")
+  CUSTOM_EXEC=""
+  MIME_TYPES=""
+  INTERACTIVE_MODE=true
+else
+  APP_NAME="$1"
+  APP_URL="$2"
+  ICON_REF="$3"
+  CUSTOM_EXEC="$4" # Optional custom exec command
+  MIME_TYPES="$5"  # Optional mime types
+  INTERACTIVE_MODE=false
+fi
+
+# Debug: Show what we got
+echo "DEBUG: APP_NAME='$APP_NAME'"
+echo "DEBUG: APP_URL='$APP_URL'"
+echo "DEBUG: ICON_REF='$ICON_REF'"
+
+# Ensure valid execution
+if [[ -z "$APP_NAME" || -z "$APP_URL" || -z "$ICON_REF" ]]; then
+  echo "You must set app name, app URL, and icon URL!"
+  read -p "Press Enter to continue..."
+  exit 1
+fi
+
+# Refer to local icon or fetch remotely from URL
+ICON_DIR="$HOME/.local/share/icons"
+if [[ $ICON_REF =~ ^https?:// ]]; then
+  ICON_PATH="$ICON_DIR/$APP_NAME.png"
+  if curl -sL -o "$ICON_PATH" "$ICON_REF"; then
+    ICON_PATH="$ICON_DIR/$APP_NAME.png"
+  else
+    echo "Error: Failed to download icon."
+    exit 1
+  fi
+else
+  ICON_PATH="$ICON_DIR/$ICON_REF"
+fi
+
+# Use custom exec if provided, otherwise default behavior
+if [[ -n $CUSTOM_EXEC ]]; then
+  EXEC_COMMAND="$CUSTOM_EXEC"
+else
+  EXEC_COMMAND="$HOME/.config/scripts/installer/webapp-launch.sh \"$APP_URL\""
+fi
+
+# Create application .desktop file
+DESKTOP_FILE="$HOME/.local/share/applications/$APP_NAME.desktop"
+
+cat >"$DESKTOP_FILE" <<EOF
+[Desktop Entry]
+Version=1.0
+Name=$APP_NAME
+Comment=$APP_NAME
+Exec=$EXEC_COMMAND
+Terminal=false
+Type=Application
+Icon=$ICON_PATH
+StartupNotify=true
+EOF
+
+# Add mime types if provided
+if [[ -n $MIME_TYPES ]]; then
+  echo "MimeType=$MIME_TYPES" >>"$DESKTOP_FILE"
+fi
+
+chmod +x "$DESKTOP_FILE"
+
+if [[ $INTERACTIVE_MODE == true ]]; then
+  echo -e "You can now find $APP_NAME using the app launcher (SUPER + SPACE)\n"
+  ./show-done.sh
+fi
