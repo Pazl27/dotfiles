@@ -2,7 +2,7 @@
 # 1. Environment Variables
 # =========================
 
-export JAVA_HOME="/usr/lib/jvm/java-23-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
 export GOPATH="$HOME/go"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER="zen-browser"
@@ -19,6 +19,9 @@ export PATH="$HOME/.cargo/bin:$PATH"                     # Rust/Cargo
 export PATH="$HOME/.cache/pokemon-icat:$PATH"            # Pokemon iCat
 export PATH="/usr/local/go/bin:$PATH"                    # Go
 export PATH="$GOPATH/bin:$PATH"                          # Go user binaries
+
+export ANDROID_HOME="$HOME/Android/Sdk"
+export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 
 
 source $HOME/.askai-env
@@ -47,7 +50,6 @@ alias ff='nvim $(fzf -m --preview="bat --color=always {}")'
 alias ft='~/.config/scripts/fzf-tmux.sh'
 
 # Tmux
-alias t='~/.config/scripts/start-tmux.sh'
 alias ta='tmux attach'
 alias tl='tmux list-sessions'
 alias tn='tmux new-session -s'
@@ -73,6 +75,7 @@ alias gds='gd --staged'
 alias gi='git init'
 alias gl='git log --graph --pretty=format:"%C(magenta)%h %C(white)%an  %ar%C(blue)  %D%n%s%n"'
 alias gla='serie'
+alias glf='$HOME/.config/scripts/git-logs.sh'
 alias gm='git merge'
 alias gn='git checkout -b'  
 alias gp='git push'
