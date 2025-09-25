@@ -198,6 +198,7 @@ The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
 | <kbd>Super</kbd> + <kbd>A</kbd>            | Launch AI assistant (`askai.sh`)                    |
 | <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>S</kbd> | Take screenshot (`snapshot.sh`)             |
 | <kbd>Super</kbd> + <kbd>I</kbd>            | Open logout screen (`wlogout`)                      |
+| <kbd>Super</kbd> + <kbd>A</kbd>            | Open AI assistant promt                             |
 
 ---
 
