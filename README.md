@@ -255,7 +255,7 @@ Main scripts:
 I use a **Corne (crkbd) v4** keyboard — a split, column-staggered 40% layout with 3 layers. Mine is the **wired version**, and I got it from [KeebArt](https://www.keebart.com/de/produkte/corne). It's compact, ergonomic, and a joy to type on once you get used to the layering system.  
 
 I use **Vial** to configure and flash my keymap. Vial makes it easy to customize layers, remap keys on the fly, and store changes directly in the keyboard’s memory.
-But mainly, I use a wireless Corne build. The configuration for this build can be found in this [repo](github.com/Pazl27/zmk-corne-config). This is the setup I use as my daily driver. The one below is a bit older.
+But mainly, I use a wireless Corne build. The configuration for this build can be found in this [repo](https://github.com/Pazl27/zmk-config-corne). This is the setup I use as my daily driver. The one below is a bit older.
 
 
 ## My Layer Setup
