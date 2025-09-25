@@ -177,7 +177,7 @@ My configuration has also integrated ai assistance, which can help you with quic
 # Keyboard Shortcuts
 
 These are the keybindings I use in Hyprland, configured in my `keymaps.conf`.  
-The `SUPER` key refers to the **Windows** or **Command** key on most keyboards.
+The `SUPER` key refers to the **Left Alt** or **Option** key on most keyboards.
 
 | Shortcut                            | Action Description                                  |
 |-------------------------------------|-----------------------------------------------------|
