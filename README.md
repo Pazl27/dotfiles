@@ -317,44 +317,37 @@ Launch the Installation Manager with `Super + P` and choose the action you want 
 ![Pkg](./screenshots/install-pkg.png)
    - Multi-select packages with Tab
    - Preview package information with `pacman -Sii`
-   - Scroll preview with Alt+J/K
-   - Toggle preview with Alt+P
+   - Browse through existing packages
 
 3. **Install AUR Packages** - Browse and install from AUR
    - Multi-select AUR packages
    - Preview package info and PKGBUILD files
-   - Alt+B to view PKGBUILD, Alt+B again to return to info
+   - Browse through existing packages
 
 4. **Remove Packages** - Uninstall packages with dependencies
    - Shows only explicitly installed packages
    - Multi-select for batch removal
    - Preview installed package information
 
-5. **Create Web App** - Convert websites to desktop applications
+5. **System Update** - Create a system update
+   - Shows all packages that have updates
+   - see version increment of packages
+   - Preview installed package information
+
+6. **Create Web App** - Convert websites to desktop applications
 ![Webapp](./screenshots/create-webapp.png)
    - Enter app name, URL, and icon URL
    - Automatically downloads and sets up icons
    - Creates .desktop files for app launcher integration
    - Uses browser app mode to hide UI elements
    - The app can be found in the rofi menu after installation
-![Webapp in Rofi](./screenshots/webapp.png)
+  ![Webapp in Rofi](./screenshots/webapp.png)
 
 
-6. **Remove Web App** - Clean up created web applications
+7. **Remove Web App** - Clean up created web applications
    - Lists all created web apps
    - Multi-select for batch removal
    - Removes both .desktop files and icons
-
-### Key Bindings (in FZF interfaces)
-
-| Key Combination | Action |
-|-----------------|--------|
-| <kbd>Tab</kbd> | Multi-select items |
-| <kbd>Alt</kbd> + <kbd>P</kbd> | Toggle preview panel |
-| <kbd>Alt</kbd> + <kbd>J/K</kbd> | Scroll preview up/down |
-| <kbd>Alt</kbd> + <kbd>D/U</kbd> | Page down/up in preview |
-| <kbd>Alt</kbd> + <kbd>B</kbd> | Toggle PKGBUILD view (AUR only) |
-| <kbd>F11</kbd> | Maximize preview window |
 
 ### Dependencies
 
