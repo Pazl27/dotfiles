@@ -14,7 +14,10 @@ chosen="$(printf '%s\n' "$configs" | rofi -dmenu -theme "$HOME/.config/rofi/ai.r
 dir="$HOME/dev/$chosen"
 
 # Kill existing terminal (if you only want one instance)
-pkill -x "$terminal" 2>/dev/null || true
+# pkill -x "$terminal" 2>/dev/null || true
+# sleep 0.1
+
+zeditor "$dir"
 sleep 0.1
 
 # Launch terminal with tmux session (attach if exists, else create new)
