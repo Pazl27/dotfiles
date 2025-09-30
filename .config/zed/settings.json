@@ -83,21 +83,20 @@
     "edit_prediction_provider": "copilot"
   },
   "agent": {
+    "default_profile": "write",
     "button": true,
     "dock": "right",
     "default_model": {
       "provider": "copilot_chat",
       "model": "claude-sonnet-4"
-    },
-    "version": "2"
+    }
   },
 
   // Git
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
-      "enabled": true,
-      "position": "right"
+      "enabled": true
     }
   },
 

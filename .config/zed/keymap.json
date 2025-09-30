@@ -11,26 +11,28 @@
     "context": "VimControl && !menu",
     "bindings": {
       // Put key bindings here if you want them to work in normal & visual mode.
-      "shift-k": "editor::Hover",
-      "space r n": "editor::Rename",
+      ":": "command_palette::Toggle",
+
       "space x f": "editor::Format",
       "space x x": "diagnostics::Deploy",
-      "space f b": "tab_switcher::Toggle",
+
       "space b d": "pane::CloseActiveItem",
-      ":": "command_palette::Toggle",
       "space s v": "pane::SplitVertical",
       "space s h": "pane::SplitHorizontal",
 
       "space c a": "editor::ToggleCodeActions",
+      "shift-k": "editor::Hover",
+      "shift-u": "vim::Redo",
+      "space r n": "editor::Rename",
 
       "space c c": "workspace::ToggleRightDock",
       "space c i": "assistant::InlineAssist",
 
-      "shift-u": "vim::Redo",
-
       "space f f": "file_finder::Toggle",
       "space f g": "pane::DeploySearch",
       "space f t": "task::Spawn",
+      "space f b": "tab_switcher::Toggle",
+      "space f p": "projects::OpenRecent",
       "space e": "workspace::ToggleLeftDock",
 
       "ctrl-h": "workspace::ActivatePaneLeft",
@@ -45,10 +47,18 @@
 
       "space g p": "editor::ToggleSelectedDiffHunks",
       "space g b": "git::Blame",
+      "space g r": "git::Restore",
       "space g i": "editor::OpenGitBlameCommit",
       "space g c": "editor::BlameHover",
+      "space g w": "git::Branch",
 
-      "space w r": "projects::OpenRecent",
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDeclaration",
+      "g I": "editor::GoToImplementation",
+      "g t": "editor::GoToTypeDefinition",
+      "g r": "editor::FindAllReferences",
+
+      "space t n": "terminal_panel::ToggleFocus",
 
       "space g g": [
         "task::Spawn",
@@ -111,9 +121,9 @@
       // work when no editor exists.
       "space f f": "file_finder::Toggle",
       "space f g": "pane::DeploySearch",
+      "space f p": "projects::OpenRecent",
       "space e": "workspace::ToggleLeftDock",
       "space b d": "pane::CloseActiveItem",
-      "space w r": "projects::OpenRecent",
       "space q a": "zed::Quit",
       "ctrl-c": "editor::Copy",
       "ctrl-v": "editor::Paste",
@@ -124,6 +134,7 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown",
       "space c c": "workspace::ToggleRightDock",
+      "space t n": "terminal_panel::ToggleFocus",
       "space g g": [
         "task::Spawn",
         { "task_name": "Lazygit", "reveal_target": "center" }
@@ -181,6 +192,18 @@
     "bindings": {
       "ctrl-k": "editor::ContextMenuPrevious",
       "ctrl-j": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "DebugPanel",
+    "bindings": {
+      "escape": "workspace::CloseActiveDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "escape": "workspace::CloseActiveDock"
     }
   }
 ]
