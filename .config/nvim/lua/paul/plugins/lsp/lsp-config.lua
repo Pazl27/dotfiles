@@ -4,15 +4,11 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
+    "b0o/schemastore.nvim", -- For JSON schemas
   },
   config = function()
-    -- import lspconfig plugin
-    local lspconfig = require("lspconfig")
-
-    -- import cmp-nvim-lsp plugin
+    -- import cmp-nvim-lsp plugin for capabilities
     local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-    local util = require("lspconfig/util")
 
     local keymap = vim.keymap -- for conciseness
 
@@ -63,117 +59,230 @@ return {
 
     local capabilities = cmp_nvim_lsp.default_capabilities()
 
-    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    -- Configure diagnostic signs
+    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    -- configure html server
-    lspconfig["html"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
+    -- Helper function to create root pattern (not needed for vim.lsp.config)
+    -- vim.lsp.config uses root_markers instead
 
-    -- configure typescript server with plugin
-    lspconfig["ts_ls"].setup({
+    -- Configure HTML server
+    vim.lsp.config.html = {
+      cmd = { "vscode-html-language-server", "--stdio" },
+      filetypes = { "html" },
+      root_markers = { "package.json", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
-    -- configure css server
-    lspconfig["cssls"].setup({
+    -- Configure TypeScript server
+    vim.lsp.config.ts_ls = {
+      cmd = { "typescript-language-server", "--stdio" },
+      filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
+      root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
-    -- configure tailwindcss server
-    lspconfig["tailwindcss"].setup({
+    -- Configure CSS server
+    vim.lsp.config.cssls = {
+      cmd = { "vscode-css-language-server", "--stdio" },
+      filetypes = { "css", "scss", "less" },
+      root_markers = { "package.json", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-    })
-
-    -- vue.js
-    lspconfig["volar"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-    })
-
-    -- configure rust-analyzer server
-    lspconfig["rust_analyzer"].setup({
-      capabilities = capabilities,
-      on_attach = on_attach,
-      root_dir = util.root_pattern("Cargo.toml"),
       settings = {
-        ['rust-analyzer'] = {
-          cargo = {
-            allFeatures = true
-          }
-        }
-      }
-    })
+        css = {
+          validate = true,
+        },
+        less = {
+          validate = true,
+        },
+        scss = {
+          validate = true,
+        },
+      },
+    }
 
-    -- configure python server
-    lspconfig["pyright"].setup({
+    -- Configure Tailwind CSS server
+    vim.lsp.config.tailwindcss = {
+      cmd = { "tailwindcss-language-server", "--stdio" },
+      filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge", "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "gohtmltmpl", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact", "vue", "svelte" },
+      root_markers = { "tailwind.config.js", "tailwind.config.ts", "postcss.config.js", "postcss.config.ts", "package.json", "node_modules", ".git" },
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+      settings = {
+        tailwindCSS = {
+          classAttributes = { "class", "className", "classList", "ngClass" },
+          lint = {
+            cssConflict = "warning",
+            invalidApply = "error",
+            invalidConfigPath = "error",
+            invalidScreen = "error",
+            invalidTailwindDirective = "error",
+            invalidVariant = "error",
+            recommendedVariantOrder = "warning",
+          },
+          validate = true,
+        },
+      },
+    }
 
-    -- configure c/c++ server
-    lspconfig["clangd"].setup({
+    -- Configure Vue.js server
+    vim.lsp.config.volar = {
+      cmd = { "vue-language-server", "--stdio" },
+      filetypes = { "vue" },
+      root_markers = { "package.json", "vue.config.js", "nuxt.config.js", ".git" },
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
-    -- configure docker server
-    lspconfig["dockerls"].setup({
+    -- Configure Python server
+    vim.lsp.config.pyright = {
+      cmd = { "pyright-langserver", "--stdio" },
+      filetypes = { "python" },
+      root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", "pyrightconfig.json", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+      settings = {
+        python = {
+          analysis = {
+            autoSearchPaths = true,
+            diagnosticMode = "workspace",
+            useLibraryCodeForTypes = true,
+          },
+        },
+      },
+    }
 
-    lspconfig["docker_compose_language_service"].setup({
+    -- Configure C/C++ server
+    vim.lsp.config.clangd = {
+      cmd = { "clangd" },
+      filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+      root_markers = { ".clangd", ".clang-tidy", ".clang-format", "compile_commands.json", "compile_flags.txt", "configure.ac", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
-    -- configure json server
-    lspconfig["jsonls"].setup({
+    -- Configure Docker server
+    vim.lsp.config.dockerls = {
+      cmd = { "docker-langserver", "--stdio" },
+      filetypes = { "dockerfile" },
+      root_markers = { "Dockerfile", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
-    -- configure latex server
-    lspconfig["texlab"].setup({
+    -- Configure Docker Compose server
+    vim.lsp.config.docker_compose_language_service = {
+      cmd = { "docker-compose-langserver", "--stdio" },
+      filetypes = { "yaml.docker-compose" },
+      root_markers = { "docker-compose.yaml", "docker-compose.yml", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+    }
 
-    -- configure bash server
-    lspconfig["bashls"].setup({
+    -- Configure JSON server
+    vim.lsp.config.jsonls = {
+      cmd = { "vscode-json-language-server", "--stdio" },
+      filetypes = { "json", "jsonc" },
+      root_markers = { "package.json", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-    })
+      settings = {
+        json = {
+          schemas = require("schemastore").json.schemas(),
+          validate = { enable = true },
+        },
+      },
+    }
 
-    -- configure go server
-    lspconfig["gopls"].setup({
+    -- Configure LaTeX server
+    vim.lsp.config.texlab = {
+      cmd = { "texlab" },
+      filetypes = { "tex", "bib" },
+      root_markers = { ".latexmkrc", ".texlabroot", "texlabroot", "Tectonic.toml", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-      fileypes = { "go", "gomod" },
+      settings = {
+        texlab = {
+          auxDirectory = ".",
+          bibtexFormatter = "texlab",
+          build = {
+            args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+            executable = "latexmk",
+            forwardSearchAfter = false,
+            onSave = false,
+          },
+          chktex = {
+            onEdit = false,
+            onOpenAndSave = false,
+          },
+          diagnosticsDelay = 300,
+          formatterLineLength = 80,
+          forwardSearch = {
+            args = {},
+          },
+          latexFormatter = "latexindent",
+          latexindent = {
+            modifyLineBreaks = false,
+          },
+        },
+      },
+    }
+
+    -- Configure Bash server
+    vim.lsp.config.bashls = {
+      cmd = { "bash-language-server", "start" },
+      filetypes = { "sh" },
+      root_markers = { ".git" },
+      single_file_support = true,
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
+    -- Configure Go server
+    vim.lsp.config.gopls = {
+      cmd = { "gopls" },
+      filetypes = { "go", "gomod", "gowork", "gotmpl" },
+      root_markers = { "go.work", "go.mod", ".git" },
+      single_file_support = true,
+      capabilities = capabilities,
+      on_attach = on_attach,
       settings = {
         gopls = {
           completeUnimported = true,
+          usePlaceholders = true,
           analyses = {
             unusedparams = true,
           },
-        }
-      }
-    })
+          staticcheck = true,
+          gofumpt = true,
+        },
+      },
+    }
 
-    -- configure lua server (with special settings)
-    lspconfig["lua_ls"].setup({
+    -- Configure Lua server (with special settings)
+    vim.lsp.config.lua_ls = {
+      cmd = { "lua-language-server" },
+      filetypes = { "lua" },
+      root_markers = { ".luarc.json", ".luarc.jsonc", ".luacheckrc", ".stylua.toml", "stylua.toml", "selene.toml", "selene.yml", ".git" },
+      single_file_support = true,
       capabilities = capabilities,
       on_attach = on_attach,
-      settings = { -- custom settings for lua
+      settings = {
         Lua = {
           -- make the language server recognize "vim" global
           diagnostics = {
@@ -186,8 +295,12 @@ return {
               [vim.fn.stdpath("config") .. "/lua"] = true,
             },
           },
+          telemetry = {
+            enable = false,
+          },
         },
       },
-    })
+    }
   end,
 }
+            

@@ -83,9 +83,15 @@ map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugge
 map("n", "<leader>dx", ":DapTerminate<CR>", { desc = "Debugger terminate" })
 
 
--- Git
-vim.keymap.set("n", "<leader>gp", ":Gitsigns preview_hunk<CR>", { desc = "Preview hunk" })
-vim.keymap.set("n", "<leader>gt", ":Gitsigns toggle_current_line_blame<CR>", { desc = "Toggle current line blame" })
+-- Git keymaps
+vim.keymap.set("n", "<leader>gb", "<cmd>Git blame<cr>", { desc = "Git blame buffer" })
+vim.keymap.set("n", "<leader>gp", function()
+  require("gitsigns").preview_hunk()
+end, { desc = "Preview git hunk" })
+vim.keymap.set("n", "<leader>gr", function()
+  require("gitsigns").reset_hunk()
+end, { desc = "Restore git hunk" })
+vim.keymap.set("n", "<leader>gs", "<cmd>Git<cr>", { desc = "Git Status" })
 
 -- None-ls
 keymap.set("n", "<leader>xf", "<cmd>lua vim.lsp.buf.format() <CR>", { desc = "Format buffer" })

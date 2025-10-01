@@ -61,5 +61,3 @@ vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 opt.spelllang = "en,de"
 opt.spell = true
 
--- remove statusline for telescope and tree
-opt.laststatus = 3
