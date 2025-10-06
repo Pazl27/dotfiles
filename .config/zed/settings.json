@@ -23,7 +23,7 @@
   "autosave": "on_focus_change",
   "format_on_save": "off",
   "tab_bar": {
-    "show": true,
+    "show": false,
     "show_tab_bar_buttons": false,
     "show_nav_history_buttons": false
   },
@@ -42,7 +42,7 @@
   "theme": {
     "mode": "system",
     "light": "Gruvbox Dark",
-    "dark": "One Dark"
+    "dark": "Gruvbox Dark Hard"
   },
   "terminal": {
     "dock": "bottom",
