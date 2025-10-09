@@ -17,6 +17,7 @@
       "space x x": "diagnostics::Deploy",
 
       "space b d": "pane::CloseActiveItem",
+      // "space b d": "pane::CloseAllItems",
       "space s v": "pane::SplitVertical",
       "space s h": "pane::SplitHorizontal",
 
@@ -166,6 +167,7 @@
 
       "q": "workspace::ToggleLeftDock",
       "space e": "workspace::ToggleLeftDock",
+      "space c c": "workspace::ToggleRightDock",
 
       "ctrl-h": "workspace::ActivatePaneLeft",
       "ctrl-l": "workspace::ActivatePaneRight",
