@@ -16,6 +16,10 @@
   
 [merge]
 	conflictStyle = zdiff3
+  tool = nvimdiff
+
+[mergetool "nvimdiff"]
+    layout = LOCAL,MERGED,REMOTE
 
 [blame]
   coloring = highlightRecent
@@ -35,6 +39,13 @@
   short = true
   showStash = true
   showUntrackedFiles = all  # show individual untracked files
+
+[color "status"]
+  added = green
+  changed = yellow
+  untracked = red
+  branch = magenta
+  header = cyan
 
 # Third-party: diff-so-fancy
 [delta]
