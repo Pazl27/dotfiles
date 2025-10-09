@@ -2,7 +2,7 @@
 # 1. Environment Variables
 # =========================
 
-export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-25-openjdk"
 export GOPATH="$HOME/go"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER="zen-browser"
@@ -38,8 +38,8 @@ alias c='clear'
 alias zed='zeditor'
 
 # File/Directory Listing
-alias ls='exa'
-alias ll='exa -la --icons'
+alias ls='eza'
+alias ll='eza -la --icons'
 alias tree='eza -1A --group-directories-first --color=always --git-ignore --tree'
 
 # Search/Editor
