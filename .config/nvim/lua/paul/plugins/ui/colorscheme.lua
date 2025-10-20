@@ -18,34 +18,4 @@ return {
       vim.cmd.colorscheme("gruvbox-material")
     end,
   },
-  {
-    {
-      "the-argus/banner.nvim",
-      config = function()
-        -- vim.cmd('colorscheme base16-gruvbox-dark-hard')
-      end,
-    },
-  },
-  {
-    "ellisonleao/gruvbox.nvim",
-    name = "gruvbox",
-    priority = 1000,
-    opts = {
-      alpha = true,
-    },
-    config = function()
-      require("gruvbox").setup({
-        terminal_colors = true,
-      })
-      -- vim.cmd("colorscheme gruvbox")
-    end,
-  },
-  {
-    "ajmwagar/vim-deus",
-    priority = 1000,
-    config = function()
-      -- vim.cmd("colorscheme deus")
-    end,
-  }
-
 }
