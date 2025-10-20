@@ -18,7 +18,6 @@ vim.api.nvim_set_keymap('v', '<Tab>', '>gv', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
 
 -- Copy/past to/from system clipboard (with ctrl-c/ctrl-v)
--- vim.opt.clipboard = "unnamedplus"
 vim.api.nvim_set_keymap('n', '<C-c>', '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-v>', '"+p', { noremap = true, silent = true })
@@ -53,8 +52,8 @@ keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Move cursor to 
 -- keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Close buffer" }) -- close buffer
 keymap.set("n", "<leader>bn", "<cmd>bn<CR>", { desc = "Next buffer" }) -- next buffer
 keymap.set("n", "<leader>bp", "<cmd>bp<CR>", { desc = "Previous buffer" }) -- previous buffer
-keymap.set("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
-keymap.set("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })
+-- keymap.set("n", "<S-Tab>", "<Plug>(cokeline-focus-prev)", { silent = true })
+-- keymap.set("n", "<Tab>", "<Plug>(cokeline-focus-next)", { silent = true })
 
 -- Telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })

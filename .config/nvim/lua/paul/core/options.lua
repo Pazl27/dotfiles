@@ -61,3 +61,4 @@ vim.cmd([[autocmd FileType * set formatoptions-=ro]])
 opt.spelllang = "en,de"
 opt.spell = true
 
+
