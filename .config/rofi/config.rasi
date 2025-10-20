@@ -8,7 +8,7 @@
 
 configuration {
 	show-icons: true;
-	icon-theme: "Papirus";
+  icon-theme: "Adwaita";
 	location: 0;
 	font: "CaskaydiaCove Nerd Font 12";	
 	display-drun: "";
