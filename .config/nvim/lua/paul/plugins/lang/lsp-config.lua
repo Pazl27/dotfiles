@@ -89,6 +89,15 @@ return {
       on_attach = on_attach,
     }
 
+    vim.lsp.config.ast_grep = {
+      cmd = { "ast-grep-languageserver", "--stdio" },
+      filetypes = { "javascript" },
+      root_markers = { ".git" },
+      single_file_support = true,
+      capabilities = capabilities,
+      on_attach = on_attach,
+    }
+
     -- Configure CSS server
     vim.lsp.config.cssls = {
       cmd = { "vscode-css-language-server", "--stdio" },
@@ -110,56 +119,13 @@ return {
       },
     }
 
-    -- Configure Tailwind CSS server
-    vim.lsp.config.tailwindcss = {
-      cmd = { "tailwindcss-language-server", "--stdio" },
-      filetypes = { "aspnetcorerazor", "astro", "astro-markdown", "blade", "clojure", "django-html", "htmldjango", "edge", "eelixir", "elixir", "ejs", "erb", "eruby", "gohtml", "gohtmltmpl", "haml", "handlebars", "hbs", "html", "html-eex", "heex", "jade", "leaf", "liquid", "markdown", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "css", "less", "postcss", "sass", "scss", "stylus", "sugarss", "javascript", "javascriptreact", "reason", "rescript", "typescript", "typescriptreact", "vue", "svelte" },
-      root_markers = { "tailwind.config.js", "tailwind.config.ts", "postcss.config.js", "postcss.config.ts", "package.json", "node_modules", ".git" },
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        tailwindCSS = {
-          classAttributes = { "class", "className", "classList", "ngClass" },
-          lint = {
-            cssConflict = "warning",
-            invalidApply = "error",
-            invalidConfigPath = "error",
-            invalidScreen = "error",
-            invalidTailwindDirective = "error",
-            invalidVariant = "error",
-            recommendedVariantOrder = "warning",
-          },
-          validate = true,
-        },
-      },
-    }
-
     -- Configure Vue.js server
-    vim.lsp.config.volar = {
+    vim.lsp.config.vuels = {
       cmd = { "vue-language-server", "--stdio" },
       filetypes = { "vue" },
       root_markers = { "package.json", "vue.config.js", "nuxt.config.js", ".git" },
       capabilities = capabilities,
       on_attach = on_attach,
-    }
-
-    -- Configure Python server
-    vim.lsp.config.pyright = {
-      cmd = { "pyright-langserver", "--stdio" },
-      filetypes = { "python" },
-      root_markers = { "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt", "Pipfile", "pyrightconfig.json", ".git" },
-      single_file_support = true,
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        python = {
-          analysis = {
-            autoSearchPaths = true,
-            diagnosticMode = "workspace",
-            useLibraryCodeForTypes = true,
-          },
-        },
-      },
     }
 
     -- Configure C/C++ server
@@ -204,41 +170,6 @@ return {
         json = {
           schemas = require("schemastore").json.schemas(),
           validate = { enable = true },
-        },
-      },
-    }
-
-    -- Configure LaTeX server
-    vim.lsp.config.texlab = {
-      cmd = { "texlab" },
-      filetypes = { "tex", "bib" },
-      root_markers = { ".latexmkrc", ".texlabroot", "texlabroot", "Tectonic.toml", ".git" },
-      single_file_support = true,
-      capabilities = capabilities,
-      on_attach = on_attach,
-      settings = {
-        texlab = {
-          auxDirectory = ".",
-          bibtexFormatter = "texlab",
-          build = {
-            args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
-            executable = "latexmk",
-            forwardSearchAfter = false,
-            onSave = false,
-          },
-          chktex = {
-            onEdit = false,
-            onOpenAndSave = false,
-          },
-          diagnosticsDelay = 300,
-          formatterLineLength = 80,
-          forwardSearch = {
-            args = {},
-          },
-          latexFormatter = "latexindent",
-          latexindent = {
-            modifyLineBreaks = false,
-          },
         },
       },
     }
