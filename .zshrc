@@ -8,6 +8,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export BROWSER="zen-browser"
 export LANG="en_US.UTF-8"
 export BAT_THEME="gruvbox-dark"
+export POKEMON_ICAT_DATA="$HOME/.local/share/pokemon-icat"
 
 # =========================
 # 2. PATH Setup (Einzeln)
@@ -165,5 +166,4 @@ setopt hist_find_no_dups
 # 11. Extras
 # =========================
 
-pokemon-icat
-
+pokemon-icat 
