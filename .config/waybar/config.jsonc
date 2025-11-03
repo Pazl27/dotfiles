@@ -53,7 +53,7 @@
         "today": "<span color='#fAfBfC'><b>{}</b></span>"
       }
     },
-    "format": "{:%d.%m.%Y %I:%M %p}",
+    "format": "{:%d.%m.%Y | %I:%M %p}",
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>"
   },
