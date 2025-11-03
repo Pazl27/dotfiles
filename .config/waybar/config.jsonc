@@ -1,7 +1,9 @@
 {
   "layer": "top",
   "position": "top",
-  "output": ["*"],
+  "output": [
+    "*"
+  ],
   "reload_style_on_change": true,
   "modules-left": [
     "custom/power",
@@ -51,7 +53,7 @@
         "today": "<span color='#fAfBfC'><b>{}</b></span>"
       }
     },
-    "format": "{:%I:%M %p}",
+    "format": "{:%d.%m.%Y %I:%M %p}",
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>"
   },
