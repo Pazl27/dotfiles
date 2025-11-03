@@ -14,6 +14,6 @@ if [ -z "$SELECTED" ]; then
 fi
 notify-send "new wallpaper: $(basename "$SELECTED")"
 
-swww img -t none --transition-duration 0 "$SELECTED"
+swww img -t grow --transition-duration 2 "$SELECTED"
 
 
