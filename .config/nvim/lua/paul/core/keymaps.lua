@@ -17,11 +17,9 @@ vim.api.nvim_set_keymap('x', 'J', ":move '>+1<CR>gv=gv", { noremap = true, silen
 vim.api.nvim_set_keymap('v', '<Tab>', '>gv', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<S-Tab>', '<gv', { noremap = true, silent = true })
 
--- Copy/past to/from system clipboard (with ctrl-c/ctrl-v)
-vim.api.nvim_set_keymap('n', '<C-c>', '"+y', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('v', '<C-c>', '"+y', { noremap = true, silent = true })
+-- Copy/paste to/from system clipboard (with ctrl-c/ctrl-v)
 vim.api.nvim_set_keymap('n', '<C-v>', '"+p', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('i', '<C-v>', '"+p', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<C-v>', '"+p', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<C-a>', 'ggVG', { noremap = true, silent = true })
 

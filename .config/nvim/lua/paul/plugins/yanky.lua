@@ -5,11 +5,15 @@ return {
      },
   opts = {
     highlight = { timer = 250 },
+    system_clipboard = {
+      sync_with_ring = true,
+    }
   },
   keys = {
       -- stylua: ignore
     { "<leader>p", function() require("telescope").extensions.yank_history.yank_history({ initial_mode="normal" }) end, desc = "Open Yank History" },
     { "y", "<Plug>(YankyYank)", mode = { "n", "x" }, desc = "Yank text" },
+    { "<C-c>", '"+<Plug>(YankyYank)', mode = { "n", "x" }, desc = "Copy to system clipboard" },
     { "p", "<Plug>(YankyPutAfter)", mode = { "n", "x" }, desc = "Put yanked text after cursor" },
     { "P", "<Plug>(YankyPutBefore)", mode = { "n", "x" }, desc = "Put yanked text before cursor" },
     { "gp", "<Plug>(YankyGPutAfter)", mode = { "n", "x" }, desc = "Put yanked text after selection" },
