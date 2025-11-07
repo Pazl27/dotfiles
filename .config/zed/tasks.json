@@ -8,19 +8,19 @@
     "reveal_target": "center"
   },
   {
-    "label": "Lazydocker",
-    "command": "lazydocker",
-    "use_new_terminal": true,
-    "allow_concurrent_runs": true,
+    "label": "File Finder",
+    "command": "zed \"$(tv files)\"",
     "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
     "reveal_target": "center"
   },
   {
-    "label": "Yazi",
-    "command": "yazi",
-    "use_new_terminal": true,
-    "allow_concurrent_runs": true,
+    "label": "Fulltext Search",
+    "command": "zed \"$(tv text)\"",
     "hide": "always",
+    "allow_concurrent_runs": true,
+    "use_new_terminal": true,
     "reveal_target": "center"
   },
   {

@@ -29,8 +29,8 @@
       "space c c": "workspace::ToggleRightDock",
       "space c i": "assistant::InlineAssist",
 
-      "space f f": "file_finder::Toggle",
-      "space f g": "pane::DeploySearch",
+      // "space f f": "file_finder::Toggle",
+      // "space f g": "pane::DeploySearch",
       "space f t": "task::Spawn",
       "space f b": "tab_switcher::Toggle",
       "space f p": "projects::OpenRecent",
@@ -61,13 +61,19 @@
 
       "space t n": "terminal_panel::ToggleFocus",
 
+      "space f f": [
+        "task::Spawn",
+        { "task_name": "File Finder", "reveal_target": "center" }
+      ],
+
+      "space f g": [
+        "task::Spawn",
+        { "task_name": "Fulltext Search", "reveal_target": "center" }
+      ],
+
       "space g g": [
         "task::Spawn",
         { "task_name": "Lazygit", "reveal_target": "center" }
-      ],
-      "space l d": [
-        "task::Spawn",
-        { "task_name": "Lazydocker", "reveal_target": "center" }
       ],
       "space g l": [
         "task::Spawn",
