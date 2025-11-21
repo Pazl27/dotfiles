@@ -84,6 +84,9 @@ alias gr='git reset'
 alias gs='git status --short'
 alias gu='git pull'
 
+# PDF
+alias to-pdf='abiword --to=pdf'
+
 # =========================
 # 4. Functions
 # =========================
