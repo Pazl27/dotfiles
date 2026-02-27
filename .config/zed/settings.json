@@ -48,7 +48,7 @@
     "light": "Gruvbox Dark",
     "dark": "Gruvbox Dark Hard"
   },
-  "icon_theme": "Catppuccin Latte",
+  "icon_theme": "Material Icon Theme",
   "ui_font_size": 16,
   "hide_mouse": "never",
 
@@ -97,7 +97,125 @@
         "background": "#8d3250ff",
         "selection": "#8d32503d"
       }
-    ]
+    ],
+    // --- Blured Theme ---
+    "background.appearance": "blurred",
+
+    "border": "#3c383615",
+    "border.variant": "#00000000",
+    "border.focused": "#83a598",
+    "border.selected": "#d3869b",
+    "border.transparent": "#b8bb26",
+    "border.disabled": "#928374",
+
+    "elevated_surface.background": "#1d2021",
+    "surface.background": "#2828288c",
+    "background": "#28282899",
+
+    "element.background": "#1d2021",
+    "element.hover": "#3c3836",
+    "element.active": "#00000000",
+    "element.selected": "#3c38364d",
+    "element.disabled": "#928374",
+    "drop_target.background": "#d3869b90",
+
+    "ghost_element.background": "#1d202160",
+    "ghost_element.hover": "#1d202190",
+    "ghost_element.active": "#d3869b30",
+    "ghost_element.selected": "#d3869b50",
+    "ghost_element.disabled": "#928374",
+
+    "status_bar.background": "#28282899",
+    "title_bar.background": "#28282899",
+    "title_bar.inactive_background": "#1d2021",
+    "toolbar.background": "#00000000",
+    "tab_bar.background": "#00000000",
+
+    "tab.inactive_background": "#00000000",
+    "tab.active_background": "#1d202190",
+
+    "search.match_background": "#8ec07c4d",
+    "search.active_match_background": "#fb49344d",
+
+    "panel.background": "#00000000",
+    "panel.focused_border": "00000000",
+    "panel.indent_guide": "#3c383699",
+    "panel.indent_guide_active": "#928374",
+    "panel.indent_guide_hover": "#d3869b",
+    "panel.overlay_background": "#282828",
+    "pane.focused_border": "#3c383610",
+    "pane_group.border": "#3c383615",
+
+    "scrollbar.thumb.background": "#92837480",
+    "scrollbar.thumb.hover_background": "#a89984",
+    "scrollbar.thumb.active_background": null,
+    "scrollbar.thumb.border": null,
+    "scrollbar.track.background": "#00000000",
+    "scrollbar.track.border": "#00000000",
+    "minimap.thumb.background": "#d3869b33",
+    "minimap.thumb.hover_background": "#d3869b66",
+    "minimap.thumb.active_background": "#d3869b99",
+    "minimap.thumb.border": null,
+
+    "editor.background": "#00000000",
+    "editor.gutter.background": "#00000000",
+    "editor.subheader.background": "#1d2021",
+    "editor.active_line.background": "#00000000",
+    "editor.highlighted_line.background": "#ebdbb212",
+    "editor.line_number": "#ffffff20",
+    "editor.active_line_number": "#ebdbb290",
+    "editor.invisible": "#92837466",
+    "editor.wrap_guide": "#504945",
+    "editor.active_wrap_guide": "#504945",
+    "editor.indent_guide": "#3c383699",
+    "editor.indent_guide_active": "#928374",
+
+    "terminal.background": "#00000000",
+    "terminal.ansi.background": "#282828",
+
+    "conflict": "#fe8019",
+    "conflict.border": "#fe8019",
+    "conflict.background": "#fe801926",
+    "created": "#b8bb26",
+    "created.border": "#b8bb26",
+    "created.background": "#b8bb2626",
+    "deleted": "#fb4934",
+    "deleted.border": "#fb4934",
+    "deleted.background": "#fb493426",
+    "hidden": "#928374",
+    "hidden.border": "#928374",
+    "hidden.background": "#1d2021",
+    "hint": "#928374",
+    "hint.border": "#928374",
+    "hint.background": "#3c3836c0",
+    "ignored": "#928374",
+    "ignored.border": "#928374",
+    "ignored.background": "#92837426",
+    "modified": "#fabd2f",
+    "modified.border": "#fabd2f",
+    "modified.background": "#fabd2f26",
+    "predictive": "#928374",
+    "predictive.border": "#83a598",
+    "predictive.background": "#1d2021",
+    "renamed": "#83a598",
+    "renamed.border": "#83a598",
+    "renamed.background": "#83a59826",
+
+    "info": "#8ec07c",
+    "info.border": "#8ec07c",
+    "info.background": "#1d2021",
+    "warning": "#fabd2f",
+    "warning.border": "#fabd2f",
+    "warning.background": "#3c3836",
+    "error": "#fb4934",
+    "error.border": "#fb4934",
+    "error.background": "#322323",
+    "success": "#b8bb26",
+    "success.border": "#b8bb26",
+    "success.background": "#282828",
+    "unreachable": "#fb4934",
+    "unreachable.border": "#fb4934",
+    "unreachable.background": "#fb49341f"
   },
 
   // ============================================================================
@@ -140,7 +258,7 @@
   // AI / COPILOT
   // ============================================================================
   "edit_predictions": {
-    "provider": "zed"
+    "provider": "copilot"
   },
 
   "agent": {
@@ -149,7 +267,7 @@
     "dock": "right",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4"
+      "model": "claude-sonnet-4.5"
     }
   },
 
